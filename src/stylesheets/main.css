@@ -361,11 +361,11 @@ html {
  * Basic styles for links
  */
 a {
-  color: #e50050;
+  color: rgb(229, 0, 80);
   text-decoration: none;
 }
 a:hover, a:active, a:focus {
-  color: #222222;
+  color: rgb(34, 34, 34);
   text-decoration: underline;
 }
 
@@ -373,7 +373,7 @@ a:hover, a:active, a:focus {
  * Basic typography style for copy text
  */
 body {
-  color: #222222;
+  color: rgb(34, 34, 34);
   font: normal 125%/1.4 "Open Sans", "Helvetica Neue Light", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
 }
 

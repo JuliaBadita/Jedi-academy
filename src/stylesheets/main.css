@@ -448,9 +448,46 @@ body {
 /* ============================================================================
   Navbar
    ============================================================================ */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white;
+}
+.header .logo {
+  width: 14rem;
+  margin: 1rem;
+}
+.header nav ul {
+  display: flex;
+  margin-right: 2.5rem;
+  margin-left: 2.5rem;
+  list-style: none;
+}
+.header nav ul li {
+  margin: 0 1rem;
+  font-size: larger;
+}
+.header nav ul li a {
+  text-decoration: none;
+  color: #BA9100;
+}
+
 /* ============================================================================
    Buttons
     ============================================================================ */
 /* ============================================================================
    Carousel 
-    ============================================================================ *//*# sourceMappingURL=main.css.map */
+    ============================================================================ */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-image: url(../../assets/starwars-1649334637769-8594.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100vh;
+}/*# sourceMappingURL=main.css.map */

@@ -338,43 +338,21 @@ template {
   display: none;
 }
 
-/**
- * Set up a decent box model on the root element
- */
 html {
   box-sizing: border-box;
 }
 
-/**
- * Make all elements from the DOM inherit from the parent box-sizing
- * Since `*` has a specificity of 0, it does not override the `html` value
- * making all elements inheriting from the root box-sizing value
- * See: https://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/
- */
-*,
-*::before,
-*::after {
-  box-sizing: inherit;
+* {
+  margin: 0;
+  padding: 0;
 }
 
-/**
- * Basic styles for links
- */
-a {
-  color: rgb(229, 0, 80);
-  text-decoration: none;
-}
-a:hover, a:active, a:focus {
-  color: rgb(34, 34, 34);
-  text-decoration: underline;
-}
-
-/**
- * Basic typography style for copy text
- */
 body {
-  color: rgb(34, 34, 34);
-  font: normal 125%/1.4 "Open Sans", "Helvetica Neue Light", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+  background-image: url(../../assets/starwars-1649334637769-8594.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100vh;
 }
 
 /**
@@ -452,11 +430,46 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: white;
+  background-color: #ffffff;
 }
-.header .logo {
+.header .navbar__logo {
   width: 14rem;
   margin: 1rem;
+}
+.header nav .navbar__underline {
+  width: 83.334%;
+  margin: 0 auto;
+  margin-top: 0.2rem;
+  color: #BA9100;
+  border: 0.0625rem solid #BA9100;
+  border-radius: 0.625rem;
+}
+.header nav a.active {
+  position: relative;
+  font-weight: bold;
+}
+.header nav a.active::after {
+  content: "";
+  height: 0.1875rem;
+  width: 0;
+  background: #BA9100;
+  position: absolute;
+  border-radius: 0.625rem;
+  bottom: -0.3125rem;
+  left: 50%;
+  transform: translateX(-50%);
+  -webkit-animation: anim 0.3s ease forwards;
+  animation: anim 0.6s ease forwards;
+}
+@-webkit-keyframes anim {
+  to {
+    width: 110%;
+  }
+}
+@keyframes anim {
+  to {
+    width: 110%;
+  }
 }
 .header nav ul {
   display: flex;
@@ -466,7 +479,7 @@ body {
 }
 .header nav ul li {
   margin: 0 1rem;
-  font-size: larger;
+  font-size: 20px;
 }
 .header nav ul li a {
   text-decoration: none;
@@ -478,16 +491,4 @@ body {
     ============================================================================ */
 /* ============================================================================
    Carousel 
-    ============================================================================ */
-* {
-  margin: 0;
-  padding: 0;
-}
-
-body {
-  background-image: url(../../assets/starwars-1649334637769-8594.jpg);
-  background-size: cover;
-  background-repeat: no-repeat;
-  width: 100%;
-  height: 100vh;
-}/*# sourceMappingURL=main.css.map */
+    ============================================================================ *//*# sourceMappingURL=main.css.map */

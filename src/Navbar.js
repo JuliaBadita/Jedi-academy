@@ -1,30 +1,31 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
 import logo from './assets/logo_light-mode.png'
-import './stylesheets/layout/_navigation.scss'
+import './stylesheets/main.scss'
 
 const Navbar = () => {
   return (
     <header className="header">
-      <img src={logo} className="logo" alt="logo académie Jedi" />
+      <img src={logo} className="navbar__logo" alt="logo académie Jedi" />
       <nav>
         <ul>
           <li>
-            <Link to="/">Accueil</Link>
+            <NavLink to="/">Accueil</NavLink>
           </li>
           <li>
-            <Link to="/about">Infos utiles</Link>
+            <NavLink to="/about">Infos utiles</NavLink>
           </li>
           <li>
-            <Link to="/members">Membres</Link>
+            <NavLink to="/members">Membres</NavLink>
           </li>
           <li>
-            <Link to="/history">Notre histoire</Link>
+            <NavLink to="/history">Notre histoire</NavLink>
           </li>
           <li>
-            <Link to="/contact">Contact</Link>
+            <NavLink to="/contact">Contact</NavLink>
           </li>
         </ul>
+        <hr className="navbar__underline" />
       </nav>
     </header>
   )

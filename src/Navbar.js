@@ -7,22 +7,32 @@ const Navbar = () => {
   return (
     <header className="header">
       <img src={logo} className="navbar__logo" alt="logo académie Jedi" />
-      <nav>
+      <nav className="navbar__desktop">
         <ul>
           <li>
-            <NavLink to="/">Accueil</NavLink>
+            <NavLink to="/" className="navlinks__desktop">
+              Accueil
+            </NavLink>
           </li>
           <li>
-            <NavLink to="/about">Infos utiles</NavLink>
+            <NavLink to="/about" className="navlinks__desktop">
+              Infos utiles
+            </NavLink>
           </li>
           <li>
-            <NavLink to="/members">Membres</NavLink>
+            <NavLink to="/members" className="navlinks__desktop">
+              Membres
+            </NavLink>
           </li>
           <li>
-            <NavLink to="/history">Notre histoire</NavLink>
+            <NavLink to="/history" className="navlinks__desktop">
+              Notre histoire
+            </NavLink>
           </li>
           <li>
-            <NavLink to="/contact">Contact</NavLink>
+            <NavLink to="/contact" className="navlinks__desktop">
+              Contact
+            </NavLink>
           </li>
         </ul>
         <hr className="navbar__underline" />

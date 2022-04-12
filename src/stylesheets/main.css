@@ -355,6 +355,7 @@ body {
   background-image: url(../../assets/starwars-1649334637769-8594.jpg);
   background-size: cover;
   background-repeat: no-repeat;
+  background-position: center;
   width: 100%;
   height: 100vh;
 }
@@ -506,4 +507,42 @@ body {
     ============================================================================ */
 /* ============================================================================
    Carousel 
-    ============================================================================ *//*# sourceMappingURL=main.css.map */
+    ============================================================================ */
+.dark-mode-toggle {
+  display: flex;
+}
+
+.dark-mode-checkbox {
+  display: none;
+}
+
+.dark-mode-label {
+  height: 2.6rem;
+  width: 5rem;
+  background: #ffe3ac;
+  padding: 0.5rem 0.8rem;
+  border-radius: 5rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  transform: scale(1.2);
+  box-shadow: 0.2rem 0.1rem 0.1rem #0f0f0f;
+}
+
+.dark-mode-label .dark-mode-ball {
+  background: gray;
+  border-radius: 50%;
+  height: 2.2rem;
+  width: 2.2rem;
+  position: absolute;
+  top: 0.2rem;
+  left: 0.2rem;
+  transform: translateX(0px);
+  transition: transform 0.4s cubic-bezier(0.45, -1.12, 0.35, 1.78);
+}
+
+.dark-mode-checkbox:checked + .dark-mode-label .dark-mode-ball {
+  transform: translateX(2.5rem);
+}/*# sourceMappingURL=main.css.map */

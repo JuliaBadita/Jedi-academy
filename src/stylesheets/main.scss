@@ -27,12 +27,12 @@
 // 5. Components
 @import
   'components/button',
-  'components/carousel';
+  'components/carousel',
+  'components/dark-mode';
 
 // 6. Page-specific styles
 @import
-  'pages/home',
-  'pages/app';
+  'pages/home';
 
 // 7. Themes
 @import

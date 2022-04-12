@@ -12,8 +12,9 @@
       margin: 1rem;
     }
     nav {
+      margin: 0 auto;
       .navbar__underline {
-        width: 84%;
+        width: 81.8%;
         margin: 0 auto;
         margin-top: 0.3000rem;
         color: $gold;
@@ -49,7 +50,7 @@
         list-style: none;
         li {
           margin: 0 1rem;
-          font-size: 22px;
+          font-size: 23px;
           // font-weight: 500;
           font-family: 'Rajdhani', sans-serif;
           a {
@@ -61,6 +62,14 @@
     }
    }
 
+
+   @media screen and (max-width: 1050px) {
+    .navlinks__desktop {
+        font-size: 18px;
+      }
+    }
+  
+
    @media screen and (max-width: 950px) {
     .navbar__logo {
       margin: 0 auto;
@@ -68,7 +77,8 @@
   }
 
   @media (max-width: 950px) {
-    .navbar__desktop, .navbar__logo {
+    .navbar__desktop, .navbar__logo, .dark-mode-toggle {
       display: none;
       }
   }
+

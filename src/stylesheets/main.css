@@ -441,8 +441,11 @@ body {
   width: 14rem;
   margin: 1rem;
 }
+.header nav {
+  margin: 0 auto;
+}
 .header nav .navbar__underline {
-  width: 84%;
+  width: 81.8%;
   margin: 0 auto;
   margin-top: 0.3rem;
   color: #BA9100;
@@ -484,7 +487,7 @@ body {
 }
 .header nav ul li {
   margin: 0 1rem;
-  font-size: 22px;
+  font-size: 23px;
   font-family: "Rajdhani", sans-serif;
 }
 .header nav ul li a {
@@ -492,13 +495,18 @@ body {
   color: #BA9100;
 }
 
+@media screen and (max-width: 1050px) {
+  .navlinks__desktop {
+    font-size: 18px;
+  }
+}
 @media screen and (max-width: 950px) {
   .navbar__logo {
     margin: 0 auto;
   }
 }
 @media (max-width: 950px) {
-  .navbar__desktop, .navbar__logo {
+  .navbar__desktop, .navbar__logo, .dark-mode-toggle {
     display: none;
   }
 }
@@ -509,7 +517,8 @@ body {
    Carousel 
     ============================================================================ */
 .dark-mode-toggle {
-  display: flex;
+  position: relative;
+  margin-right: 5rem;
 }
 
 .dark-mode-checkbox {
@@ -517,9 +526,9 @@ body {
 }
 
 .dark-mode-label {
-  height: 2.6rem;
-  width: 5rem;
-  background: #ffe3ac;
+  height: 1.3rem;
+  width: 2.9rem;
+  background: #f3e6cb;
   padding: 0.5rem 0.8rem;
   border-radius: 5rem;
   cursor: pointer;
@@ -528,21 +537,34 @@ body {
   justify-content: space-between;
   position: relative;
   transform: scale(1.2);
-  box-shadow: 0.2rem 0.1rem 0.1rem #0f0f0f;
+  box-shadow: 0.08rem 0.1rem 0.1rem #646262;
 }
 
 .dark-mode-label .dark-mode-ball {
-  background: gray;
+  background: #d2c180;
   border-radius: 50%;
-  height: 2.2rem;
-  width: 2.2rem;
+  height: 1.6rem;
+  width: 1.6rem;
   position: absolute;
-  top: 0.2rem;
-  left: 0.2rem;
+  top: 0.35rem;
+  left: 0.25rem;
+  right: 0.1rem;
   transform: translateX(0px);
   transition: transform 0.4s cubic-bezier(0.45, -1.12, 0.35, 1.78);
 }
 
 .dark-mode-checkbox:checked + .dark-mode-label .dark-mode-ball {
   transform: translateX(2.5rem);
+}
+
+.moon__dark-mode, .sun__dark-mode {
+  height: 1.45rem;
+}
+
+.moon__dark-mode {
+  margin-left: -0.3rem;
+}
+
+.sun__dark-mode {
+  margin-left: 0.7rem;
 }/*# sourceMappingURL=main.css.map */

@@ -4,7 +4,6 @@ import logo from '../assets/logo_light-mode.png'
 import sun from '../assets/sun.png'
 import moon from '../assets/moon.png'
 import '../stylesheets/main.scss'
-import $ from 'jquery'
 
 const Navbar = () => {
   return (
@@ -43,16 +42,6 @@ const Navbar = () => {
         <hr className="navbar__underline" />
       </nav>
 
-      {/* Navbar version Mobile  */}
-
-      <section id="nav-container">
-        <div class="toggle-icon">
-          <span class="bar"></span>
-          <span class="bar"></span>
-          <span class="bar"></span>
-        </div>
-      </section>
-
       {/* Dark mode button  */}
 
       <article class="dark-mode-toggle">
@@ -76,11 +65,5 @@ const Navbar = () => {
     </header>
   )
 }
-
-/// For the animation of the mobile burger menu
-
-$('.toggle-icon').click(function () {
-  $('#nav-container').toggleClass('pushed')
-})
 
 export default Navbar

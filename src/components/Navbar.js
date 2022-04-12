@@ -4,11 +4,13 @@ import logo from '../assets/logo_light-mode.png'
 import sun from '../assets/sun.png'
 import moon from '../assets/moon.png'
 import '../stylesheets/main.scss'
+import $ from 'jquery'
 
 const Navbar = () => {
   return (
     <header className="header">
       {/* Version desktop  */}
+
       <img src={logo} className="navbar__logo" alt="logo académie Jedi" />
       <nav className="navbar__desktop">
         <ul>
@@ -41,6 +43,18 @@ const Navbar = () => {
         <hr className="navbar__underline" />
       </nav>
 
+      {/* Navbar version Mobile  */}
+
+      <section id="nav-container">
+        <div class="toggle-icon">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </div>
+      </section>
+
+      {/* Dark mode button  */}
+
       <article class="dark-mode-toggle">
         <input type="checkbox" class="dark-mode-checkbox" id="dark-mode" />
         <label for="dark-mode" class="dark-mode-label">
@@ -59,18 +73,14 @@ const Navbar = () => {
       </article>
 
       <span class="darkened-background"></span>
-
-      {/* Version Mobile  */}
-
-      <section id="nav-container">
-        <div class="toggle-icon">
-          <span class="bar"></span>
-          <span class="bar"></span>
-          <span class="bar"></span>
-        </div>
-      </section>
     </header>
   )
 }
+
+/// For the animation of the mobile burger menu
+
+$('.toggle-icon').click(function () {
+  $('#nav-container').toggleClass('pushed')
+})
 
 export default Navbar

@@ -495,21 +495,92 @@ body {
   color: #BA9100;
 }
 
+@media screen and (max-width: 1100px) {
+  .navlinks__desktop {
+    font-size: 20px;
+  }
+}
 @media screen and (max-width: 1050px) {
   .navlinks__desktop {
     font-size: 18px;
   }
 }
-@media screen and (max-width: 950px) {
+@media screen and (max-width: 990px) {
   .navbar__logo {
     margin: 0 auto;
   }
 }
-@media (max-width: 950px) {
+@media (max-width: 990px) {
   .navbar__desktop, .navbar__logo, .dark-mode-toggle {
     display: none;
   }
 }
+#nav-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: -3em;
+}
+
+/*toggle-icon*/
+.toggle-icon {
+  display: block;
+  position: relative;
+  width: 100%;
+  margin: -2.2em auto 0 0.2em;
+  transition: margin 600ms;
+  cursor: pointer;
+}
+
+.toggle-icon .bar {
+  display: block;
+  width: 3.8em;
+  height: 0.2em;
+  margin: 0.9em;
+  border-right: 2.8em solid #BA9100;
+  border-left: 0.6em solid #2f2d2d;
+  box-sizing: border-box;
+  transition-property: transform, margin, border-right-color, box-shadow;
+  transition-duration: 600ms;
+}
+
+.toggle-icon .bar:nth-of-type(1) {
+  transition: opacity 300ms;
+}
+
+.toggle-icon .bar:nth-of-type(2) {
+  transform: rotate(-180deg);
+}
+
+/*pushed*/
+.pushed .toggle-icon {
+  margin: -3.2em 0 0 0.7em;
+}
+
+.pushed .bar:nth-of-type(1) {
+  opacity: 0;
+}
+
+.pushed .bar:nth-of-type(2) {
+  margin-left: 1.4em;
+  transform: rotate(-137deg) translateY(-1.5em);
+}
+
+.pushed .bar:nth-of-type(3) {
+  margin-left: 0.5em;
+  transform: rotate(-42deg);
+}
+
+.pushed .toggle-icon:hover .bar:nth-of-type(2) {
+  border-right-color: #e9b8b9;
+  box-shadow: 0.4em 0 0.6em 0.1em rgba(205, 40, 44, 0.75);
+}
+
+.pushed .toggle-icon:hover .bar:nth-of-type(3) {
+  border-right-color: #ddf1da;
+  box-shadow: 0.4em 0 0.6em 0.1em rgba(83, 228, 68, 0.65);
+}
+
 /* ============================================================================
    Buttons
     ============================================================================ */
@@ -518,7 +589,7 @@ body {
     ============================================================================ */
 .dark-mode-toggle {
   position: relative;
-  margin-right: 5rem;
+  margin-right: 3.5rem;
 }
 
 .dark-mode-checkbox {
@@ -526,8 +597,8 @@ body {
 }
 
 .dark-mode-label {
-  height: 1.3rem;
-  width: 2.9rem;
+  height: 0.8rem;
+  width: 2.6rem;
   background: #f3e6cb;
   padding: 0.5rem 0.8rem;
   border-radius: 5rem;
@@ -543,11 +614,11 @@ body {
 .dark-mode-label .dark-mode-ball {
   background: #d2c180;
   border-radius: 50%;
-  height: 1.6rem;
-  width: 1.6rem;
+  height: 1.4rem;
+  width: 1.4rem;
   position: absolute;
-  top: 0.35rem;
-  left: 0.25rem;
+  top: 0.23rem;
+  left: 0.17rem;
   right: 0.1rem;
   transform: translateX(0px);
   transition: transform 0.4s cubic-bezier(0.45, -1.12, 0.35, 1.78);
@@ -558,7 +629,7 @@ body {
 }
 
 .moon__dark-mode, .sun__dark-mode {
-  height: 1.45rem;
+  height: 1.1rem;
 }
 
 .moon__dark-mode {
@@ -566,5 +637,29 @@ body {
 }
 
 .sun__dark-mode {
-  margin-left: 0.7rem;
+  margin-left: 1rem;
+}
+
+@media screen and (max-width: 1150px) {
+  .dark-mode-label {
+    height: 0.6rem;
+    width: 2.5rem;
+    box-shadow: 0.04rem 0.08rem 0.08rem #646262;
+  }
+
+  .dark-mode-label .dark-mode-ball {
+    height: 1.3rem;
+    width: 1.3rem;
+    top: 0.13rem;
+    left: 0.145rem;
+  }
+
+  .moon__dark-mode {
+    height: 1rem;
+  }
+
+  .sun__dark-mode {
+    height: 1rem;
+    margin-left: 1.1rem;
+  }
 }/*# sourceMappingURL=main.css.map */

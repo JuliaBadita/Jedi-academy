@@ -2,7 +2,7 @@
 
 .dark-mode-toggle {
    position: relative;
-   margin-right: 5rem;
+   margin-right: 3.5rem;
   }
   
   .dark-mode-checkbox {
@@ -10,8 +10,8 @@
   }
   
   .dark-mode-label {
-    height: 1.3rem;
-    width: 2.9rem;
+    height: 0.8rem;
+    width: 2.6rem;
     background: $dark-mode-bg;
     padding: 0.5rem 0.8rem;
     border-radius: 5rem;
@@ -27,11 +27,11 @@
   .dark-mode-label .dark-mode-ball {
     background: $dark-mode-ball;
     border-radius: 50%;
-    height: 1.6rem;
-    width: 1.6rem;
+    height: 1.4rem;
+    width: 1.4rem;
     position: absolute;
-    top: 0.35rem;
-    left: 0.25rem;
+    top: 0.23rem;
+    left: 0.17rem;
     right: 0.1rem;
     transform: translateX(0px);
     transition: transform 0.4s cubic-bezier(.45, -1.12, .35,1.78);
@@ -42,7 +42,7 @@
   }
 
   .moon__dark-mode, .sun__dark-mode {
-      height: 1.45rem;
+      height: 1.1rem;
   }
 
   .moon__dark-mode {
@@ -50,5 +50,30 @@
   }
   
   .sun__dark-mode {
-    margin-left: 0.7rem;
+    margin-left: 1rem;
   }
+
+
+/// Responsive version of the dark mode button
+
+  @media screen and (max-width: 1150px) {
+    .dark-mode-label {
+        height: 0.6rem;
+        width: 2.5rem;
+        box-shadow: 0.04rem 0.08rem 0.08rem $dark-mode-shadow;
+      }
+      .dark-mode-label .dark-mode-ball {
+      height: 1.3rem;
+      width: 1.3rem;
+      top: 0.13rem;
+      left: 0.145rem;
+      }
+      .moon__dark-mode {
+        height: 1rem;
+      }
+      .sun__dark-mode {
+        height: 1rem;
+        margin-left: 1.1rem;
+      }
+    }
+  

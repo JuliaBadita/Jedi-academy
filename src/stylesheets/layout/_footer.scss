@@ -1,3 +1,26 @@
  /* ============================================================================
     Footer
      ============================================================================ */
+
+     footer {
+      position: absolute;
+      padding: 2rem;
+      background-color: white;
+      bottom: 0;
+      width:100%;
+      .footer {
+         display: flex;
+            justify-content: center; 
+           align-items: center;
+           flex-direction: column;
+           @media screen and (max-width: 800px) {
+              width: 12rem;
+              font-size: smaller;
+              margin: 0 auto;
+              text-align: center;
+           }
+      }
+      .footer__logo {
+         width: 14rem;
+      }
+     }

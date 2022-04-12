@@ -446,6 +446,9 @@ footer .footer {
     text-align: center;
   }
 }
+footer .footer .social-medias__logo {
+  margin-left: 1rem;
+}
 footer .footer__logo {
   width: 14rem;
 }

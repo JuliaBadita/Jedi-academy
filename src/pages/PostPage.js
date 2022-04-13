@@ -6,6 +6,7 @@ import Box from '@mui/material/Box';
 import Skeleton from '@mui/material/Skeleton';
 import MarkdownView from 'react-showdown';
 import PostsApi from '../services/postsAPI'
+import SideBarPost from '../components/SideBarPost'
 
 
 export default function Post(){
@@ -28,6 +29,7 @@ export default function Post(){
     return (
         <div className="post">
         <Grid container>
+            <Grid item xs={8}>
             {isLoading ? (
                 <Box>
                     <Skeleton variant="rectangular" width={210} height={118} />
@@ -37,6 +39,7 @@ export default function Post(){
                 </Box>
             ) : (
                 <>
+                
                     <img src={post.attributes.img.datasrc.data !== null ? post.attributes.img.datasrc.data.attributes.formats.medium.url : EMPTY_IMG} alt={post.attributes.img.alt} />
                     <h1>{post.attributes.title}</h1>
                     <MarkdownView
@@ -45,6 +48,8 @@ export default function Post(){
                     />
                 </>
             )}
+            </Grid>
+            <SideBarPost />
         </Grid>
         </div>
 

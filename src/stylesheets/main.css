@@ -427,7 +427,7 @@ body {
     ============================================================================ */
 footer {
   position: absolute;
-  padding: 2rem;
+  padding: 1rem;
   background-color: white;
   bottom: 0;
   width: 100%;
@@ -473,9 +473,9 @@ footer .footer__logo {
   margin: 0 auto;
 }
 .header nav .navbar__underline {
-  width: 81.8%;
+  width: 81%;
   margin: 0 auto;
-  margin-top: 0.3rem;
+  margin-top: 0.28rem;
   color: #BA9100;
   border: 0.0625rem solid #BA9100;
   border-radius: 0.625rem;
@@ -525,12 +525,18 @@ footer .footer__logo {
 
 @media screen and (max-width: 1100px) {
   .navlinks__desktop {
-    font-size: 20px;
+    font-size: 22px;
   }
 }
+@media screen and (max-width: 1100px) {
+  .navbar__logo, .footer__logo {
+    width: 11rem !important;
+  }
+}
+
 @media screen and (max-width: 1050px) {
   .navlinks__desktop {
-    font-size: 18px;
+    font-size: 21px;
   }
 }
 @media (max-width: 990px) {
@@ -556,7 +562,7 @@ footer .footer__logo {
   display: block;
   position: relative;
   width: 100%;
-  top: -5.5rem;
+  top: -4.5rem;
   transition: margin 600ms;
   cursor: pointer;
 }

@@ -13,6 +13,19 @@ async function findAll(){
     return res_1.data;
 }
 
+async function findXRandom(nbPosts){
+    const res = await fetch(`${API_URL_POSTS}?${POPULATE_POSTS}`,
+        {
+            method: "GET",
+            headers: {
+                'Accept': 'Application/json',
+                'Authorization': `Bearer ${API_TOKEN}`
+            }
+        });
+    const res_1 = await res.json();
+    return res_1.data;
+}
+
 async function findOneWithSlug(slug){
     const qs = require('qs');
     const query = qs.stringify({
@@ -41,5 +54,5 @@ async function findOneWithSlug(slug){
 }
 
 export default {
-    findAll, findOneWithSlug
+    findAll, findOneWithSlug, findXRandom
 };

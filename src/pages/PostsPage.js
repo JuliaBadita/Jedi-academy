@@ -35,7 +35,7 @@ export default function Posts(){
         }
         //return the item which contains the user input
         else {
-            return el.attributes.content.includes(filterText);
+            return el.attributes.content.toLowerCase().includes(filterText);
         }
         
     });

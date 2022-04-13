@@ -11,6 +11,7 @@ function App() {
       <div className="App">
         <Router>
           <Routes>
+            <Route path="/" exact element={<div>Accueil</div>} />
             <Route path="/infos-utiles" exact element={<Posts />} />
             <Route path="/infos-utiles/:slug" element={<Post />} />
           </Routes>

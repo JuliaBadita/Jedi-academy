@@ -8,7 +8,9 @@ function App() {
     <>
       <Navbar />
       <Burger />
-      <Footer />
+      <div className="page-container">
+        <Footer />
+      </div>
     </>
   )
 }

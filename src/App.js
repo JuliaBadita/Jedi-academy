@@ -1,9 +1,10 @@
-import React from 'react';
-import './stylesheets/main.css';
-import Posts from './pages/PostsPage.js'
-import Post from './pages/PostPage.js'
-import Container from '@mui/material/Container';
-import {BrowserRouter as Router, Route, Routes} from 'react-router-dom'
+import React from "react";
+import "./stylesheets/main.css";
+import Posts from "./pages/PostsPage.js";
+import Post from "./pages/PostPage.js";
+import Members from "./components/Members.js"; //to change to MembersPage after
+import Container from "@mui/material/Container";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
           <Routes>
             <Route path="/infos-utiles" exact element={<Posts />} />
             <Route path="/infos-utiles/:slug" element={<Post />} />
+            <Route path="/liste-des-membres" exact element={<Members />} />
           </Routes>
         </Router>
       </div>

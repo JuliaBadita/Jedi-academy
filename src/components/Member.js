@@ -1,8 +1,24 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+import { useParams } from "react-router-dom";
+import { API_URL } from "../config";
+
 export default function Member() {
+  const { id } = useParams();
+  let [memberState, setMember] = useState(null);
+  let [isLoading, setIsLoading] = useState(false);
+
+  useEffect(() => {
+    console.log(id);
+    fetch(`${API_URL}/api/members/${id}`)
+      .then((res) => res.json())
+      .then((res) => {
+        setMember(res);
+        setIsLoading(true);
+      });
+  });
   return (
     <div>
-      <p>Our member</p>
+      <h1>{isLoading ? memberState.attributes.title : "Loading..."}</h1>
     </div>
   );
 }

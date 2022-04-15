@@ -4,19 +4,27 @@ import { FaSearch } from 'react-icons/fa';
 
 export default function SearchBar(props){
 
-    function handleFilterTextChange(e){
+    const handleFilterTextChange = (e) => {
         props.onFilterTextChange(e.target.value);
+    }
+
+    const handleEnterPress = (e) => {
+        if (e.key === "Enter") {
+            e.preventDefault();
+        }
     }
     
     return (
         <form>
             <TextField
-                label="Search..."
+                className="searchBar"
+                label="Recherche..."
                 variant="outlined" 
                 value={props.filterText}
                 onChange={handleFilterTextChange}
+                onKeyPress={handleEnterPress}
                 InputProps={{
-                    endAdornment: <FaSearch/>
+                    endAdornment: <FaSearch className="searchIcon"/>
                 }}
             />  
         </form>

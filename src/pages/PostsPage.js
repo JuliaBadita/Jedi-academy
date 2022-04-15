@@ -1,11 +1,13 @@
 import React, {useEffect, useState} from "react"
 import Grid from '@mui/material/Grid'
-import Box from '@mui/material/Box'
 import Skeleton from '@mui/material/Skeleton'
 import CardPost from '../components/CardPost.js'
 import Masonry from '@mui/lab/Masonry'
 import PostsApi from '../services/postsAPI'
 import SearchBar from '../components/SearchBar'
+import Card from '@mui/material/Card';
+import Title from '../components/Title'
+import Container from '@mui/material/Container';
 
 export default function Posts(){
 
@@ -13,8 +15,11 @@ export default function Posts(){
     const [posts, setPosts] = useState([]);
 
     useEffect(() => {
+        
         fetchAllPosts();
     },[])
+
+    const skeletonArray=[1, 2, 3, 4];
 
     const [filterText, setFilterText] = useState("");
     let handleFilterTextChange = (e) => {
@@ -41,23 +46,30 @@ export default function Posts(){
     });
 
     return (
-        <div className="posts">
-            <h1>Infos utiles</h1>
+        <>
+        <Title title="Infos utiles" />
+        <Container className="posts">
+            
             <SearchBar 
                     filterText={filterText}
                     onFilterTextChange={handleFilterTextChange} />
             <Grid container mt={2}>
                 <Masonry columns={{ xs: 1, sm: 2, md: 4 }} spacing={2}>
-                    {isLoading ? (
-                        <Box>
-                            <Skeleton variant="rectangular" width={210} height={118} />
-                            <Skeleton width="60%" />
-                            <Skeleton />
-                            <Skeleton />
-                        </Box>
-                    ) : filterPosts.map(post => <CardPost key={post.id} post={post}></CardPost>)}
+                    {isLoading ? skeletonArray.map(skeloton => 
+                    (
+                        <Card key={skeloton}  className="cardInfos">
+                            <Skeleton variant="rectangular" height={200} />
+                            <Skeleton width="80%"  style={{ marginBottom: 10, marginTop: 5, marginRight:16, marginLeft:16}}/>
+                            <Skeleton height={20} style={{ marginRight:16, marginLeft:16}}/>
+                            <Skeleton height={20} style={{ marginRight:16, marginLeft:16}}/>
+                            <Skeleton height={20} style={{ marginRight:16, marginLeft:16}}/>
+                            <Skeleton height={20} width="60%" style={{ marginRight:16, marginLeft:16, marginBottom: 10}}/>
+                            <Skeleton height={65} width="82%" style={{ marginRight:20, marginLeft:20}}/>
+                        </Card>
+                    )) : filterPosts.map(post => <CardPost key={post.id} post={post}></CardPost>)}
                 </Masonry>
             </Grid>
-        </div>
+        </Container>
+        </>
     )
 }

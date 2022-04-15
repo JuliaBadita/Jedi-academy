@@ -12,6 +12,7 @@ export default function CardPost({post}){
     const postContent=post.attributes;
     const imgSrc=postContent.img.datasrc.data.attributes.formats.small.url;
     const imgAlt=postContent.img.alt;
+    console.log(`/infos-utiles/${postContent.slug}`)
     return (
         <Card className="cardInfos">
             <CardMedia

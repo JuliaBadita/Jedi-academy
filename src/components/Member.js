@@ -8,7 +8,6 @@ export default function Member() {
   let [isLoading, setIsLoading] = useState(false);
 
   useEffect(() => {
-    console.log(id);
     fetch(`${API_URL}/api/members/${id}`)
       .then((res) => res.json())
       .then((res) => {
@@ -18,7 +17,7 @@ export default function Member() {
   });
   return (
     <div>
-      <h1>{isLoading ? memberState.attributes.title : "Loading..."}</h1>
+      <h1>{isLoading ? memberState.data.attributes.title : "Loading..."}</h1>
     </div>
   );
 }

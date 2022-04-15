@@ -90,4 +90,10 @@
          transform: translateX(70px) scaleX(150) ;
       }
    }
+   a {
+      color:$brand-color-day;
+      &:hover {
+         text-decoration:none;
+      }
+   }
 }

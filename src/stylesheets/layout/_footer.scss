@@ -5,7 +5,7 @@
      footer {
         padding: 1em;
         position: absolute;
-        background-color: $white;
+        background-color: $gray;
         bottom: 0;
         width:100%;
         /// Line above the footer
@@ -126,6 +126,9 @@
               @media screen and (max-width: 800px) {
                  margin-left: 0.4rem;
               }
+              @media (max-width: 480px) {
+                 margin-left: 0.15rem;
+              }
          }
          
          /// Social medias 
@@ -136,7 +139,7 @@
              fill: $gold;
              border-radius: 0.7rem;
              &:hover {
-                fill: $red-lightsaber2;
+                fill: $social-medias;
              }
            }
          }
@@ -166,7 +169,13 @@
 
       /// Container social medias + logo
       .footer__logo-social-medias {
-         margin: 0 auto;
+        margin-left: 6rem;
+        @media (max-width: 1200px) {
+           margin-left: 3rem;
+        }
+        @media(max-width: 840px){
+           margin: 0 auto;
+        }
       }
 
       /// Links

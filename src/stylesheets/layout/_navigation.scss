@@ -6,7 +6,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: $white;
+    background-color: $gray;
 
     /// Logo in the navbar
     .navbar__logo {
@@ -80,15 +80,24 @@
       }
     }
     
-      .navbar__logo {
-        @media screen and (max-width: 1100px) {
-        width: 11rem !important;
+.navbar__logo {
+
+  @media screen and (max-width: 1100px) {
+    width: 11rem !important;
     transform: translate(39%) ;
-    
-      }
-      @media (max-width: 500px) {
-        width: 10.5rem !important;
-      }
+  }
+
+  @media (max-width: 990px) {
+    margin: 0 auto !important;
+  }
+
+  @media (max-width: 500px) {
+    width: 10.5rem !important;
+  }
+
+  @media (max-width: 400px) {
+    width: 10rem !important;
+  }
     }
 
    @media screen and (max-width: 1050px) {
@@ -96,13 +105,6 @@
         font-size: 1.3125rem;
       }
     }
-  
-
-   @media (max-width: 990px) {
-    .navbar__logo {
-      margin: 0 auto !important;
-    }
-  }
 
   @media (max-width: 990px) {
     .navbar__desktop {
@@ -111,7 +113,7 @@
   }
 
   @media (min-width: 990px) {
-    #nav-container {
+    #burger-menu__container {
       display: none;
     }
   }
@@ -119,29 +121,31 @@
 
   /// Burger menu - responsive 
 
-  #nav-container{
+  #burger-menu__container {
     position: relative;
   }
   
  /// Toggle icon
 
- /// Renommer les classes ici /!\
  
-  .toggle-icon {
+  .burger__toggle-icon {
     display: block;
     position: relative;
     width: 100%;
-    top: -4.5rem;
+    top: -4.1rem;
     -webkit-transition: margin 600ms;
     -moz-transition: margin 600ms;
     transition: margin 600ms;
     cursor: pointer;
     z-index: 4;
+    @media screen {
+      
+    }
   }
   
   /// Toggle icon bars 
 
-  .toggle-icon .bar {
+  .burger__toggle-icon .burger__bar {
     display: block;
     width: 3.8em;
     height: 0.25em;
@@ -158,12 +162,12 @@
     -moz-transition-duration: 600ms;
     transition-duration: 600ms;
   }
-    .toggle-icon .bar:nth-of-type(1) {
+    .burger__toggle-icon .burger__bar:nth-of-type(1) {
       -webkit-transition: opacity 300ms;
       -moz-transition: opacity 300ms;
       transition: opacity 300ms;
     }
-    .toggle-icon .bar:nth-of-type(2) {
+    .burger__toggle-icon .burger__bar:nth-of-type(2) {
       -webkit-transform: rotate(-180deg);
       -moz-transform: rotate(-180deg);
       -ms-transform: rotate(-180deg);
@@ -171,8 +175,8 @@
       transform: rotate(-180deg);
     }
 
-    .pushed .toggle-icon {
-    top: -5.5rem;
+    .pushed .burger__toggle-icon {
+    top: -5rem;
     left: 0.2rem;
       transform: translateX(11.25rem);
       transition: all 0.9s ease;
@@ -181,11 +185,11 @@
   
 
     /// Action when we push the toggle icon 
-    .pushed .bar:nth-of-type(1) {
+    .pushed .burger__bar:nth-of-type(1) {
       opacity: 0;
     }
   
-    .pushed .bar:nth-of-type(2) {
+    .pushed .burger__bar:nth-of-type(2) {
       margin-left: 1.4em;
       -webkit-transform: rotate(-137deg) translateY(-1.5em);
       -moz-transform: rotate(-137deg) translateY(-1.5em);
@@ -194,7 +198,7 @@
       transform: rotate(-137deg) translateY(-1.5em);
     }
   
-    .pushed .bar:nth-of-type(3) {
+    .pushed .burger__bar:nth-of-type(3) {
       margin-left: 0.5em;
       -webkit-transform: rotate(-42deg);
       -moz-transform: rotate(-42deg);
@@ -204,18 +208,18 @@
     }
   
   
-  .pushed .toggle-icon:hover .bar:nth-of-type(2) {
+  .pushed .burger__toggle-icon:hover .burger__bar:nth-of-type(2) {
     border-right-color: $red-lightsaber;
     box-shadow: 0.4em 0 0.6em 0.1em $red-lightsaber2;
   }
-  .pushed .toggle-icon:hover .bar:nth-of-type(3) {
+  .pushed .burger__toggle-icon:hover .burger__bar:nth-of-type(3) {
     border-right-color: $blue-lightsaber;
     box-shadow: 0.4em 0 0.6em 0.1em $blue-lightsaber2;
   }
 
 
   /// Content inside the burger menu 
-  .content{
+  .burger-menu__content {
     position: absolute;
     width: 15.625rem;
     height: 100%;
@@ -225,7 +229,7 @@
     transform: translateX(-25rem);
     transition: all 0.9s ease;
     box-shadow: 0.0625rem 0 0.3125rem $dark-mode-shadow ;
-    background-color: $white;
+    background-color: $gray;
     z-index: 6;
 
     
@@ -285,7 +289,7 @@
   }
   
   /// Show the .content when we click on the toggle icon
-  .content-show{
+  .burger-menu__content-show{
     transform: translateX(0);
     transition: all 0.9s ease;
   }

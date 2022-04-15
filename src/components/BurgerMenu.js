@@ -8,13 +8,13 @@ import '../stylesheets/main.scss'
 export default class Burger extends Component {
   jQuerycode = () => {
     // toggle icon
-    $('.toggle-icon').click(function () {
-      $('#nav-container').toggleClass('pushed')
+    $('.burger__toggle-icon').click(function () {
+      $('#burger-menu__container').toggleClass('pushed')
     })
 
     // burger menu content
-    $('.link').click(function () {
-      $('.content').toggleClass('content-show')
+    $('.burger__links').click(function () {
+      $('.burger-menu__content').toggleClass('burger-menu__content-show')
     })
   }
 
@@ -25,16 +25,18 @@ export default class Burger extends Component {
   render() {
     return (
       <>
-        <section class="reserve" id="nav-container">
-          <div type="button" class="link toggle-icon" id="nav-icon">
-            <span class="bar"></span>
-            <span class="bar"></span>
-            <span class="bar"></span>
+        {/* Burger Menu icon  */}
+        <section id="burger-menu__container">
+          <div type="button" class="burger__links burger__toggle-icon">
+            <span class="burger__bar"></span>
+            <span class="burger__bar"></span>
+            <span class="burger__bar"></span>
           </div>
         </section>
 
-        <section class="content">
-          <ul id="li-head"></ul>
+        {/* Burger Menu content  */}
+        <section class="burger-menu__content">
+          <ul></ul>
           <li>
             <NavLink to="/">Accueil</NavLink>
           </li>

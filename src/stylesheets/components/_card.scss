@@ -1,0 +1,38 @@
+.posts {
+    .cardInfos {
+        background-color: #FAFAFA;
+        color:$brand-color-day;
+        background-image: linear-gradient(rgb(0, 0, 0), #FAFAFA max(3rem, 12.5rem));
+        box-shadow: 0px 1px 8px -1px $brand-color-day;
+        border-radius: 20px;
+        margin:10px;
+        transition-property: width,margin;
+        transition-duration: .4s;
+
+        h2 {
+            font-size:1.2rem;
+            letter-spacing: 1.5px;
+            margin-top: 5px;
+        }
+        img {
+            mix-blend-mode: overlay;
+        }
+        .cardContent {
+            padding: 5px 16px 10px;
+        }
+        /*&:hover {
+            @include mediaMasonry-min('small'){
+                width: calc(100.00% - 10px);
+                margin:0px;
+            }
+            @include mediaMasonry-min('medium'){
+                width: calc(50.00% - 10px);
+                margin:0px;
+            }
+            @include mediaMasonry-min('large'){
+                width: calc(25.00% - 10px);
+                margin:5px;
+            }
+        }*/
+    }
+}

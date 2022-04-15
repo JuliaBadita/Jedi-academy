@@ -2,12 +2,10 @@ import React from 'react';
 import './stylesheets/main.css';
 import Posts from './pages/PostsPage.js'
 import Post from './pages/PostPage.js'
-import Container from '@mui/material/Container';
 import {BrowserRouter as Router, Route, Routes} from 'react-router-dom'
 
 function App() {
   return (
-    <Container>
       <div className="App">
         <Router>
           <Routes>
@@ -17,7 +15,6 @@ function App() {
           </Routes>
         </Router>
       </div>
-    </Container>
   );
 }
 

@@ -5,7 +5,7 @@
      footer {
         padding: 1em;
         position: absolute;
-        background-color: white;
+        background-color: $white;
         bottom: 0;
         width:100%;
         /// Line above the footer
@@ -13,6 +13,9 @@
            width: 80%;
            margin: 0 auto;
            border: 0.0625rem solid $gold;
+           @media (max-width: 480px) {
+              margin-right: 3rem;
+           }
         }
         ul {
            list-style: none;
@@ -48,6 +51,7 @@
                line-height: 1.25rem;
                font-size: 1rem;
 
+                /// Responsive mode for the articles
                @media(max-width: 840px){
                   width: 50%;
                   margin-bottom: 1.875rem;
@@ -57,6 +61,7 @@
                @media(max-width: 480px){ 
                   width: 100%;
                   margin-bottom: 1.4rem;
+                  margin-right: 1.5rem;
                }
 
                /// Titles
@@ -67,12 +72,14 @@
                   color: $gold;
                   text-decoration: underline;
                   font-size: 1.0625rem;
-                  
+       
+            /// Responsive mode for the titles
             @media (max-width: 480px) {
                margin-bottom: 0.5rem;
             }
                }
             }
+
             li {
                font-weight: 300;
                display: block;
@@ -81,7 +88,7 @@
                /// Links 
                a{
                   text-decoration: none;
-                  color: black;
+                  color: $black;
 
                   /// Links hover
                   &:hover {
@@ -98,25 +105,46 @@
          }
         }
 
-        /// article in the middle 
+        /// Article in the middle 
       .footer__middle {
            display: flex;
            align-items: center;
            flex-direction: column;
+
+            /// Responsive mode for the middle article
            @media screen and (max-width: 800px) {
               width: 12rem;
               text-align: center;
            }
 
-           /// Social medias 
-           .social-medias__logo {
+           .footer__container-social-medias {
+              margin-left: 2rem;
+              @media (max-width: 1000px) {
+                 margin-left: 1rem;
+              }
+
+              @media screen and (max-width: 800px) {
+                 margin-left: 0.4rem;
+              }
+         }
+         
+         /// Social medias 
+         .social-medias__logo {
              margin-left: 1rem;
+             width: 30px;
+             height: 30px;
+             fill: $gold;
+             border-radius: 0.7rem;
+             &:hover {
+                fill: $red-lightsaber2;
+             }
            }
          }
          
+         /// Article "about us" 
          .footer__about {
            @media (max-width: 480px) {
-              margin-right: 3rem;
+              margin-right: 4rem !important;
               margin-left: 3rem;
            }
          }
@@ -129,6 +157,8 @@
          /// Footer logo
       .footer__logo {
          width: 14rem;
+
+          /// Responsive mode for the logo
          @media screen and (max-width: 1000px) {
             width: 12rem;
           }
@@ -150,11 +180,10 @@
          margin-top: 1.6rem;
          text-align: center;
          font-size: 0.875rem;
+
+          /// Responsive mode for the copyrights
          @media (max-width: 850px) {
             font-size: 0.75rem;
          }
       }
    }
-   
-
-

@@ -60,8 +60,6 @@ const Navbar = () => {
           <i class="dark-mode-ball"></i>
         </label>
       </article>
-
-      <span class="darkened-background"></span>
     </header>
   )
 }

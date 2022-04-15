@@ -340,10 +340,10 @@ template {
 }
 
 html {
-  box-sizing: border-box;
   overflow-y: auto;
   overflow-x: hidden;
   scroll-behavior: smooth;
+  box-sizing: border-box;
 }
 
 * {
@@ -426,38 +426,170 @@ body {
    Footer
     ============================================================================ */
 footer {
+  padding: 1em;
   position: absolute;
-  padding: 1rem;
-  background-color: white;
+  background-color: #ffffff;
   bottom: 0;
   width: 100%;
-  display: flex;
-  justify-content: space-evenly;
-  margin: 0 auto;
-  padding: 50px 0 50px;
 }
-footer .footer {
+footer hr {
+  width: 80%;
+  margin: 0 auto;
+  border: 0.0625rem solid #BA9100;
+}
+@media (max-width: 480px) {
+  footer hr {
+    margin-right: 3rem;
+  }
+}
+footer ul {
+  list-style: none;
+}
+footer .footer__container {
+  max-width: 1500px;
+  margin: 0 auto;
+}
+@media (max-width: 1600px) {
+  footer .footer__container {
+    max-width: 1350px;
+  }
+}
+@media (max-width: 1500px) {
+  footer .footer__container {
+    max-width: 1100px;
+  }
+}
+@media (max-width: 1200px) {
+  footer .footer__container {
+    max-width: 950px;
+  }
+}
+@media (max-width: 1000px) {
+  footer .footer__container {
+    max-width: 800px;
+  }
+}
+footer .footer__container .footer__row {
+  margin-top: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+}
+footer .footer__container .footer__row article {
+  width: 25%;
+  line-height: 1.25rem;
+  font-size: 1rem;
+}
+@media (max-width: 840px) {
+  footer .footer__container .footer__row article {
+    width: 50%;
+    margin-bottom: 1.875rem;
+    text-align: center;
+    font-size: 0.9375rem;
+  }
+}
+@media (max-width: 480px) {
+  footer .footer__container .footer__row article {
+    width: 100%;
+    margin-bottom: 1.4rem;
+    margin-right: 1.5rem;
+  }
+}
+footer .footer__container .footer__row article h4 {
+  margin-bottom: 1rem;
+  font-weight: 500;
+  font-family: "Rajdhani", sans-serif;
+  color: #BA9100;
+  text-decoration: underline;
+  font-size: 1.0625rem;
+}
+@media (max-width: 480px) {
+  footer .footer__container .footer__row article h4 {
+    margin-bottom: 0.5rem;
+  }
+}
+footer .footer__container .footer__row li {
+  font-weight: 300;
+  display: block;
+  transition: all 0.3s ease;
+}
+footer .footer__container .footer__row li a {
+  text-decoration: none;
+  color: #000000;
+}
+footer .footer__container .footer__row li a:hover {
+  color: #BA9100;
+}
+footer .footer__container .footer__row li:hover {
+  color: #BA9100;
+  padding-right: 0.5rem;
+}
+footer .footer__middle {
   display: flex;
   align-items: center;
   flex-direction: column;
 }
 @media screen and (max-width: 800px) {
-  footer .footer {
+  footer .footer__middle {
     width: 12rem;
-    font-size: smaller;
-    margin: 0 auto;
     text-align: center;
   }
 }
-footer .footer .social-medias__logo {
+footer .footer__middle .footer__container-social-medias {
+  margin-left: 2rem;
+}
+@media (max-width: 1000px) {
+  footer .footer__middle .footer__container-social-medias {
+    margin-left: 1rem;
+  }
+}
+@media screen and (max-width: 800px) {
+  footer .footer__middle .footer__container-social-medias {
+    margin-left: 0.4rem;
+  }
+}
+footer .footer__middle .social-medias__logo {
   margin-left: 1rem;
+  width: 30px;
+  height: 30px;
+  fill: #BA9100;
+  border-radius: 0.7rem;
+}
+footer .footer__middle .social-medias__logo:hover {
+  fill: rgba(205, 40, 44, 0.75);
+}
+@media (max-width: 480px) {
+  footer .footer__about {
+    margin-right: 4rem !important;
+    margin-left: 3rem;
+  }
+}
+footer .footer__right {
+  text-align: end;
 }
 footer .footer__logo {
   width: 14rem;
 }
+@media screen and (max-width: 1000px) {
+  footer .footer__logo {
+    width: 12rem;
+  }
+}
+footer .footer__logo-social-medias {
+  margin: 0 auto;
+}
 footer .footer__links {
   display: flex;
   flex-direction: column;
+}
+footer .footer__copyrights {
+  margin-top: 1.6rem;
+  text-align: center;
+  font-size: 0.875rem;
+}
+@media (max-width: 850px) {
+  footer .footer__copyrights {
+    font-size: 0.75rem;
+  }
 }
 
 /* ============================================================================
@@ -475,6 +607,7 @@ footer .footer__links {
 .header .navbar__logo {
   width: 14rem;
   margin: 1rem;
+  z-index: 6;
 }
 .header nav {
   margin: 0 auto;
@@ -522,28 +655,37 @@ footer .footer__links {
 }
 .header nav ul li {
   margin: 0 1rem;
-  font-size: 23px;
+  font-size: 1.4375rem;
   font-family: "Rajdhani", sans-serif;
 }
 .header nav ul li a {
   text-decoration: none;
   color: #BA9100;
 }
+.header nav ul li a:hover {
+  font-weight: 700;
+}
 
 @media screen and (max-width: 1100px) {
   .navlinks__desktop {
-    font-size: 22px;
+    font-size: 1.375rem;
   }
 }
 @media screen and (max-width: 1100px) {
-  .navbar__logo, .footer__logo {
+  .navbar__logo {
     width: 11rem !important;
+    transform: translate(39%);
+  }
+}
+@media (max-width: 500px) {
+  .navbar__logo {
+    width: 10.5rem !important;
   }
 }
 
 @media screen and (max-width: 1050px) {
   .navlinks__desktop {
-    font-size: 21px;
+    font-size: 1.3125rem;
   }
 }
 @media (max-width: 990px) {
@@ -552,7 +694,7 @@ footer .footer__links {
   }
 }
 @media (max-width: 990px) {
-  .navbar__desktop, .dark-mode-toggle {
+  .navbar__desktop {
     display: none;
   }
 }
@@ -572,6 +714,7 @@ footer .footer__links {
   top: -4.5rem;
   transition: margin 600ms;
   cursor: pointer;
+  z-index: 4;
 }
 
 .toggle-icon .bar {
@@ -579,7 +722,7 @@ footer .footer__links {
   width: 3.8em;
   height: 0.25em;
   margin: 0.8em;
-  border-right: 2.8em solid black;
+  border-right: 2.8em solid #000000;
   border-left: 0.6em solid #BA9100;
   box-sizing: border-box;
   transition-property: transform, margin, border-right-color, box-shadow;
@@ -592,6 +735,14 @@ footer .footer__links {
 
 .toggle-icon .bar:nth-of-type(2) {
   transform: rotate(-180deg);
+}
+
+.pushed .toggle-icon {
+  top: -5.5rem;
+  left: 0.2rem;
+  transform: translateX(11.25rem);
+  transition: all 0.9s ease;
+  z-index: 7;
 }
 
 .pushed .bar:nth-of-type(1) {
@@ -618,6 +769,74 @@ footer .footer__links {
   box-shadow: 0.4em 0 0.6em 0.1em rgba(83, 94, 247, 0.65);
 }
 
+.content {
+  position: absolute;
+  width: 15.625rem;
+  height: 100%;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  transform: translateX(-25rem);
+  transition: all 0.9s ease;
+  box-shadow: 0.0625rem 0 0.3125rem #646262;
+  background-color: #ffffff;
+  z-index: 6;
+}
+@media (min-width: 990px) {
+  .content {
+    display: none;
+  }
+}
+.content ul {
+  font-size: 2rem;
+}
+.content li, .content a {
+  text-align: center;
+  list-style: none;
+  text-decoration: none;
+  font-family: "Rajdhani", sans-serif;
+  color: #000000;
+  font-size: 1.5625rem;
+  padding: 0.3125rem;
+  position: relative;
+  bottom: -1rem;
+  line-height: 3rem;
+}
+.content li:hover, .content a:hover {
+  font-size: 1.625rem;
+  font-weight: 600;
+  color: #BA9100;
+  text-shadow: 0 0 0.0625rem #ffffff, 0 0 0.0625rem #646262;
+}
+.content li a.active, .content a a.active {
+  position: relative;
+  color: #BA9100;
+  font-weight: bold;
+}
+.content li a.active::after, .content a a.active::after {
+  content: "";
+  height: 0.1875rem;
+  width: 0;
+  background: #BA9100;
+  position: absolute;
+  border-radius: 0.625rem;
+  bottom: 0.3rem;
+  left: 50%;
+  transform: translateX(-50%);
+  -webkit-animation: anim 0.3s ease forwards;
+  animation: anim 0.6s ease forwards;
+}
+@keyframes anim {
+  to {
+    width: 100%;
+  }
+}
+
+.content-show {
+  transform: translateX(0);
+  transition: all 0.9s ease;
+}
+
 /* ============================================================================
    Buttons
     ============================================================================ */
@@ -627,6 +846,12 @@ footer .footer__links {
 .dark-mode-toggle {
   position: relative;
   margin-right: 3.5rem;
+  z-index: 10;
+}
+@media (max-width: 990px) {
+  .dark-mode-toggle {
+    left: 2rem;
+  }
 }
 
 .dark-mode-checkbox {
@@ -655,10 +880,11 @@ footer .footer__links {
   width: 1.4rem;
   position: absolute;
   top: 0.23rem;
-  left: 0.17rem;
+  left: 0.13rem;
   right: 0.1rem;
   transform: translateX(0px);
   transition: transform 0.4s cubic-bezier(0.45, -1.12, 0.35, 1.78);
+  z-index: 5;
 }
 
 .dark-mode-checkbox:checked + .dark-mode-label .dark-mode-ball {
@@ -675,6 +901,7 @@ footer .footer__links {
 
 .sun__dark-mode {
   margin-left: 1rem;
+  z-index: 1;
 }
 
 @media screen and (max-width: 1150px) {
@@ -689,6 +916,7 @@ footer .footer__links {
     width: 1.3rem;
     top: 0.13rem;
     left: 0.145rem;
+    z-index: 100;
   }
 
   .moon__dark-mode {
@@ -698,5 +926,6 @@ footer .footer__links {
   .sun__dark-mode {
     height: 1rem;
     margin-left: 1.1rem;
+    z-index: 1;
   }
 }/*# sourceMappingURL=main.css.map */

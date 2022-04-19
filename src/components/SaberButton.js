@@ -1,7 +1,6 @@
 import React from "react"
 
 export default function SaberButton({text, link}){
-    console.log(text);
     return (
         <div className="buttonSaber">
             <a href={link}>

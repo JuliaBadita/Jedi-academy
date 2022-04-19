@@ -27,6 +27,8 @@
 // 5. Components
 @import
   'components/searchbar',
+  'components/sidebar',
+  'components/gridcontainer',
   'components/stars',
   'components/icons',
   'components/card',
@@ -35,7 +37,8 @@
 
 // 6. Page-specific styles
 @import
-  'pages/home';
+  'pages/home',
+  'pages/post';
 
 // 7. Themes
 @import

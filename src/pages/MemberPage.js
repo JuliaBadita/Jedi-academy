@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from "react";
 import { useParams, Link } from "react-router-dom";
-import { API_URL } from "../config";
+
 import Skeleton from "@mui/material/Skeleton";
 import Grid from "@mui/material/Grid";
 import Button from "@mui/material/Button";
 import List from "@mui/material/List";
 import ListItem from "@mui/material/ListItem";
-// import Divider from "@mui/material/Divider";
+
 import ListItemText from "@mui/material/ListItemText";
 import ListItemAvatar from "@mui/material/ListItemAvatar";
 import Avatar from "@mui/material/Avatar";
@@ -15,19 +15,24 @@ import TextField from "@mui/material/TextField";
 
 import { AiFillCaretLeft } from "react-icons/ai";
 
+import MembersAPI from "../services/membersAPI";
+
+import FormMember from "../components/forms/FormMember";
+
 export default function Member() {
   const { id } = useParams();
   let [memberState, setMember] = useState(null);
   let [isLoading, setIsLoading] = useState(false);
 
   useEffect(() => {
-    fetch(`${API_URL}/api/members/${id}`)
-      .then((res) => res.json())
-      .then((res) => {
-        setMember(res);
-        setIsLoading(true);
-      });
+    fetchMember();
   });
+
+  const fetchMember = async () => {
+    const data = await MembersAPI.findOne(id);
+    setMember(data);
+    setIsLoading(true);
+  };
   return (
     <div>
       <nav className="memberNav">
@@ -75,25 +80,7 @@ export default function Member() {
 
       <Grid container spacing={2}>
         <Grid item md={6}>
-          <form>
-            <div>
-              <TextField id="pseudo" label="Pseudo" type="text" />
-            </div>
-
-            <div>
-              <TextField
-                id="standard-multiline-static"
-                label="Multiline"
-                multiline
-                rows={4}
-                variant="standard"
-              />
-            </div>
-
-            <div>
-              <Button variant="contained">Contained</Button>
-            </div>
-          </form>
+          <FormMember />
         </Grid>
 
         <Grid item md={6}>

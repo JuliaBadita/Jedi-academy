@@ -17,7 +17,7 @@ export default function CardMember({ member }) {
           component="img"
           height="140"
           image={member.attributes.image}
-          alt="green iguana"
+          alt="Starswar members"
         />
         <CardContent>
           <Typography gutterBottom variant="h5" component="div">

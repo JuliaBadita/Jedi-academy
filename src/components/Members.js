@@ -2,29 +2,24 @@ import React, { useEffect, useState } from "react";
 import CardMember from "./CardMember";
 
 import Grid from "@mui/material/Grid";
-// import Box from "@mui/material/Box";
+
 import Stack from "@mui/material/Stack";
 import Skeleton from "@mui/material/Skeleton";
+import MembersAPI from "../services/membersAPI";
 
 export default function Members() {
   const [isLoading, setIsLoading] = useState(true);
   const [members, setMembers] = useState(null);
 
   useEffect(() => {
-    fetch("https://admin-academie-jedi.herokuapp.com/api/members", {
-      method: "GET",
-      headers: {
-        Accept: "Application/json",
-      },
-    })
-      .then((res) => res.json())
-      .then((response) => {
-        setTimeout(() => {
-          setMembers(response.data);
-          setIsLoading(false);
-        }, 2000);
-      });
+    fetchAllMembers();
   }, []);
+
+  const fetchAllMembers = async () => {
+    const response = await MembersAPI.findAll();
+    setMembers(response.data);
+    setIsLoading(false);
+  };
   return (
     <div className="members">
       <h1>Liste des membres</h1>

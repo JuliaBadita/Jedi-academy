@@ -1,5 +1,5 @@
 import React from "react";
-import "./stylesheets/main.css";
+import "./stylesheets/main.scss";
 import Posts from "./pages/PostsPage.js";
 import Post from "./pages/PostPage.js";
 import Members from "./components/Members.js";

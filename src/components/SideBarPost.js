@@ -5,6 +5,7 @@ import PreviousNextButton from "./PreviousNextButton";
 import PostsApi from '../services/postsAPI'
 import Skeleton from '@mui/material/Skeleton'
 import {useNavigate} from 'react-router-dom'
+import RandomArray from '../functions/RandomArray'
 
 export default function SideBarPost(){
     const [isLoading, setIsLoading] = useState(true)
@@ -16,7 +17,9 @@ export default function SideBarPost(){
 
     const fetchAllPosts = async () => {
         const data = await PostsApi.findAll();
-        setPosts(data);
+        const dataArray=RandomArray(data, 3);
+        console.log(dataArray);
+        setPosts(dataArray);
         setIsLoading(false);
     }
     const skeletonArray=[1, 2, 3];

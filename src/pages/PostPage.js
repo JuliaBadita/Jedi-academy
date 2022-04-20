@@ -10,6 +10,7 @@ import Container from '@mui/material/Container';
 import Title from '../components/Title'
 import PreviousNextButton from "../components/PreviousNextButton";
 import { useNavigate } from 'react-router-dom';
+import {withRouter} from 'react-router';
 
 
 export default function Post(){
@@ -21,7 +22,7 @@ export default function Post(){
 
     useEffect ( () => {
         fetchPostWithSlug();
-    }, [])
+    }, [slug])
 
     const fetchPostWithSlug = async () => {
         const data = await PostsApi.findOneWithSlug(slug);

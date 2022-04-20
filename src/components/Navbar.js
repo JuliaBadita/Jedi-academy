@@ -56,12 +56,12 @@ const Navbar = () => {
         </nav>
 
         {/* Dark mode toggle  */}
-        <article class="dark-mode-toggle">
-          <input type="checkbox" class="dark-mode-checkbox" id="dark-mode" />
+        <article className="dark-mode-toggle">
+          <input type="checkbox" className="dark-mode-checkbox" id="dark-mode" />
           <label
             onClick={() => setDarkMode(!darkMode)}
-            for="dark-mode"
-            class="dark-mode-label"
+            htmlFor="dark-mode"
+            className="dark-mode-label"
           >
             <img
               src={moon}
@@ -73,7 +73,7 @@ const Navbar = () => {
               className="sun__dark-mode"
               alt="Soleil pour le bouton dark mode"
             />
-            <i class="dark-mode-ball"></i>
+            <i className="dark-mode-ball"></i>
           </label>
         </article>
       </header>

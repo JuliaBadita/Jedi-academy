@@ -10,16 +10,15 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
 function App() {
   return (
     <>
-      <Navbar />
-      <Burger />
-      <CardsHome />
-      <Footer />
       <Router>
+        <Navbar />
+        <Burger />
         <Routes>
-          <Route path="/" exact element={<div>Accueil</div>} />
+          <Route path="/" exact element={<CardsHome />} />
           <Route path="/infos-utiles" exact element={<Posts />} />
           <Route path="/infos-utiles/:slug" element={<Post />} />
         </Routes>
+        <Footer />
       </Router>
     </>
   )

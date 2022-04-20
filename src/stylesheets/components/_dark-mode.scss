@@ -12,13 +12,23 @@
   }
   footer {
     background-color: $black;
-    article {
-      color: $white;
+    .footer__container {
+      .footer__row {
+        article {
+          color: $white;
+          a {
+            color: $white;
+            &:visited {
+              color: $white;
+            }
+            &:hover{
+              color: $gold;
+            }
+          }
+      }
+    }
     }
   }
-    a {
-      color: $white;
-    }
 
     .div__container {
       background-color: $black;

@@ -780,7 +780,7 @@ footer .footer__copyrights {
 }
 
 .pushed .burger__toggle-icon:hover .burger__bar:nth-of-type(2) {
-  border-right-color: #f90d1d;
+  border-right-color: #f8424e;
   box-shadow: 0.3em 0 0.4em 0.1em #cd282c;
 }
 
@@ -868,6 +868,32 @@ footer .footer__copyrights {
     ============================================================================ */
 .dark .dark-mode-label {
   background: rgb(183, 10, 10);
+}
+.dark .header {
+  background-color: #000000;
+}
+.dark footer {
+  background-color: #000000;
+}
+.dark footer article {
+  color: #ffffff;
+}
+.dark a {
+  color: #ffffff;
+}
+.dark .div__container {
+  background-color: #000000;
+}
+.dark .burger__toggle-icon .burger__bar {
+  border-right: 2.8em solid #cd282c;
+  border-left: 0.6em solid #BA9100;
+}
+.dark .burger-menu__content {
+  background-color: #000000;
+}
+.dark .pushed .burger__toggle-icon:hover .burger__bar:nth-of-type(3) {
+  border-right-color: rgb(77, 196, 77);
+  box-shadow: 0.3em 0 0.4em 0.1em rgb(72, 215, 56);
 }
 
 .dark-mode-toggle {

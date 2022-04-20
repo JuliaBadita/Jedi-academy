@@ -67,7 +67,10 @@ const Footer = () => {
               <h4>Liens utiles</h4>
               <ul>
                 <li>
-                  <a href="https://www.starwars.com/">
+                  <a
+                    href="https://www.starwars.com/"
+                    className="footer__dark-mode"
+                  >
                     Site officiel Star Wars
                   </a>
                 </li>

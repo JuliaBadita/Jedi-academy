@@ -2,13 +2,44 @@
     Dark mode
      ============================================================================ */
 
+     /// Here are the dark mode parameters
 .dark {
   .dark-mode-label {
     background: rgb(183, 10, 10);
   }
+  .header {
+    background-color: $black;
+  }
+  footer {
+    background-color: $black;
+    article {
+      color: $white;
+    }
+  }
+    a {
+      color: $white;
+    }
+
+    .div__container {
+      background-color: $black;
+    }
+
+    .burger__toggle-icon .burger__bar {
+      border-right: 2.8em solid $red-lightsaber2;
+      border-left: 0.6em solid $gold; 
+    }
+    .burger-menu__content {
+      background-color: $black;
+    }
+    .pushed .burger__toggle-icon:hover .burger__bar:nth-of-type(3) {
+      border-right-color: rgb(77, 196, 77);
+      box-shadow: 0.3em 0 0.4em 0.1em rgb(72, 215, 56);
+    }
 }
 
-// Dark mode button
+
+
+// Here, the Dark mode button itself
 
 .dark-mode-toggle {
    position: relative;

@@ -12,6 +12,9 @@ Cards
     text-decoration: underline;
 }
 
+
+/// Images 
+
 .card1__home {
     transform:perspective(800px) rotateY(-18deg);
 }
@@ -32,6 +35,8 @@ Cards
     box-shadow: 0 0.0625rem 0.5rem -0.0625rem $gold;
 }
 
+
+// Grid 
 .home__cards-grid {
     display:grid;
     place-items:center;
@@ -73,6 +78,8 @@ Cards
 .home__cards-container:hover img {
     opacity: 0.8;
 }
+
+/// Container for the background
 
 .div__container {
     background: $gray;

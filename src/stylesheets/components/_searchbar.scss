@@ -1,0 +1,27 @@
+.searchBar{
+    .Mui-focused {
+        fieldset {
+            border-color:$brand-color-day;
+        }
+    }
+    label {
+        &:focus {
+            color:$brand-color-day;
+        }
+        line-height:0.9rem;
+    }
+    fieldset{
+        border-radius:20px;
+        height:45px;
+        border-color:rgba($brand-color-day,.5);
+        &:focus {
+            color:$brand-color-day;
+        }
+        legend {
+            color:$brand-color-day;
+        }
+    }
+    input {
+        height:10px;
+    }
+}

@@ -26,13 +26,21 @@
 
 // 5. Components
 @import
+  'components/searchbar',
+  'components/sidebar',
+  'components/gridcontainer',
+  'components/stars',
+  'components/icons',
   'components/button',
-  'components/carousel';
+  'components/carousel',
+  'components/dark-mode', 
+  'components/card';
 
 // 6. Page-specific styles
 @import
   'pages/home',
-  'pages/member';
+  'pages/member',
+  'pages/post';
 
 // 7. Themes
 @import

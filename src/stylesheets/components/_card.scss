@@ -1,0 +1,135 @@
+/* ============================================================================
+Cards
+============================================================================ */
+
+// Home cards 
+
+.home__card-title {
+    margin-top: 3rem;
+    font-family: 'Rajdhani', sans-serif;
+    text-align: center;
+    color: $gold;
+    text-decoration: underline;
+}
+
+
+/// Images 
+
+.card1__home {
+    transform:perspective(800px) rotateY(-18deg);
+}
+
+.card2__home {
+    transform:perspective(800px)       rotateY(0deg);
+}
+
+.card3__home {
+    transform:perspective(800px) rotateY(18deg);
+}
+
+.cards__home{
+    margin-top: 2rem;
+    margin-bottom: 3rem;
+    border-radius: 1.25rem; 
+    border: 0.0625rem solid $gold;
+    box-shadow: 0 0.0625rem 0.5rem -0.0625rem $gold;
+}
+
+
+// Grid 
+.home__cards-grid {
+    display:grid;
+    place-items:center;
+    img {
+        width: 50%;
+        height: 100%;
+        object-fit:cover;
+        -webkit-box-reflect:below 0.125rem linear-gradient(transparent, transparent, #0004);
+        transform-origin:center;
+        transition:0.5s;
+        &:hover {
+            transform:perspective(800px)       rotateY(0deg);
+            opacity:1 !important;
+        }
+        @media (max-width: 980px) {
+            width: 70%;
+        }
+    }
+    .home__cards-container {
+        max-width:1400px;
+       max-height: 1400px;
+  display:flex;
+  justify-content:center;
+  flex-direction: row;
+  align-items:center;
+  gap: 5%;
+  @media (max-width: 980px) {
+      flex-direction: column;
+      height: 87.5rem;
+      width: 100%;
+      gap: 0;
+      .card1__home, .card2__home, .card3__home {
+        transform:perspective(800px) rotateY(0deg);
+      }
+  }
+    }
+}
+
+.home__cards-container:hover img {
+    opacity: 0.8;
+}
+
+/// Container for the background
+
+.div__container {
+    background: $gray;
+    padding: 0.03125rem 0.5625rem 0.03125rem 0.5625rem;
+    margin: 6.25rem;
+    border-radius: 1rem;
+@media (max-width: 980px) {
+    padding: 0.0125rem 0.25rem 0.0125rem 0.25rem;
+    margin: 1.5625rem;
+}
+@media (max-width: 980px) {
+    margin: 0.625rem;
+}
+}
+
+.posts {
+    .cardInfos {
+        background-color: #FAFAFA;
+        color:$brand-color-day;
+        background-image: linear-gradient(rgb(0, 0, 0), #FAFAFA max(3rem, 12.5rem));
+        box-shadow: 0px 1px 8px -1px $brand-color-day;
+        border-radius: 20px;
+        margin:10px;
+        transition-property: width,margin;
+        transition-duration: .4s;
+
+        h2 {
+            font-size:1.2rem;
+            letter-spacing: 1.5px;
+            margin-top: 5px;
+        }
+        img {
+            mix-blend-mode: overlay;
+        }
+        .cardContent {
+            padding: 5px 16px 10px;
+        }
+        /*&:hover {
+            @include mediaMasonry-min('small'){
+                width: calc(100.00% - 10px);
+                margin:0px;
+            }
+            @include mediaMasonry-min('medium'){
+                width: calc(50.00% - 10px);
+                margin:0px;
+            }
+            @include mediaMasonry-min('large'){
+                width: calc(25.00% - 10px);
+                margin:5px;
+            }
+        }*/
+    }
+}

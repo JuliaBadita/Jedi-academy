@@ -11,7 +11,7 @@
    margin-left: auto;
    margin-top: 5px;
    margin-bottom: 5px;
-   padding-top:5px;
+   padding-top: 10px;
    height: 40px;
    max-width: 200px;
    line-height: 30px;
@@ -92,7 +92,11 @@
    }
    a {
       color:$brand-color-day;
+      text-decoration:none;
       &:hover {
+         text-decoration:none;
+      }
+      &:visited {
          text-decoration:none;
       }
    }

@@ -29,7 +29,7 @@ const Footer = () => {
             </article>
 
             {/* Article 2 - Middle section, with the social medias and logo  */}
-            <article class="footer__middle">
+            <article className="footer__middle">
               <div className="footer__logo-social-medias">
                 {/* Logo  */}
                 <img

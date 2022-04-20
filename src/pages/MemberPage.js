@@ -11,13 +11,12 @@ import ListItemText from "@mui/material/ListItemText";
 import ListItemAvatar from "@mui/material/ListItemAvatar";
 import Avatar from "@mui/material/Avatar";
 import Typography from "@mui/material/Typography";
-import TextField from "@mui/material/TextField";
 
 import { AiFillCaretLeft } from "react-icons/ai";
 
 import MembersAPI from "../services/membersAPI";
 
-import FormMember from "../components/forms/FormMember";
+import FormComment from "../components/forms/FormComment";
 
 export default function Member() {
   const { id } = useParams();
@@ -26,7 +25,7 @@ export default function Member() {
 
   useEffect(() => {
     fetchMember();
-  });
+  }, []);
 
   const fetchMember = async () => {
     const data = await MembersAPI.findOne(id);
@@ -48,7 +47,12 @@ export default function Member() {
         <Grid item sm="6">
           <div className="memberImg">
             {isLoading ? (
-              <img src="" />
+              <img
+                src={
+                  memberState.data.attributes.image.data[0].attributes.formats
+                    .small.url
+                }
+              />
             ) : (
               <Skeleton variant="rectangular" width="100%" height={300} />
             )}
@@ -80,7 +84,7 @@ export default function Member() {
 
       <Grid container spacing={2}>
         <Grid item md={6}>
-          <FormMember />
+          <FormComment />
         </Grid>
 
         <Grid item md={6}>

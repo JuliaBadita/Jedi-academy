@@ -16,7 +16,7 @@ export default function CardMember({ member }) {
         <CardMedia
           component="img"
           height="140"
-          image={member.attributes.image}
+          image={member.attributes.image.data[0].attributes.formats.small.url}
           alt="Starswar members"
         />
         <CardContent>

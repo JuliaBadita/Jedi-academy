@@ -12,3 +12,9 @@ padding-right: 2px;
 form div {
     margin-top: 10px;
 }
+
+img {
+    max-width: 100%;
+    max-height: auto;
+    object-fit: cover;
+}

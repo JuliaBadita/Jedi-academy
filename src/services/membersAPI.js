@@ -10,7 +10,9 @@ function findAll() {
 }
 
 function findOne(id) {
-  return fetch(`${API_URL_MEMBERS}/${id}`).then((res) => res.json());
+  return fetch(`${API_URL_MEMBERS}/${id}?${POPULATE_MEMBERS}`).then((res) =>
+    res.json()
+  );
 }
 
 export default {

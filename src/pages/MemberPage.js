@@ -33,7 +33,7 @@ export default function Member() {
     setIsLoading(true);
   };
   return (
-    <div>
+    <div className="member">
       <nav className="memberNav">
         <Link to="/liste-des-membres">
           <Button variant="contained">

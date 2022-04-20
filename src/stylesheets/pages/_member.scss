@@ -1,3 +1,5 @@
+.members, .member{
+
 .memberNav {
     padding: 20px 0;
 }
@@ -9,12 +11,13 @@
 padding-right: 2px;
 }
 
-// form div {
-//     margin-top: 10px;
-// }
+form div {
+    margin-top: 10px;
+}
 
-.member-img {
+img {
     max-width: 100%;
     max-height: auto;
     object-fit: cover;
+}
 }

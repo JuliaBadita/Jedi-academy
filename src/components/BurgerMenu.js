@@ -41,7 +41,7 @@ export default class Burger extends Component {
             <NavLink to="/">Accueil</NavLink>
           </li>
           <li>
-            <NavLink to="/about">Infos utiles</NavLink>
+            <NavLink to="/infos-utiles">Infos utiles</NavLink>
           </li>
           <li>
             <NavLink to="/about">Membres</NavLink>

@@ -4,12 +4,16 @@
 
      /// Here are the dark mode parameters
 .dark {
+
+  // The header in dark mode
   .dark-mode-label {
     background: rgb(183, 10, 10);
   }
   .header {
     background-color: $black;
   }
+
+  // The footer 
   footer {
     background-color: $black;
     .footer__container {
@@ -30,6 +34,8 @@
     }
   }
 
+
+  // Home components 
     .div__container {
       background-color: $black;
     }

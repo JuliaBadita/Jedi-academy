@@ -1,37 +1,55 @@
-import React from "react"
+import React, {useEffect, useState} from "react"
 import Grid from '@mui/material/Grid';
-import SaberButton from './SaberButton';
-import starWars from '../images/star-wars.jpg'
 import goldSeparator from '../images/gold-separator.svg'
 import PreviousNextButton from "./PreviousNextButton";
+import PostsApi from '../services/postsAPI'
+import Skeleton from '@mui/material/Skeleton'
+import {useNavigate} from 'react-router-dom'
 
 export default function SideBarPost(){
+    const [isLoading, setIsLoading] = useState(true)
+    const [posts, setPosts] = useState([]);
+
+    useEffect(() => {
+        fetchAllPosts();
+    },[])
+
+    const fetchAllPosts = async () => {
+        const data = await PostsApi.findAll();
+        setPosts(data);
+        setIsLoading(false);
+    }
+    const skeletonArray=[1, 2, 3];
+
+    let navigate = useNavigate(); 
 
     return (
         <Grid item xs={12} md={4} className="sideBarPost">
             <div className="separator"><img src={goldSeparator} alt="gold separator"/></div>
-            <div className="content"><span className="title"><h2>Autres infos utiles</h2></span>
-            <article className="card">
-                <div className="thumb" style={{backgroundImage: `url(${starWars})`, backgroundRepeat: 'no-repeat', backgroundPosition:'center'}}></div>
-                <div className="infos">
-                    <h3 className="title">C'est quoi Star Wars ?</h3>
-                    <PreviousNextButton isNext="true" text="Go !" onClick="location.href='https://google.com';" width="small" />
+            <div className="content">
+                <div className="sticky">
+                    <span className="title"><h2>Autres infos utiles</h2></span>
+                    {isLoading ? skeletonArray.map(skeloton => 
+                    (
+                        <article className="card" key={skeloton}>
+                            <div className="thumb"></div>
+                            <div className="infos">
+                                <Skeleton height={20} style={{ marginRight:16, marginLeft:16}}/>
+                                <Skeleton height={20} width="60%" style={{ marginRight:30, marginLeft:30}}/>
+                            </div>
+                        </article>
+                    )) : posts.map(post => 
+                    (
+                        <article className="card" key={post.id}>
+                            <div className="thumb" style={{backgroundImage: `url(${post.attributes.img.datasrc.data.attributes.formats.small.url})`, backgroundRepeat: 'no-repeat', backgroundPosition:'center'}}></div>
+                            <div className="infos">
+                                <h3 className="title">{post.attributes.title}</h3>
+                                <PreviousNextButton isNext="true" text="Go !" onClick={() => navigate("/infos-utiles/"+post.attributes.slug)} width="small" />
+                            </div>
+                        </article>
+                    )
+                    )}
                 </div>
-            </article>
-            <article className="card">
-                <div className="thumb" style={{backgroundImage: `url(${starWars})`, backgroundRepeat: 'no-repeat', backgroundPosition:'center'}}></div>
-                <div className="infos">
-                    <h3 className="title">C'est quoi Star Wars ?</h3>
-                    <SaberButton link="" text="Go !" />
-                </div>
-            </article>
-            <article className="card">
-                <div className="thumb" style={{backgroundImage: `url(${starWars})`, backgroundRepeat: 'no-repeat', backgroundPosition:'center'}}></div>
-                <div className="infos">
-                    <h3 className="title">C'est quoi Star Wars ?</h3>
-                    <SaberButton link="" text="Go !" />
-                </div>
-            </article>
             </div>
         </Grid>
     );

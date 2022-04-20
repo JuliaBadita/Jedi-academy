@@ -3,6 +3,10 @@
     text-align:center;
     display:table;
     width:100%;
+    .sticky {
+        position:sticky;
+        top:0px;
+    }
     .separator {
         @include mediaMasonry-min('small'){
             display:none;

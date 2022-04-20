@@ -27,15 +27,15 @@ export default class Burger extends Component {
       <>
         {/* Burger Menu icon  */}
         <section id="burger-menu__container">
-          <div type="button" class="burger__links burger__toggle-icon">
-            <span class="burger__bar"></span>
-            <span class="burger__bar"></span>
-            <span class="burger__bar"></span>
+          <div type="button" className="burger__links burger__toggle-icon">
+            <span className="burger__bar"></span>
+            <span className="burger__bar"></span>
+            <span className="burger__bar"></span>
           </div>
         </section>
 
         {/* Burger Menu content  */}
-        <section class="burger-menu__content">
+        <section className="burger-menu__content">
           <ul></ul>
           <li>
             <NavLink to="/">Accueil</NavLink>

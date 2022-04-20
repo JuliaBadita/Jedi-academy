@@ -10,7 +10,6 @@ function App() {
       <Navbar />
       <Burger />
       <CardsHome />
-      {/* <Slider /> */}
       <Footer />
     </>
   )

@@ -5,17 +5,19 @@ import sun from '../assets/sun.png'
 import moon from '../assets/moon.png'
 import '../stylesheets/main.scss'
 
-/// For the dark mode
-
-const darkMode = document.getElementById('dark-mode')
-
-darkMode.addEventListener('change', () => {
-  document.body.classList.toggle('dark')
-})
-
-/// The navbar itself
-
 const Navbar = () => {
+  /// For the dark mode
+  const [darkMode, setDarkMode] = React.useState(false)
+
+  React.useEffect(() => {
+    if (darkMode) {
+      document.body.classList.add('dark')
+    } else {
+      document.body.classList.remove('dark')
+    }
+  }, [darkMode])
+
+  /// The navbar itself
   return (
     <>
       <header className="header">
@@ -56,7 +58,11 @@ const Navbar = () => {
         {/* Dark mode toggle  */}
         <article class="dark-mode-toggle">
           <input type="checkbox" class="dark-mode-checkbox" id="dark-mode" />
-          <label for="dark-mode" class="dark-mode-label">
+          <label
+            onClick={() => setDarkMode(!darkMode)}
+            for="dark-mode"
+            class="dark-mode-label"
+          >
             <img
               src={moon}
               className="moon__dark-mode"

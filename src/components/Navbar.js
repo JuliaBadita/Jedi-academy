@@ -1,21 +1,21 @@
-import React from 'react'
-import { NavLink } from 'react-router-dom'
-import logo from '../assets/logo_light-mode.png'
-import sun from '../assets/sun.png'
-import moon from '../assets/moon.png'
-import '../stylesheets/main.scss'
+import React from "react";
+import { NavLink } from "react-router-dom";
+import logo from "../assets/logo_light-mode.png";
+import sun from "../assets/sun.png";
+import moon from "../assets/moon.png";
+import "../stylesheets/main.scss";
 
 const Navbar = () => {
   /// For the dark mode
-  const [darkMode, setDarkMode] = React.useState(false)
+  const [darkMode, setDarkMode] = React.useState(false);
 
   React.useEffect(() => {
     if (darkMode) {
-      document.body.classList.add('dark')
+      document.body.classList.add("dark");
     } else {
-      document.body.classList.remove('dark')
+      document.body.classList.remove("dark");
     }
-  }, [darkMode])
+  }, [darkMode]);
 
   /// The navbar itself
   return (
@@ -37,7 +37,7 @@ const Navbar = () => {
               </NavLink>
             </li>
             <li>
-              <NavLink to="/members" className="navlinks__desktop">
+              <NavLink to="/liste-des-membres" className="navlinks__desktop">
                 Membres
               </NavLink>
             </li>
@@ -56,12 +56,12 @@ const Navbar = () => {
         </nav>
 
         {/* Dark mode toggle  */}
-        <article class="dark-mode-toggle">
-          <input type="checkbox" class="dark-mode-checkbox" id="dark-mode" />
+        <article className="dark-mode-toggle">
+          <input type="checkbox" className="dark-mode-checkbox" id="dark-mode" />
           <label
             onClick={() => setDarkMode(!darkMode)}
-            for="dark-mode"
-            class="dark-mode-label"
+            htmlFor="dark-mode"
+            className="dark-mode-label"
           >
             <img
               src={moon}
@@ -73,12 +73,12 @@ const Navbar = () => {
               className="sun__dark-mode"
               alt="Soleil pour le bouton dark mode"
             />
-            <i class="dark-mode-ball"></i>
+            <i className="dark-mode-ball"></i>
           </label>
         </article>
       </header>
     </>
-  )
-}
+  );
+};
 
-export default Navbar
+export default Navbar;

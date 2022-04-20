@@ -353,6 +353,7 @@ html {
 
 body {
   background-image: url(../../assets/starwars-1649334637769-8594.jpg);
+  background-attachment: fixed;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -427,9 +428,9 @@ body {
     ============================================================================ */
 footer {
   padding: 1em;
-  position: absolute;
-  background-color: rgb(226, 217, 217);
+  background-color: #e2d9d9;
   bottom: 0;
+  left: 0;
   width: 100%;
 }
 footer hr {
@@ -617,7 +618,7 @@ footer .footer__copyrights {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: rgb(226, 217, 217);
+  background-color: #e2d9d9;
 }
 .header .navbar__logo {
   width: 14rem;
@@ -780,12 +781,12 @@ footer .footer__copyrights {
 
 .pushed .burger__toggle-icon:hover .burger__bar:nth-of-type(2) {
   border-right-color: #f90d1d;
-  box-shadow: 0.4em 0 0.6em 0.1em rgba(205, 40, 44, 0.75);
+  box-shadow: 0.3em 0 0.4em 0.1em #cd282c;
 }
 
 .pushed .burger__toggle-icon:hover .burger__bar:nth-of-type(3) {
   border-right-color: #3769f2;
-  box-shadow: 0.4em 0 0.6em 0.1em rgba(83, 94, 247, 0.65);
+  box-shadow: 0.3em 0 0.4em 0.1em #535ef7;
 }
 
 .burger-menu__content {
@@ -798,7 +799,7 @@ footer .footer__copyrights {
   transform: translateX(-25rem);
   transition: all 0.9s ease;
   box-shadow: 0.0625rem 0 0.3125rem #646262;
-  background-color: rgb(226, 217, 217);
+  background-color: #e2d9d9;
   z-index: 6;
 }
 @media (min-width: 990px) {
@@ -862,6 +863,13 @@ footer .footer__copyrights {
 /* ============================================================================
    Carousel 
     ============================================================================ */
+/* ============================================================================
+   Dark mode
+    ============================================================================ */
+.dark .dark-mode-label {
+  background: rgb(183, 10, 10);
+}
+
 .dark-mode-toggle {
   position: relative;
   margin-right: 3.2rem;
@@ -971,5 +979,100 @@ footer .footer__copyrights {
     height: 0.7rem;
     margin-left: 1.4rem;
     z-index: 1;
+  }
+}
+/* ============================================================================
+Cards
+============================================================================ */
+.home__card-title {
+  margin-top: 3rem;
+  font-family: "Rajdhani", sans-serif;
+  text-align: center;
+  color: #BA9100;
+  text-decoration: underline;
+}
+
+.card1__home {
+  transform: perspective(800px) rotateY(-18deg);
+}
+
+.card2__home {
+  transform: perspective(800px) rotateY(0deg);
+}
+
+.card3__home {
+  transform: perspective(800px) rotateY(18deg);
+}
+
+.cards__home {
+  margin-top: 2rem;
+  margin-bottom: 3rem;
+  border-radius: 1.25rem;
+  border: 1px solid #BA9100;
+  box-shadow: 0px 1px 8px -1px #BA9100;
+}
+
+.home__cards-grid {
+  display: grid;
+  place-items: center;
+}
+.home__cards-grid img {
+  width: 50%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -webkit-box-reflect: below 2px linear-gradient(transparent, transparent, rgba(0, 0, 0, 0.2666666667));
+  transform-origin: center;
+  transition: 0.5s;
+}
+.home__cards-grid img:hover {
+  transform: perspective(800px) rotateY(0deg);
+  opacity: 1 !important;
+}
+@media (max-width: 980px) {
+  .home__cards-grid img {
+    width: 70%;
+  }
+}
+.home__cards-grid .home__cards-container {
+  max-width: 1400px;
+  max-height: 1400px;
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  align-items: center;
+  gap: 5%;
+}
+@media (max-width: 980px) {
+  .home__cards-grid .home__cards-container {
+    flex-direction: column;
+    height: 1400px;
+    width: 100%;
+    gap: 0;
+  }
+  .home__cards-grid .home__cards-container .card1__home, .home__cards-grid .home__cards-container .card2__home, .home__cards-grid .home__cards-container .card3__home {
+    transform: perspective(800px) rotateY(0deg);
+  }
+}
+
+.home__cards-container:hover img {
+  opacity: 0.8;
+}
+
+.div__container {
+  background: #e2d9d9;
+  padding: 0.5px 9px 0.5px 9px;
+  margin: 100px;
+  border-radius: 1rem;
+}
+@media (max-width: 980px) {
+  .div__container {
+    padding: 0.2px 4px 0.2px 4px;
+    margin: 25px;
+  }
+}
+@media (max-width: 980px) {
+  .div__container {
+    margin: 10px;
   }
 }/*# sourceMappingURL=main.css.map */

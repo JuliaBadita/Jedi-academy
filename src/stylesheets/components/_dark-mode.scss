@@ -1,7 +1,19 @@
+ /* ============================================================================
+    Dark mode
+     ============================================================================ */
+
+.dark {
+  .dark-mode-label {
+    background: rgb(183, 10, 10);
+  }
+}
+
 // Dark mode button
 
 .dark-mode-toggle {
    position: relative;
+  //  left: 90rem;
+  //  top: -3rem;
    margin-right: 3.2rem;
    z-index: 10;
    @media (max-width: 990px) {

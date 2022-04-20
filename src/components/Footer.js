@@ -67,14 +67,20 @@ const Footer = () => {
               <h4>Liens utiles</h4>
               <ul>
                 <li>
-                  <Link to="/"> Site officiel Star Wars</Link>
+                  <a href="https://www.starwars.com/">
+                    Site officiel Star Wars
+                  </a>
                 </li>
 
                 <li>
-                  <Link to="/">Boutique Sabre Galactique</Link>
+                  <a href="https://sabre-galactique.fr/">
+                    Boutique Sabre Galactique
+                  </a>
                 </li>
                 <li>
-                  <Link to="/">Conditions d'utilisations</Link>
+                  <a href="https://policies.google.com/?hl=fr">
+                    Conditions d'utilisations
+                  </a>
                 </li>
               </ul>
             </article>
@@ -84,10 +90,12 @@ const Footer = () => {
               <h4>Rejoignez l'aventure !</h4>
               <ul>
                 <li>
-                  <p>jedi-academie@padawan.fr</p>
+                  <a href="mailto:jedi-adademie@padawan.fr">
+                    jedi-academie@padawan.fr
+                  </a>
                 </li>
                 <li>
-                  <p>0612345678</p>
+                  <a href="tel:+33612345678">0612345678</a>
                 </li>
               </ul>
               <p>265 rue Montaigne, Lille 59000</p>

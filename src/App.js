@@ -1,6 +1,7 @@
 import Burger from './components/BurgerMenu'
 import Footer from './components/Footer'
 import Navbar from './components/Navbar'
+import CardsHome from './components/CardsHome.js'
 import './stylesheets/main.scss'
 
 function App() {
@@ -8,9 +9,9 @@ function App() {
     <>
       <Navbar />
       <Burger />
-      <div className="page-container">
-        <Footer />
-      </div>
+      <CardsHome />
+      {/* <Slider /> */}
+      <Footer />
     </>
   )
 }

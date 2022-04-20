@@ -8,7 +8,7 @@
 
 /// Regular font family
 /// @type List
-$text-font-stack: 'Open Sans', 'Helvetica Neue Light', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif !default;
+$text-font-stack: 'Segoe UI', 'Roboto', 'Open Sans', 'Helvetica Neue Light', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif !default;
 
 /// Code (monospace) font family
 /// @type List
@@ -59,6 +59,12 @@ $breakpoints: (
   'small': 320px,
   'medium': 768px,
   'large': 1024px,
+) !default;
+
+$breakpointsMasonry: (
+  'small': 0px,
+  'medium': 600px,
+  'large': 900px,
 ) !default;
 
 

@@ -32,3 +32,8 @@
   }
 }
 
+@mixin mediaMasonry-min($_key) {
+  @media screen and (min-width: map-get($breakpointsMasonry, $_key)) {
+      &{ @content; }
+  }
+}

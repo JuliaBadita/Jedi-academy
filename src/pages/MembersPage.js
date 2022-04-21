@@ -26,7 +26,6 @@ export default function Members() {
     <div>
       <Title title="Liste des membres" />
       <Container className="members">
-        <h1>Liste des membres</h1>
         <Grid container spacing={3}>
           {isLoading ? (
             <MembersContentLoader />

@@ -28,6 +28,7 @@
       }
     }
     }
+
   }
 
     .div__container {
@@ -44,6 +45,10 @@
     .pushed .burger__toggle-icon:hover .burger__bar:nth-of-type(3) {
       border-right-color: rgb(77, 196, 77);
       box-shadow: 0.3em 0 0.4em 0.1em rgb(72, 215, 56);
+    }
+
+    .cardMember {
+      background-color: $black;
     }
 }
 

@@ -1,4 +1,37 @@
-.members, .member{
+//Style for page Liste de membre
+.members {
+    padding: 1rem;
+    .cardMember {
+        box-shadow: 0px 1px 8px -1px $brand-color-day;
+        border-radius: 20px;
+    }
+    .MuiGrid-container {
+        justify-content: center;
+    }
+    .roundImg {
+        width: 140px; 
+        height: 140px; 
+        overflow: hidden; 
+        border-radius: 50%;
+        margin: 1rem auto 1rem auto;
+   
+        img {
+            max-width: 100%;
+            max-height: auto;
+            object-fit: cover;
+    }
+}
+.MuiTypography-h5 {
+    color: $brand-color-day;
+    text-align:center;
+}
+a {
+    text-decoration: none;
+}
+    }
+ 
+// Style for page of single member
+ .member{
 
 .memberNav {
     padding: 20px 0;
@@ -14,10 +47,5 @@ padding-right: 2px;
 form div {
     margin-top: 10px;
 }
+ }
 
-img {
-    max-width: 100%;
-    max-height: auto;
-    object-fit: cover;
-}
-}

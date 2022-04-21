@@ -10,12 +10,24 @@ const cardsHome = () => {
       <div className="div__container">
         <section className="home__cards-grid">
           <h1 className="home__card-title">
-            L'Académie Jedi, association de combats au labre laser
+            L'Académie Jedi, association de combats au sabre laser
           </h1>
           <article className="home__cards-container">
-            <img src={card1} alt="" className="card1__home cards__home" />
-            <img src={card2} alt="" className="card2__home cards__home" />
-            <img src={card3} alt="" className="card3__home cards__home" />
+            <img
+              src={card1}
+              alt="combat au labre laser"
+              className="card1__home cards__home"
+            />
+            <img
+              src={card2}
+              alt="combat au labre laser"
+              className="card2__home cards__home"
+            />
+            <img
+              src={card3}
+              alt="combat au labre laser"
+              className="card3__home cards__home"
+            />
           </article>
         </section>
       </div>

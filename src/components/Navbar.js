@@ -1,21 +1,22 @@
-import React from "react";
-import { NavLink } from "react-router-dom";
-import logo from "../assets/logo_light-mode.png";
-import sun from "../assets/icon-light-mode.png";
-import moon from "../assets/icon-dark-mode.png";
-import "../stylesheets/main.scss";
+import React from 'react'
+import { NavLink } from 'react-router-dom'
+import logo from '../assets/logo_light-mode.png'
+import logoDark from '../assets/logo_dark-mode.png'
+import sun from '../assets/icon-light-mode.png'
+import moon from '../assets/icon-dark-mode.png'
+import '../stylesheets/main.scss'
 
 const Navbar = () => {
   /// For the dark mode
-  const [darkMode, setDarkMode] = React.useState(false);
+  const [darkMode, setDarkMode] = React.useState(false)
 
   React.useEffect(() => {
     if (darkMode) {
-      document.body.classList.add("dark");
+      document.body.classList.add('dark')
     } else {
-      document.body.classList.remove("dark");
+      document.body.classList.remove('dark')
     }
-  }, [darkMode]);
+  }, [darkMode])
 
   /// The navbar itself
   return (
@@ -23,7 +24,16 @@ const Navbar = () => {
       <header className="header">
         {/* Version desktop  */}
 
-        <img src={logo} className="navbar__logo" alt="logo académie Jedi" />
+        <img
+          src={logo}
+          className="navbar__logo navbar__logo-light"
+          alt="logo académie Jedi"
+        />
+        <img
+          src={logoDark}
+          className="navbar__logo navbar__logo-dark"
+          alt="logo académie Jedi version Dark Mode"
+        />
         <nav className="navbar__desktop">
           <ul>
             <li>
@@ -57,7 +67,11 @@ const Navbar = () => {
 
         {/* Dark mode toggle  */}
         <article className="dark-mode-toggle">
-          <input type="checkbox" className="dark-mode-checkbox" id="dark-mode" />
+          <input
+            type="checkbox"
+            className="dark-mode-checkbox"
+            id="dark-mode"
+          />
           <label
             onClick={() => setDarkMode(!darkMode)}
             htmlFor="dark-mode"
@@ -78,7 +92,7 @@ const Navbar = () => {
         </article>
       </header>
     </>
-  );
-};
+  )
+}
 
-export default Navbar;
+export default Navbar

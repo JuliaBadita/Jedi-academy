@@ -50,6 +50,7 @@
             display:flex;
             .label {
                 width:130px;
+                margin-top: 6px;
             }
             .field {
                 width:100%;
@@ -67,6 +68,10 @@
                 border-radius: 9px;
                 height: 30px;
                 border:1px solid rgba(186, 145, 0, 0.5);
+                padding-left: 10px;
+            }
+            textarea {
+                padding-top:5px;
             }
             
         }

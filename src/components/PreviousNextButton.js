@@ -1,11 +1,12 @@
 import React from "react";
 
-export default function PreviousNextButton({ text, onClick, isNext, width }) {
+export default function PreviousNextButton({ text, onClick, isNext, width, type }) {
   return (
     <div className={width === "small" ? "wrapper small" : "wrapper"}>
       <button
         className={isNext === "true" ? "cta" : "cta reverse"}
         onClick={onClick}
+        type={type}
       >
         <span>{text}</span>
         <span>

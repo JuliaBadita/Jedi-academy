@@ -44,6 +44,7 @@
     }
   }
 }
+
 }
  
 // Burger menu
@@ -119,15 +120,10 @@
         }
       }
     }
-<<<<<<< HEAD
-    }
-
-=======
   
   .footer__copyrights {
     color: $white;
   }
->>>>>>> 3df6e1a93876741f1752a5ea07385aae32d3a853
   }
 
 
@@ -153,21 +149,7 @@
     .cardContent p {
       color:white;
     }
-<<<<<<< HEAD
-.members {
-  
-  .cardMember {
-    background-color: $black;
-  }
-  .MuiTypography-body2 {
-    color: $brand-color-day;
-  }
-}
-.member {
-  background-color: $black;
-  color: $brand-color-day;
-}
-=======
+
   }
   .buttonSaber{
     span.line-1 {
@@ -232,7 +214,31 @@
     color:rgb(183, 10, 10);
     font-weight:600;
   }
->>>>>>> 3df6e1a93876741f1752a5ea07385aae32d3a853
+
+  // Members
+  .members {
+  
+    .cardMember {
+      background-color: $black;
+      box-shadow: 0px 1px 8px -1px $brand-color-night;
+    }
+    .MuiTypography-body2 {
+      color: $white;
+    }
+    .MuiTypography-h5 {
+      color: $brand-color-night;
+    }
+  }
+  .member {
+    background-color: $black;
+    box-shadow: 0px 1px 8px -1px $brand-color-night;
+    h1{
+      color: $brand-color-night;
+    }
+    p{
+      color: white;
+    }
+  }
 }
 
 

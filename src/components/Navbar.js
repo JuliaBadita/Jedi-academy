@@ -1,8 +1,8 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 import logo from "../assets/logo_light-mode.png";
-import sun from "../assets/sun.png";
-import moon from "../assets/moon.png";
+import sun from "../assets/icon-light-mode.png";
+import moon from "../assets/icon-dark-mode.png";
 import "../stylesheets/main.scss";
 
 const Navbar = () => {

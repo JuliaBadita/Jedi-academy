@@ -50,7 +50,7 @@ export default function SideBarPost(){
                             <div className="thumb" style={{backgroundImage: `url(${post.attributes.img.datasrc.data.attributes.formats.small.url})`, backgroundRepeat: 'no-repeat', backgroundPosition:'center'}}></div>
                             <div className="infos">
                                 <h3 className="title">{post.attributes.title}</h3>
-                                <PreviousNextButton isNext="true" text="Go !" onClick={() => navigate("/infos-utiles/"+post.attributes.slug)} width="small" />
+                                <PreviousNextButton isNext="true" text="Go !" onClick={() => navigate("/infos-utiles/"+post.attributes.slug+"#top").isFocused()} width="small" />
                             </div>
                         </article>
                     )

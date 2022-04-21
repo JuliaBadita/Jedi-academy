@@ -9,7 +9,7 @@ import SideBarPost from "../components/SideBarPost";
 import Container from "@mui/material/Container";
 import Title from "../components/Title";
 import PreviousNextButton from "../components/PreviousNextButton";
-import { useNavigate } from "react-router-dom";
+import { useNavigate } from 'react-router-dom';
 
 export default function Post() {
   const [isLoading, setIsLoading] = useState(true);
@@ -19,7 +19,7 @@ export default function Post() {
 
   useEffect(() => {
     fetchPostWithSlug();
-  }, []);
+  }, [slug]);
 
   const fetchPostWithSlug = async () => {
     const data = await PostsApi.findOneWithSlug(slug);
@@ -67,7 +67,7 @@ export default function Post() {
               </>
             )}
           </Grid>
-          <SideBarPost />
+          <SideBarPost slug={slug}/>
         </Grid>
       </Container>
     </>

@@ -1,6 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import logo from '../assets/logo_light-mode.png'
+import logoDark from '../assets/logo_dark-mode.png'
 import { AiFillFacebook } from 'react-icons/ai'
 import { FaInstagramSquare } from 'react-icons/fa'
 import { BsYoutube } from 'react-icons/bs'
@@ -34,8 +35,13 @@ const Footer = () => {
                 {/* Logo  */}
                 <img
                   src={logo}
-                  className="footer__logo"
+                  className="footer__logo footer__logo-light"
                   alt="logo académie Jedi"
+                />
+                <img
+                  src={logoDark}
+                  className="footer__logo footer__logo-dark"
+                  alt="logo académie Jedi version Dark Mode"
                 />
                 <div className="footer__container-social-medias">
                   {/* Social medias */}
@@ -93,12 +99,17 @@ const Footer = () => {
               <h4>Rejoignez l'aventure !</h4>
               <ul>
                 <li>
-                  <a href="mailto:jedi-adademie@padawan.fr">
+                  <a
+                    href="mailto:jedi-adademie@padawan.fr"
+                    className="footer__contact"
+                  >
                     jedi-academie@padawan.fr
                   </a>
                 </li>
                 <li>
-                  <a href="tel:+33612345678">0612345678</a>
+                  <a href="tel:+33612345678" className="footer__contact">
+                    0612345678
+                  </a>
                 </li>
               </ul>
               <p>265 rue Montaigne, Lille 59000</p>

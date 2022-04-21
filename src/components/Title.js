@@ -1,5 +1,4 @@
 import React from "react"
-import xWing from "../images/x-wing.png"
 import deathStar from "../images/death-star.png"
 
 export default function Title({title}){
@@ -8,8 +7,7 @@ export default function Title({title}){
         <div className="backGroundTitle">
             <div className="titleDiv">
                 <h1>{title}</h1>
-                <img className="x-wing xwing-instance" src={xWing} style={{maxHeight:"100px"}} alt="Etoile de la Mort"/>
-                <img className="death-star" src={deathStar} style={{maxHeight:"100px"}} alt="Vaisseau X-wing"/>
+                <img className="death-star" src={deathStar} style={{maxHeight:"100px"}} alt="Etoile de la Mort"/>
             </div>
         </div>
         <div className="comet-rain">

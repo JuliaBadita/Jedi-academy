@@ -4,18 +4,103 @@
 
      /// Here are the dark mode parameters
 .dark {
+
+  // The header in dark mode
   .dark-mode-label {
-    background: rgb(183, 10, 10);
+    background: $red-dark-mode;
   }
+
+  .dark-mode-label .dark-mode-ball {
+    background: $white
+  }
+  
+  
   .header {
     background-color: $black;
+
+    // logo 
+    .navbar__logo-light {
+      display: none;
+    }
+    .navbar__logo-dark {
+      display: block;
+    }
+  nav {
+   hr {
+      color:  $red-dark-mode;
+      border: 0.0625rem solid $red-dark-mode;
+    }
+    a.active {
+      &::after {
+        background: $red-dark-mode;
+      }
   }
+  ul {
+    li {
+      font-weight: 500;
+      a {
+        color: $red-dark-mode;
+      }
+    }
+  }
+}
+}
+ 
+// Burger menu
+
+  .burger-menu__content {
+    li,a {
+      color: $white;
+      &:hover {
+        color: $red-dark-mode;
+      }
+    }
+    a.active {
+      color: $red-dark-mode;
+      &::after {
+        background: $red-dark-mode
+      }
+    }
+  }
+  .burger__toggle-icon .burger__bar {
+    border-right: 2.8em solid $red-lightsaber2;
+    border-left: 0.6em solid $white; 
+  }
+  .burger-menu__content {
+    background-color: $black;
+  }
+  .pushed .burger__toggle-icon:hover .burger__bar:nth-of-type(2) {
+    border-right-color: $red-lightsaber;
+    box-shadow: 0.3em 0 0.4em 0.1em $red-lightsaber2;
+  }
+  .pushed .burger__toggle-icon:hover .burger__bar:nth-of-type(3) {
+    border-right-color: rgb(77, 196, 77);
+    box-shadow: 0.3em 0 0.4em 0.1em rgb(72, 215, 56);
+  }
+
+  // The footer 
   footer {
     background-color: $black;
+    hr {
+      border: 0.0625rem solid $red-dark-mode;
+    }
     .footer__container {
       .footer__row {
         article {
           color: $white;
+
+            // logo 
+    .footer__logo-light {
+      display: none;
+    }
+    .footer__logo-dark {
+      display: block;
+    }
+          h4 {
+            color: $red-dark-mode;
+            font-weight: 600;
+            font-size: 1.10rem;
+          }
           a {
             color: $white;
             &:visited {
@@ -25,27 +110,50 @@
               color: $gold;
             }
           }
+          .social-medias__logo {
+            fill: $red-dark-mode;
+            &:hover {
+              fill: $white;
+            }
+          }
+        }
       }
     }
+<<<<<<< HEAD
     }
 
+=======
+  
+  .footer__copyrights {
+    color: $white;
+  }
+>>>>>>> 3df6e1a93876741f1752a5ea07385aae32d3a853
   }
 
+
+  // Home components 
     .div__container {
       background-color: $black;
     }
 
-    .burger__toggle-icon .burger__bar {
-      border-right: 2.8em solid $red-lightsaber2;
-      border-left: 0.6em solid $gold; 
+    .home__card-title {
+      color: $red-dark-mode;
     }
-    .burger-menu__content {
-      background-color: $black;
+
+    .cards__home {
+      border: 0.0625rem solid $red-dark-mode;
+      box-shadow: 0 0.0625rem 0.5rem -0.0625rem $red-dark-mode;
     }
-    .pushed .burger__toggle-icon:hover .burger__bar:nth-of-type(3) {
-      border-right-color: rgb(77, 196, 77);
-      box-shadow: 0.3em 0 0.4em 0.1em rgb(72, 215, 56);
+
+
+  .posts .cardInfos {
+    background-image: linear-gradient(gray, black 12.5rem);
+    color:rgb(183, 10, 10);
+    box-shadow: 0px 1px 8px -1px rgb(183, 10, 10);
+    .cardContent p {
+      color:white;
     }
+<<<<<<< HEAD
 .members {
   
   .cardMember {
@@ -59,6 +167,72 @@
   background-color: $black;
   color: $brand-color-day;
 }
+=======
+  }
+  .buttonSaber{
+    span.line-1 {
+      background: rgb(183, 10, 10);
+    }
+
+    span.line-3 {
+      background: rgb(183, 10, 10);
+    }
+
+  }
+
+  article.card {
+    background-image: linear-gradient(gray, black 12.5rem);
+    color:rgb(183, 10, 10);
+    box-shadow: 0px 1px 8px -1px rgb(183, 10, 10);
+  }
+
+  .wrapper .cta {
+    background: rgb(183, 10, 10);
+  }
+
+  .post h2 {
+    border-bottom: 2px solid rgb(183, 10, 10);
+  }
+
+  .sideBarPost .title h2 {
+    border-bottom: 2px solid rgb(183, 10, 10);
+  }
+
+  .GridContainer {
+    border: double rgb(183, 10, 10);
+  }
+
+  .post img {
+    border: double rgb(183, 10, 10);
+  }
+
+  .separator {
+    .gold {
+    display:none;
+    }
+    .red {
+      display:block;
+    }
+  }
+
+  .searchBar fieldset {
+    border-color:rgba(183, 10, 10, 0.5);
+  }
+  .searchIcon {
+    fill: rgb(183, 10, 10);
+  }
+  .death-star {
+    display:block;
+  }
+  .titleDiv {
+    text-shadow: 1px 1px 2px red, 0 0 1em red, 0 0 0.2em red;
+  }
+
+  .buttonSaber a {
+    color:rgb(183, 10, 10);
+    font-weight:600;
+  }
+>>>>>>> 3df6e1a93876741f1752a5ea07385aae32d3a853
 }
 
 
@@ -101,8 +275,8 @@
     height: 1.4rem;
     width: 1.4rem;
     position: absolute;
-    top: 0.23rem;
-    left: 0.13rem;
+    top: 0.2rem;
+    left: 0.3rem;
     right: 0.1rem;
     transform: translateX(0);
     transition: transform 0.4s cubic-bezier(.45, -1.12, .35,1.78);
@@ -110,7 +284,7 @@
   }
   
   .dark-mode-checkbox:checked + .dark-mode-label .dark-mode-ball {
-    transform: translateX(2.5rem);
+    transform: translateX(2.2rem);
   }
 
   .moon__dark-mode, .sun__dark-mode {
@@ -122,7 +296,7 @@
   }
   
   .sun__dark-mode {
-    margin-left: 1rem;
+    margin-left: 0.75rem;
     z-index: 1;
   }
 

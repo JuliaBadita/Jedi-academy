@@ -6,6 +6,7 @@
     .sticky {
         position:sticky;
         top:0px;
+        margin-bottom: 20px;
     }
     .separator {
         @include mediaMasonry-min('small'){
@@ -20,6 +21,12 @@
         img {
             width:20px;
             margin:10px;
+        }
+        .gold {
+            display:block;
+        }
+        .red {
+            display:none;
         }
     }
     .title h2 {

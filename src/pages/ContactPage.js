@@ -23,7 +23,7 @@ export default function Contact() {
       .required("L'email est obligatoire"),
     message: Yup.string()
       .min(2, "Trop petit")
-      .max(10, "Trop long !")
+      .max(250, "Trop long !")
       .required("Ce champ est obligatoire"),
     acceptTerms: Yup.bool().oneOf([true], "Accepter les conditions est obligatoire"),
   });
@@ -68,7 +68,7 @@ const handleSubmit = (values) => {
               onSubmit={(values) =>handleSubmit(values)}
           >
               {({ resetForm }) => (
-                  <Form>
+                  <Form action="https://formsubmit.co/paulinemerlin410@gmail.com" method="POST">
                       <h2 className="first-title">Envoyez-nous un message !</h2>
                       <div className="form-group">
                         <div className="label">
@@ -157,8 +157,9 @@ const handleSubmit = (values) => {
                       </div>
                       <div>
                         <PreviousNextButton
+                          type="submit"
                           text="Envoyez"
-                          onClick=""
+                          onClick={() => (true)}
                           isNext="true"
                         />
                       </div>

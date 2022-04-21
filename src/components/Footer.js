@@ -1,5 +1,5 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import { Link, NavLink } from 'react-router-dom'
 import logo from '../assets/logo_light-mode.png'
 import logoDark from '../assets/logo_dark-mode.png'
 import { AiFillFacebook } from 'react-icons/ai'
@@ -110,6 +110,11 @@ const Footer = () => {
                   <a href="tel:+33612345678" className="footer__contact">
                     0612345678
                   </a>
+                </li>
+                <li>
+                  <NavLink to="/contact" className="footer__contact">
+                    Contact
+                  </NavLink>
                 </li>
               </ul>
               <p>265 rue Montaigne, Lille 59000</p>

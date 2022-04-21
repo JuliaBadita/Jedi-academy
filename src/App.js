@@ -1,13 +1,14 @@
-import Burger from "./components/BurgerMenu";
-import Footer from "./components/Footer";
-import Navbar from "./components/Navbar";
-import CardsHome from "./components/CardsHome.js";
-import "./stylesheets/main.scss";
-import Posts from "./pages/PostsPage.js";
-import Post from "./pages/PostPage.js";
-import MembersPage from "./pages/MembersPage.js";
-import MemberPage from "./pages/MemberPage.js";
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import Burger from './components/BurgerMenu'
+import Footer from './components/Footer'
+import Navbar from './components/Navbar'
+import CardsHome from './components/CardsHome.js'
+import './stylesheets/main.scss'
+import Posts from './pages/PostsPage.js'
+import Post from './pages/PostPage.js'
+import MembersPage from './pages/MembersPage.js'
+import MemberPage from './pages/MemberPage.js'
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
+import StarWars from './components/StarWars'
 
 function App() {
   return (
@@ -22,10 +23,11 @@ function App() {
           <Route path="/liste-des-membres" exact element={<MembersPage />} />
           <Route path="/member/:id" exact element={<MemberPage />} />
         </Routes>
+        <StarWars />
         <Footer />
       </Router>
     </>
-  );
+  )
 }
 
-export default App;
+export default App

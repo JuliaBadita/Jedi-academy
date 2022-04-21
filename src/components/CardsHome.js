@@ -7,11 +7,11 @@ import '../stylesheets/main.scss'
 const cardsHome = () => {
   return (
     <>
+      <h1 className="home__card-title">
+        L'Académie Jedi, association de combats au sabre laser
+      </h1>
       <div className="div__container">
         <section className="home__cards-grid">
-          <h1 className="home__card-title">
-            L'Académie Jedi, association de combats au sabre laser
-          </h1>
           <article className="home__cards-container">
             <img
               src={card1}
@@ -31,6 +31,16 @@ const cardsHome = () => {
           </article>
         </section>
       </div>
+
+      {/* Logo star wars animated */}
+      <article className="home__star-wars-animated">
+        <div class="perspective">
+          <img
+            src="https://i.imgur.com/Uia4i.png?1"
+            alt="Logo Star Wars animé"
+          />
+        </div>
+      </article>
     </>
   )
 }

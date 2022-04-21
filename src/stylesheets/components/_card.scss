@@ -4,15 +4,6 @@ Cards
 
 // Home cards 
 
-.home__card-title {
-    margin-top: 3rem;
-    font-family: 'Rajdhani', sans-serif;
-    text-align: center;
-    color: $gold;
-    text-decoration: underline;
-}
-
-
 /// Images 
 
 .card1__home {
@@ -40,6 +31,7 @@ Cards
 .home__cards-grid {
     display:grid;
     place-items:center;
+    margin-bottom: 6.25rem;
     img {
         width: 30%;
         height: 100%;
@@ -51,7 +43,7 @@ Cards
             opacity:1 !important;
         }
         @media (max-width: 980px) {
-            width: 70%;
+            width: 90%;
         }
     }
     .home__cards-container {
@@ -82,15 +74,15 @@ Cards
 
 .div__container {
     background: $gray;
-    padding: 0.03125rem 0.5625rem 0.03125rem 0.5625rem;
-    margin: 6.25rem;
+    width: fit-content;
+   margin: 0 auto;
     border-radius: 1rem;
 @media (max-width: 980px) {
-    padding: 0.0125rem 0.25rem 0.0125rem 0.25rem;
     margin: 1.5625rem;
 }
 @media (max-width: 980px) {
     margin: 0.625rem;
+    background: transparent;
 }
 }
 

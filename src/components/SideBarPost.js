@@ -7,14 +7,16 @@ import PostsApi from '../services/postsAPI'
 import Skeleton from '@mui/material/Skeleton'
 import {useNavigate} from 'react-router-dom'
 import RandomArray from '../functions/RandomArray'
+import { useParams } from "react-router-dom";
 
 export default function SideBarPost(){
     const [isLoading, setIsLoading] = useState(true)
     const [posts, setPosts] = useState([]);
+    const { slug } = useParams();
 
     useEffect(() => {
         fetchAllPosts();
-    },[])
+    },[slug])
 
     const fetchAllPosts = async () => {
         const data = await PostsApi.findAll();

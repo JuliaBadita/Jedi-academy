@@ -11,21 +11,20 @@
         text-decoration:none;
         color:black;
     }
-    span {
-        svg {
-            margin-right:10px;
-            vertical-align:-3px;
-        }
-    }
+    
     .contact {
-        .first-title {
-            margin-top:0px;
-        }
         padding:30px;
         display:flex;
+
         div {
             margin:auto;
             width:100%;
+            span {
+                svg {
+                    margin-right:10px;
+                    vertical-align:-3px;
+                }
+            }
         }
     }
     .gmaps {
@@ -36,6 +35,45 @@
     }
     .form {
         margin:30px;
+        .text-danger {
+            color:red;
+        }
+        .coche {
+            display:flex;
+            input {
+                margin-right:10px;
+                margin-top: 3px;
+            }
+        }
+        .form-group {
+            margin:25px;
+            display:flex;
+            .label {
+                width:130px;
+            }
+            .field {
+                width:100%;
+                .form-control {
+                    width:100%;
+                    &.textarea {
+                        height:100px;
+                    }
+                }
+            }
+            label {
+                margin-right:10px;
+            }
+            input, textarea {
+                border-radius: 9px;
+                height: 30px;
+                border:1px solid rgba(186, 145, 0, 0.5);
+            }
+            
+        }
+    }
+
+    .first-title {
+        margin-top:0px;
     }
 }
 

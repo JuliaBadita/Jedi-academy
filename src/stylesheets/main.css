@@ -2062,20 +2062,17 @@ Cards
   text-decoration: none;
   color: black;
 }
-.GridContainer span svg {
-  margin-right: 10px;
-  vertical-align: -3px;
-}
 .GridContainer .contact {
   padding: 30px;
   display: flex;
 }
-.GridContainer .contact .first-title {
-  margin-top: 0px;
-}
 .GridContainer .contact div {
   margin: auto;
   width: 100%;
+}
+.GridContainer .contact div span svg {
+  margin-right: 10px;
+  vertical-align: -3px;
 }
 .GridContainer .gmaps {
   padding: 30px;
@@ -2085,6 +2082,43 @@ Cards
 }
 .GridContainer .form {
   margin: 30px;
+}
+.GridContainer .form .text-danger {
+  color: red;
+}
+.GridContainer .form .coche {
+  display: flex;
+}
+.GridContainer .form .coche input {
+  margin-right: 10px;
+  margin-top: 3px;
+}
+.GridContainer .form .form-group {
+  margin: 25px;
+  display: flex;
+}
+.GridContainer .form .form-group .label {
+  width: 130px;
+}
+.GridContainer .form .form-group .field {
+  width: 100%;
+}
+.GridContainer .form .form-group .field .form-control {
+  width: 100%;
+}
+.GridContainer .form .form-group .field .form-control.textarea {
+  height: 100px;
+}
+.GridContainer .form .form-group label {
+  margin-right: 10px;
+}
+.GridContainer .form .form-group input, .GridContainer .form .form-group textarea {
+  border-radius: 9px;
+  height: 30px;
+  border: 1px solid rgba(186, 145, 0, 0.5);
+}
+.GridContainer .first-title {
+  margin-top: 0px;
 }
 
 .post {

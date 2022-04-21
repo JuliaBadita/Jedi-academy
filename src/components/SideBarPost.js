@@ -1,10 +1,12 @@
 import React, {useEffect, useState} from "react"
 import Grid from '@mui/material/Grid';
 import goldSeparator from '../images/gold-separator.svg'
+import redSeparator from '../images/red-separator.svg'
 import PreviousNextButton from "./PreviousNextButton";
 import PostsApi from '../services/postsAPI'
 import Skeleton from '@mui/material/Skeleton'
 import {useNavigate} from 'react-router-dom'
+import RandomArray from '../functions/RandomArray'
 
 export default function SideBarPost(){
     const [isLoading, setIsLoading] = useState(true)
@@ -16,7 +18,9 @@ export default function SideBarPost(){
 
     const fetchAllPosts = async () => {
         const data = await PostsApi.findAll();
-        setPosts(data);
+        const dataArray=RandomArray(data, 3);
+        console.log(dataArray);
+        setPosts(dataArray);
         setIsLoading(false);
     }
     const skeletonArray=[1, 2, 3];
@@ -25,7 +29,7 @@ export default function SideBarPost(){
 
     return (
         <Grid item xs={12} md={4} className="sideBarPost">
-            <div className="separator"><img src={goldSeparator} alt="gold separator"/></div>
+            <div className="separator"><img className="gold" src={goldSeparator} alt="gold separator"/><img className="red" src={redSeparator} alt="red separator"/></div>
             <div className="content">
                 <div className="sticky">
                     <span className="title"><h2>Autres infos utiles</h2></span>

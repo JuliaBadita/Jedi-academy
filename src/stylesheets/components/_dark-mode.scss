@@ -26,7 +26,7 @@
       display: block;
     }
   nav {
-   hr {
+    hr {
       color:  $red-dark-mode;
       border: 0.0625rem solid $red-dark-mode;
     }
@@ -144,8 +144,8 @@
 
   .posts .cardInfos {
     background-image: linear-gradient(gray, black 12.5rem);
-    color:rgb(183, 10, 10);
-    box-shadow: 0px 1px 8px -1px rgb(183, 10, 10);
+    color:$red-dark-mode;
+    box-shadow: 0px 1px 8px -1px $red-dark-mode;
     .cardContent p {
       color:white;
     }
@@ -153,39 +153,39 @@
   }
   .buttonSaber{
     span.line-1 {
-      background: rgb(183, 10, 10);
+      background: $red-dark-mode;
     }
 
     span.line-3 {
-      background: rgb(183, 10, 10);
+      background: $red-dark-mode;
     }
 
   }
 
   article.card {
     background-image: linear-gradient(gray, black 12.5rem);
-    color:rgb(183, 10, 10);
-    box-shadow: 0px 1px 8px -1px rgb(183, 10, 10);
+    color:$red-dark-mode;
+    box-shadow: 0px 1px 8px -1px $red-dark-mode;
   }
 
   .wrapper .cta {
-    background: rgb(183, 10, 10);
+    background: $red-dark-mode;
   }
 
   .post h2 {
-    border-bottom: 2px solid rgb(183, 10, 10);
+    border-bottom: 2px solid $red-dark-mode;
   }
 
   .sideBarPost .title h2 {
-    border-bottom: 2px solid rgb(183, 10, 10);
+    border-bottom: 2px solid $red-dark-mode;
   }
 
   .GridContainer {
-    border: double rgb(183, 10, 10);
+    border: double $red-dark-mode;
   }
 
   .post img {
-    border: double rgb(183, 10, 10);
+    border: double $red-dark-mode;
   }
 
   .separator {
@@ -198,10 +198,10 @@
   }
 
   .searchBar fieldset {
-    border-color:rgba(183, 10, 10, 0.5);
+    border-color:rgba($red-dark-mode, 0.5);
   }
   .searchIcon {
-    fill: rgb(183, 10, 10);
+    fill: $red-dark-mode;
   }
   .death-star {
     display:block;
@@ -211,7 +211,7 @@
   }
 
   .buttonSaber a {
-    color:rgb(183, 10, 10);
+    color:$red-dark-mode;
     font-weight:600;
   }
 
@@ -237,6 +237,12 @@
     }
     p{
       color: white;
+    }
+  }
+
+  .GridContainer {
+    h2 {
+        border-bottom: 2px solid $red-dark-mode;
     }
   }
 }

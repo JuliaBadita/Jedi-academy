@@ -5,6 +5,7 @@ import CardsHome from "./components/CardsHome.js";
 import "./stylesheets/main.scss";
 import Posts from "./pages/PostsPage.js";
 import Post from "./pages/PostPage.js";
+import Contact from "./pages/ContactPage.js";
 import MembersPage from "./pages/MembersPage.js";
 import MemberPage from "./pages/MemberPage.js";
 import xWing from "./images/x-wing.png"
@@ -19,6 +20,7 @@ function App() {
         <Burger />
         <Routes>
           <Route path="/" exact element={<CardsHome />} />
+          <Route path="/contact" exact element={<Contact />} />
           <Route path="/infos-utiles" exact element={<Posts />} />
           <Route path="/infos-utiles/:slug" exact element={<Post />} />
           <Route path="/liste-des-membres" exact element={<MembersPage />} />

@@ -34,7 +34,7 @@ export default function Post() {
       {isLoading ? <Title /> : <Title title={post.attributes.title} />}
       <Container>
         <Grid container className="GridContainer">
-          <Grid item xs={12} md={8} className="post">
+          <Grid item xs={12} md={8} className="post" id="top">
             {isLoading ? (
               <>
                 <Skeleton variant="rectangular" width={210} height={118} />

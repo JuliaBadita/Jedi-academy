@@ -46,10 +46,19 @@
       border-right-color: rgb(77, 196, 77);
       box-shadow: 0.3em 0 0.4em 0.1em rgb(72, 215, 56);
     }
-
-    .cardMember {
-      background-color: $black;
-    }
+.members {
+  
+  .cardMember {
+    background-color: $black;
+  }
+  .MuiTypography-body2 {
+    color: $brand-color-day;
+  }
+}
+.member {
+  background-color: $black;
+  color: $brand-color-day;
+}
 }
 
 

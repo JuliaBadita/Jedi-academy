@@ -32,17 +32,28 @@ a {
  
 // Style for page of single member
  .member{
+background-color: white;
+// max-width: 90%;
+margin: 1rem auto 1rem auto;
+box-shadow: 0px 1px 8px -1px $brand-color-day;
+border-radius: 20px;
+padding: 2rem; 
+h1 {
+    color: $brand-color-day;
+}
+img {
+    max-width: 100%;
+    max-height: auto;
+    object-fit: cover;
+    display: block;
+   margin: auto;
+   border-radius: 20px;
+}
+a {
+    text-decoration: none;
+}
 
-.memberNav {
-    padding: 20px 0;
-}
-.memberImg {
-    margin-top: 50px;
-}
 
-.MuiButton-containedPrimary svg {
-padding-right: 2px;
-}
 
 form div {
     margin-top: 10px;

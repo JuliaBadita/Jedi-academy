@@ -8,12 +8,18 @@ import Post from './pages/PostPage.js'
 import MembersPage from './pages/MembersPage.js'
 import MemberPage from './pages/MemberPage.js'
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
-import StarWars from './components/StarWars'
+import xWing from './images/x-wing.png'
 
 function App() {
   return (
     <>
       <Router>
+        <img
+          className="x-wing xwing-instance"
+          src={xWing}
+          style={{ maxHeight: '100px' }}
+          alt="Vaisseau X-wing"
+        />
         <Navbar />
         <Burger />
         <Routes>
@@ -23,7 +29,6 @@ function App() {
           <Route path="/liste-des-membres" exact element={<MembersPage />} />
           <Route path="/member/:id" exact element={<MemberPage />} />
         </Routes>
-        <StarWars />
         <Footer />
       </Router>
     </>

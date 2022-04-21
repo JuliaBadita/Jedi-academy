@@ -1,22 +1,22 @@
 import React, { useEffect, useState } from "react";
-import { useParams, Link } from "react-router-dom";
+import { useParams, Link, useNavigate } from "react-router-dom";
 
 import Skeleton from "@mui/material/Skeleton";
 import Grid from "@mui/material/Grid";
 import Button from "@mui/material/Button";
 import List from "@mui/material/List";
 import ListItem from "@mui/material/ListItem";
+import Container from "@mui/material/Container";
 
 import ListItemText from "@mui/material/ListItemText";
 import ListItemAvatar from "@mui/material/ListItemAvatar";
 import Avatar from "@mui/material/Avatar";
 import Typography from "@mui/material/Typography";
 
-import { AiFillCaretLeft } from "react-icons/ai";
-
 import MembersAPI from "../services/membersAPI";
 
-import FormComment from "../components/forms/FormComment";
+// import FormComment from "../components/forms/FormComment";
+import PreviousNextButton from "../components/PreviousNextButton";
 
 export default function Member() {
   const { id } = useParams();
@@ -32,150 +32,58 @@ export default function Member() {
     setMember(data);
     setIsLoading(true);
   };
+
+  const navigate = useNavigate();
   return (
-    <div>
-      <nav className="memberNav">
+    <Container>
+      <div className="member">
+        <Grid container spacing={2}>
+          <Grid item sm="6">
+            <div className="memberImg">
+              {isLoading ? (
+                <img
+                  src={
+                    memberState.data.attributes.image.data[0].attributes.formats
+                      .small.url
+                  }
+                />
+              ) : (
+                <Skeleton variant="rectangular" width="100%" height={300} />
+              )}
+            </div>
+          </Grid>
+
+          <Grid item sm="6">
+            <h1>
+              {isLoading ? (
+                memberState.data.attributes.title
+              ) : (
+                <Skeleton variant="text" width={300} height={80} />
+              )}
+            </h1>
+            <p>
+              {isLoading ? (
+                memberState.data.attributes.content
+              ) : (
+                <>
+                  <Skeleton variant="text" />
+                  <Skeleton variant="text" />
+                  <Skeleton variant="text" />
+                  <Skeleton variant="text" />
+                </>
+              )}
+            </p>
+          </Grid>
+        </Grid>
+
         <Link to="/liste-des-membres">
-          <Button variant="contained">
-            <AiFillCaretLeft />
-            <span>Back</span>
-          </Button>
+          <PreviousNextButton
+            text="Retour"
+            onClick={() => navigate(-1)}
+            isNext="false"
+          />
         </Link>
-      </nav>
-
-      <Grid container spacing={2}>
-        <Grid item sm="6">
-          <div className="memberImg">
-            {isLoading ? (
-              <img
-                src={
-                  memberState.data.attributes.image.data[0].attributes.formats
-                    .small.url
-                }
-              />
-            ) : (
-              <Skeleton variant="rectangular" width="100%" height={300} />
-            )}
-          </div>
-        </Grid>
-
-        <Grid item sm="6">
-          <h1>
-            {isLoading ? (
-              memberState.data.attributes.title
-            ) : (
-              <Skeleton variant="text" width={300} height={80} />
-            )}
-          </h1>
-          <p>
-            {isLoading ? (
-              memberState.data.attributes.content
-            ) : (
-              <>
-                <Skeleton variant="text" />
-                <Skeleton variant="text" />
-                <Skeleton variant="text" />
-                <Skeleton variant="text" />
-              </>
-            )}
-          </p>
-        </Grid>
-      </Grid>
-
-      <Grid container spacing={2}>
-        <Grid item md={6}>
-          <FormComment />
-        </Grid>
-
-        <Grid item md={6}>
-          <List>
-            <ListItem alignItems="flex-start">
-              <ListItemAvatar>
-                <Avatar alt="Remy Sharp" src="/static/images/avatar/1.jpg" />
-              </ListItemAvatar>
-              <ListItemText
-                primary="Brunch this weekend?"
-                secondary={
-                  <React.Fragment>
-                    <Typography
-                      sx={{ display: "inline" }}
-                      component="span"
-                      variant="body2"
-                      color="text.primary"
-                    >
-                      Ali Connors
-                    </Typography>
-                    {" — I'll be in your neighborhood doing errands this…"}
-                  </React.Fragment>
-                }
-              />
-            </ListItem>
-            <ListItem alignItems="flex-start">
-              <ListItemAvatar>
-                <Avatar alt="Remy Sharp" src="/static/images/avatar/1.jpg" />
-              </ListItemAvatar>
-              <ListItemText
-                primary="Brunch this weekend?"
-                secondary={
-                  <React.Fragment>
-                    <Typography
-                      sx={{ display: "inline" }}
-                      component="span"
-                      variant="body2"
-                      color="text.primary"
-                    >
-                      Ali Connors
-                    </Typography>
-                    {" — I'll be in your neighborhood doing errands this…"}
-                  </React.Fragment>
-                }
-              />
-            </ListItem>
-            <ListItem alignItems="flex-start">
-              <ListItemAvatar>
-                <Avatar alt="Remy Sharp" src="/static/images/avatar/1.jpg" />
-              </ListItemAvatar>
-              <ListItemText
-                primary="Brunch this weekend?"
-                secondary={
-                  <React.Fragment>
-                    <Typography
-                      sx={{ display: "inline" }}
-                      component="span"
-                      variant="body2"
-                      color="text.primary"
-                    >
-                      Ali Connors
-                    </Typography>
-                    {" — I'll be in your neighborhood doing errands this…"}
-                  </React.Fragment>
-                }
-              />
-            </ListItem>
-            <ListItem alignItems="flex-start">
-              <ListItemAvatar>
-                <Avatar alt="Remy Sharp" src="/static/images/avatar/1.jpg" />
-              </ListItemAvatar>
-              <ListItemText
-                primary="Brunch this weekend?"
-                secondary={
-                  <React.Fragment>
-                    <Typography
-                      sx={{ display: "inline" }}
-                      component="span"
-                      variant="body2"
-                      color="text.primary"
-                    >
-                      Ali Connors
-                    </Typography>
-                    {" — I'll be in your neighborhood doing errands this…"}
-                  </React.Fragment>
-                }
-              />
-            </ListItem>
-          </List>
-        </Grid>
-      </Grid>
-    </div>
+      </div>
+    </Container>
   );
 }

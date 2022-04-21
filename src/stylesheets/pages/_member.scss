@@ -1,20 +1,62 @@
-.memberNav {
-    padding: 20px 0;
+//Style for page Liste de membre
+.members {
+    padding: 1rem;
+    .cardMember {
+        box-shadow: 0px 1px 8px -1px $brand-color-day;
+        border-radius: 20px;
+    }
+    .MuiGrid-container {
+        justify-content: center;
+    }
+    .roundImg {
+        width: 140px; 
+        height: 140px; 
+        overflow: hidden; 
+        border-radius: 50%;
+        margin: 1rem auto 1rem auto;
+   
+        img {
+            max-width: 100%;
+            max-height: auto;
+            object-fit: cover;
+    }
 }
-.memberImg {
-    margin-top: 50px;
+.MuiTypography-h5 {
+    color: $brand-color-day;
+    text-align:center;
 }
-
-.MuiButton-containedPrimary svg {
-padding-right: 2px;
+a {
+    text-decoration: none;
 }
-
-// form div {
-//     margin-top: 10px;
-// }
-
-.member-img {
+    }
+ 
+// Style for page of single member
+ .member{
+background-color: white;
+// max-width: 90%;
+margin: 1rem auto 1rem auto;
+box-shadow: 0px 1px 8px -1px $brand-color-day;
+border-radius: 20px;
+padding: 2rem; 
+h1 {
+    color: $brand-color-day;
+}
+img {
     max-width: 100%;
     max-height: auto;
     object-fit: cover;
+    display: block;
+   margin: auto;
+   border-radius: 20px;
 }
+a {
+    text-decoration: none;
+}
+
+
+
+form div {
+    margin-top: 10px;
+}
+ }
+

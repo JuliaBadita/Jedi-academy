@@ -8,41 +8,30 @@ import { HiMail } from 'react-icons/hi';
 import { AiFillPhone } from 'react-icons/ai';
 import { FaAddressCard } from 'react-icons/fa';
 import { AiFillClockCircle } from 'react-icons/ai';
+import PreviousNextButton from "../components/PreviousNextButton";
 
 
 export default function Contact() {
 
   const validationSchema = Yup.object().shape({
-    firstName: Yup.string()
-        .min(5, "trop petit")
-        .max(50, "trop long!")
-        .required("Ce champ est obligatoire"),
-    lastName: Yup.string()
-        .min(2, "trop petit")
-        .max(10, "trop long!")
-        .required("Ce champ est obligatoire"),
+    name: Yup.string()
+      .min(5, "Trop petit")
+      .max(50, "Trop long !")
+      .required("Ce champ est obligatoire"),
     email: Yup.string()
-        .email("email invalide")
-        .required("l'email est obligatoire"),
-    password: Yup.string()
-        .required("Mot de passe est obligatoire")
-        .min(8, "Mot de passe doit être plus grand que 8 caractères")
-        .max(50, "Mot de passe doit être plus petit que 50 caractères"),
-    confirmPassword: Yup.string()
-        .required("Confirmation de mot de passe est obligatoire")
-        .oneOf(
-            [Yup.ref("password"), null],
-            "Le mot de passe de confirmation ne correspond pas"
-        ),
+      .email("Email invalide")
+      .required("L'email est obligatoire"),
+    message: Yup.string()
+      .min(2, "Trop petit")
+      .max(10, "Trop long !")
+      .required("Ce champ est obligatoire"),
     acceptTerms: Yup.bool().oneOf([true], "Accepter les conditions est obligatoire"),
   });
 
   const initialValues = {
-    firstName: "",
-    lastName: "",
+    name: "",
     email: "",
-    password: "",
-    confirmPassword: "",
+    message: "",
     acceptTerms: false,
 };
 
@@ -69,7 +58,7 @@ const handleSubmit = (values) => {
               </div>
             </Grid>
             <Grid item xs={12} md={6} className="gmaps">
-              <iframe width="600" height="500" id="gmap_canvas" src="https://maps.google.com/maps?q=265%20rue%20Montaigne,%20Lille%2059000&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
+              <iframe width="600" height="500" id="gmap_canvas" src="https://maps.google.com/maps?q=265%20rue%20Montaigne,%20Lille%2059000&t=&z=13&ie=UTF8&iwloc=&output=embed" frameBorder="0" scrolling="no" marginHeight="0" marginWidth="0"></iframe>
             </Grid>
           
           <Grid item xs={12} className="form">
@@ -80,42 +69,34 @@ const handleSubmit = (values) => {
           >
               {({ resetForm }) => (
                   <Form>
-                      <div className="form-group mb-3">
-                          <label htmlFor="firstName">
-                              Prénom :
-                          </label>
-                          <Field
-                              type="text"
-                              id="firstName"
-                              name="firstName"
-                              className="form-control"
-                          />
-                          <ErrorMessage
-                              name="firstName"
-                              component="small"
-                              className="text-danger"
-                          />
-                      </div>
-                      <div className="form-group mb-3">
-                          <label htmlFor="lastName">
+                      <h2 className="first-title">Envoyez-nous un message !</h2>
+                      <div className="form-group">
+                        <div className="label">
+                          <label htmlFor="name">
                               Nom :
                           </label>
+                        </div>
+                        <div className="field">
                           <Field
                               type="text"
-                              id="lastName"
-                              name="lastName"
+                              id="name"
+                              name="name"
                               className="form-control"
                           />
                           <ErrorMessage
-                              name="lastName"
+                              name="name"
                               component="small"
                               className="text-danger"
                           />
+                        </div>
                       </div>
-                      <div className="form-group mb-3">
+                      <div className="form-group">
+                        <div className="label">
                           <label htmlFor="email">
-                              Message :
+                              Email :
                           </label>
+                        </div>
+                        <div className="field">
                           <Field
                               type="email"
                               id="email"
@@ -127,14 +108,32 @@ const handleSubmit = (values) => {
                               component="small"
                               className="text-danger"
                           />
+                        </div>
                       </div>
-                      <div className="form-group mb-3">
+                      <div className="form-group">
+                          <div className="label">
+                            <label htmlFor="message">
+                                Message :
+                            </label>
+                          </div>
+                          <div className="field">
+                            <Field
+                                type="text"
+                                as="textarea"
+                                id="message"
+                                name="message"
+                                className="form-control textarea"
+                            />
+                            <ErrorMessage
+                              name="message"
+                              component="small"
+                              className="text-danger"
+                            />
+                          </div>
                           
                       </div>
-                      <div className="form-group mb-3">
-                          
-                      </div>
-                      <div className="form-group form-check mb-5">
+                      <div className="form-check">
+                        <div className="coche">
                           <Field
                               name="acceptTerms"
                               type="checkbox"
@@ -147,19 +146,21 @@ const handleSubmit = (values) => {
                               J'ai lu et j'accepte
                               les conditions
                           </label>
+                        </div>
+                        <div>
                           <ErrorMessage
                               name="acceptTerms"
                               component="small"
                               className="text-danger d-block"
                           />
+                        </div>
                       </div>
-                      <div className="form-group d-flex justify-content-end gap-3">
-                          <button
-                              type="submit"
-                              className="btn btn-primary"
-                          >
-                              Envoyer
-                          </button>
+                      <div>
+                        <PreviousNextButton
+                          text="Envoyez"
+                          onClick=""
+                          isNext="true"
+                        />
                       </div>
                   </Form>
               )}

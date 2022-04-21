@@ -44,6 +44,7 @@
     }
   }
 }
+
 }
  
 // Burger menu
@@ -148,6 +149,7 @@
     .cardContent p {
       color:white;
     }
+
   }
   .buttonSaber{
     span.line-1 {
@@ -211,6 +213,31 @@
   .buttonSaber a {
     color:rgb(183, 10, 10);
     font-weight:600;
+  }
+
+  // Members
+  .members {
+  
+    .cardMember {
+      background-color: $black;
+      box-shadow: 0px 1px 8px -1px $brand-color-night;
+    }
+    .MuiTypography-body2 {
+      color: $white;
+    }
+    .MuiTypography-h5 {
+      color: $brand-color-night;
+    }
+  }
+  .member {
+    background-color: $black;
+    box-shadow: 0px 1px 8px -1px $brand-color-night;
+    h1{
+      color: $brand-color-night;
+    }
+    p{
+      color: white;
+    }
   }
 }
 

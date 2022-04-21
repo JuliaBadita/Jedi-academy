@@ -112,7 +112,7 @@ const Footer = () => {
                   </a>
                 </li>
               </ul>
-              <p>25 rue Émile Zola, Roubaix 59100</p>
+              <p>265 rue Montaigne, Lille 59000</p>
             </article>
           </div>
         </section>

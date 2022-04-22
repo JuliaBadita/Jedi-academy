@@ -128,20 +128,20 @@
 
 
   // Home components 
-    .div__container {
-      background-color: $black;
-    }
+  .div__container {
+    background-color: $black;
+  }
 
-    .home__card-title {
-      color: $red-dark-mode;
-    }
+  .home__card-title {
+    color: $red-dark-mode;
+  }
 
-    .cards__home {
-      border: 0.0625rem solid $red-dark-mode;
-      box-shadow: 0 0.0625rem 0.5rem -0.0625rem $red-dark-mode;
-    }
+  .cards__home {
+    border: 0.0625rem solid $red-dark-mode;
+    box-shadow: 0 0.0625rem 0.5rem -0.0625rem $red-dark-mode;
+  }
 
-
+  // Infos utiles - Posts Page and Post Page
   .posts .cardInfos {
     background-image: linear-gradient(gray, black 12.5rem);
     color:$red-dark-mode;
@@ -244,6 +244,11 @@
     h2 {
         border-bottom: 2px solid $red-dark-mode;
     }
+  }
+
+  // Contact Page
+  .GridContainer .form .form-group input, .GridContainer .form .form-group textarea {
+    border: 1px solid rgba($red-dark-mode, 0.5);
   }
 }
 

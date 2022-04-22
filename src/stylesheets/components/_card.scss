@@ -12,9 +12,7 @@ Cards
     text-decoration: underline;
 }
 
-
 /// Images 
-
 .card1__home {
     transform:perspective(800px) rotateY(-18deg);
 }
@@ -94,6 +92,7 @@ Cards
 }
 }
 
+// Cards for Posts page
 .posts {
     .cardInfos {
         background-color: #FAFAFA;
@@ -116,19 +115,5 @@ Cards
         .cardContent {
             padding: 5px 16px 10px;
         }
-        /*&:hover {
-            @include mediaMasonry-min('small'){
-                width: calc(100.00% - 10px);
-                margin:0px;
-            }
-            @include mediaMasonry-min('medium'){
-                width: calc(50.00% - 10px);
-                margin:0px;
-            }
-            @include mediaMasonry-min('large'){
-                width: calc(25.00% - 10px);
-                margin:5px;
-            }
-        }*/
     }
 }

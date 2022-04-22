@@ -5,8 +5,6 @@ import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
 import Typography from "@mui/material/Typography";
 import Grid from "@mui/material/Grid";
-// import { API_URL } from "../config";
-import { Link } from "react-router-dom";
 
 import SaberButton from "../components/SaberButton";
 

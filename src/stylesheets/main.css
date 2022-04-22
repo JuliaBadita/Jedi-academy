@@ -385,10 +385,6 @@ p {
   margin: 20px 0px 0px 0px;
 }
 
-li {
-  margin: 10px 0px 10px 30px;
-}
-
 /**
  * Clear inner floats
  */
@@ -453,7 +449,7 @@ li {
     ============================================================================ */
 /* ============================================================================
    Footer
-    ============================================================================ */
+     ============================================================================ */
 footer {
   padding: 1em 0;
   background-color: #e2d9d9;
@@ -520,7 +516,6 @@ footer .footer__container .footer__row article {
   footer .footer__container .footer__row article {
     width: 100%;
     margin-bottom: 1.4rem;
-    margin-right: 1.5rem;
   }
 }
 footer .footer__container .footer__row article h4 {
@@ -2164,6 +2159,9 @@ Cards
   text-align: center;
   padding: 15px;
   font-size: 16px;
+}
+.post li {
+  margin: 10px 0px 10px 30px;
 }
 .post img {
   max-width: 500px;

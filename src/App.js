@@ -15,7 +15,12 @@ function App() {
   return (
     <>
       <Router>
-        <img className="x-wing xwing-instance" src={xWing} style={{maxHeight:"100px"}} alt="Vaisseau X-wing"/>
+        <img
+          className="x-wing xwing-instance"
+          src={xWing}
+          style={{ maxHeight: '100px' }}
+          alt="Vaisseau X-wing"
+        />
         <Navbar />
         <Burger />
         <Routes>
@@ -29,7 +34,7 @@ function App() {
         <Footer />
       </Router>
     </>
-  );
+  )
 }
 
-export default App;
+export default App

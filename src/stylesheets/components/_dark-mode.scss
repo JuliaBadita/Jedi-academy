@@ -108,7 +108,7 @@
               color: $white;
             }
             &:hover{
-              color: $gold;
+              color: $red-dark-mode;
             }
           }
           .social-medias__logo {
@@ -129,11 +129,16 @@
 
   // Home components 
   .div__container {
-    background-color: $black;
+    background-color: transparent;
   }
 
   .home__card-title {
-    color: $red-dark-mode;
+    text-shadow: 1px 1px 2px $red, 0 0 1em $red, 0 0 0.2em $red;
+  }
+
+  .cards__home {
+    border: 0.0625rem solid $red-dark-mode;
+    box-shadow: 0 0.0625rem 0.5rem -0.0625rem $red-dark-mode;
   }
 
   .cards__home {
@@ -254,6 +259,7 @@
 
 
 
+
 // Here, the Dark mode button itself
 
 .dark-mode-toggle {
@@ -297,7 +303,7 @@
     right: 0.1rem;
     transform: translateX(0);
     transition: transform 0.4s cubic-bezier(.45, -1.12, .35,1.78);
-    z-index: 5;
+    z-index: 10;
   }
   
   .dark-mode-checkbox:checked + .dark-mode-label .dark-mode-ball {

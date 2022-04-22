@@ -655,6 +655,8 @@ footer .footer__copyrights {
   justify-content: space-between;
   align-items: center;
   background-color: #e2d9d9;
+  position: -webkit-sticky;
+  position: sticky;
 }
 .header .navbar__logo {
   width: 14rem;
@@ -774,7 +776,7 @@ footer .footer__copyrights {
   top: -4.1rem;
   transition: margin 600ms;
   cursor: pointer;
-  z-index: 4;
+  z-index: 3;
 }
 .burger__toggle-icon .burger__bar {
   display: block;
@@ -1625,7 +1627,7 @@ svg.transition-scene {
   color: #fff;
 }
 .dark footer .footer__container .footer__row article a:hover {
-  color: #BA9100;
+  color: rgb(183, 10, 10);
 }
 .dark footer .footer__container .footer__row article .social-medias__logo {
   fill: rgb(183, 10, 10);
@@ -1637,10 +1639,14 @@ svg.transition-scene {
   color: #fff;
 }
 .dark .div__container {
-  background-color: #000;
+  background-color: transparent;
 }
 .dark .home__card-title {
-  color: rgb(183, 10, 10);
+  text-shadow: 1px 1px 2px red, 0 0 1em red, 0 0 0.2em red;
+}
+.dark .cards__home {
+  border: 0.0625rem solid rgb(183, 10, 10);
+  box-shadow: 0 0.0625rem 0.5rem -0.0625rem rgb(183, 10, 10);
 }
 .dark .cards__home {
   border: 0.0625rem solid rgb(183, 10, 10);
@@ -1770,7 +1776,7 @@ svg.transition-scene {
   right: 0.1rem;
   transform: translateX(0);
   transition: transform 0.4s cubic-bezier(0.45, -1.12, 0.35, 1.78);
-  z-index: 5;
+  z-index: 10;
 }
 
 .dark-mode-checkbox:checked + .dark-mode-label .dark-mode-ball {
@@ -1843,14 +1849,6 @@ svg.transition-scene {
 /* ============================================================================
 Cards
 ============================================================================ */
-.home__card-title {
-  margin-top: 3rem;
-  font-family: "Rajdhani", sans-serif;
-  text-align: center;
-  color: #BA9100;
-  text-decoration: underline;
-}
-
 .card1__home {
   transform: perspective(800px) rotateY(-18deg);
 }
@@ -1874,6 +1872,7 @@ Cards
 .home__cards-grid {
   display: grid;
   place-items: center;
+  margin-bottom: 6.25rem;
 }
 .home__cards-grid img {
   width: 30%;
@@ -1889,7 +1888,7 @@ Cards
 }
 @media (max-width: 980px) {
   .home__cards-grid img {
-    width: 70%;
+    width: 90%;
   }
 }
 .home__cards-grid .home__cards-container {
@@ -1919,19 +1918,21 @@ Cards
 
 .div__container {
   background: #e2d9d9;
-  padding: 0.03125rem 0.5625rem 0.03125rem 0.5625rem;
-  margin: 6.25rem;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 0 auto;
   border-radius: 1rem;
 }
 @media (max-width: 980px) {
   .div__container {
-    padding: 0.0125rem 0.25rem 0.0125rem 0.25rem;
     margin: 1.5625rem;
   }
 }
 @media (max-width: 980px) {
   .div__container {
     margin: 0.625rem;
+    background: transparent;
   }
 }
 
@@ -1957,6 +1958,69 @@ Cards
   padding: 5px 16px 10px;
 }
 
+.home__card-title {
+  font-family: Copperplate Gothic;
+  letter-spacing: 3px;
+  font-size: 2em;
+  margin: 7rem 1rem 7rem 1rem;
+  text-align: center;
+  color: white;
+  text-shadow: rgb(186, 145, 0) 1px 0 10px;
+}
+@media (max-width: 1150px) {
+  .home__card-title {
+    font-size: 1.7rem;
+  }
+}
+@media (max-width: 1050px) {
+  .home__card-title {
+    font-size: 1.5rem;
+  }
+}
+@media (max-width: 980px) {
+  .home__card-title {
+    font-size: 1.4rem;
+  }
+}
+
+.home__star-wars-animated {
+  -webkit-animation: stars 122s infinite linear;
+          animation: stars 122s infinite linear;
+}
+
+.perspective {
+  width: 100%;
+  height: 100%;
+  perspective: 2000;
+  display: flex;
+  justify-content: center;
+}
+.perspective img {
+  margin: 3rem;
+  transform-origin: center center;
+  -webkit-animation: sw 5s linear infinite;
+          animation: sw 5s linear infinite;
+  width: 50%;
+  height: 50%;
+}
+@media (max-width: 980px) {
+  .perspective img {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+@-webkit-keyframes sw {
+  to {
+    transform: scale(0);
+  }
+}
+
+@keyframes sw {
+  to {
+    transform: scale(0);
+  }
+}
 .members {
   padding: 1rem;
 }

@@ -1812,12 +1812,17 @@ svg.transition-scene {
 
   .moon__dark-mode {
     height: 1rem;
+    margin-left: -0.5rem;
   }
 
   .sun__dark-mode {
     height: 1rem;
     margin-left: 1.1rem;
     z-index: 1;
+  }
+
+  .dark-mode-checkbox:checked + .dark-mode-label .dark-mode-ball {
+    transform: translateX(2.4rem);
   }
 }
 @media screen and (max-width: 400px) {

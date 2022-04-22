@@ -52,7 +52,7 @@ const Navbar = () => {
               </NavLink>
             </li>
             <li>
-              <NavLink to="/history" className="navlinks__desktop">
+              <NavLink to="/histoire" className="navlinks__desktop">
                 Notre histoire
               </NavLink>
             </li>

@@ -6,14 +6,14 @@
     
     article {
     position: relative;
-    top: 5%;
+    top: 2%;
     margin: 0 auto;
     display: block;
     font-family:'helvetica neue';
     color: $history;
     width: 31.25rem;
     font-size: 1.5em;
-    line-height:1.5em;
+    line-height: 1.5em;
     letter-spacing: 0.1em;
     transform: rotatex(40deg);
     animation: textMove 75s linear infinite;
@@ -35,7 +35,9 @@
     }
     
     @keyframes textMove {
-        to {top:-1970px;}
+        to {
+            top:-1970px;
+        }
     }
 }
 

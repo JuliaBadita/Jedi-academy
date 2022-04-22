@@ -1,13 +1,13 @@
 import React, { useEffect, useState } from "react";
+import Container from "@mui/material/Container";
+import Masonry from "@mui/lab/Masonry";
 import Grid from "@mui/material/Grid";
 import Skeleton from "@mui/material/Skeleton";
+import Card from "@mui/material/Card";
 import CardPost from "../components/CardPost.js";
-import Masonry from "@mui/lab/Masonry";
 import PostsApi from "../services/postsAPI";
 import SearchBar from "../components/SearchBar";
-import Card from "@mui/material/Card";
 import Title from "../components/Title";
-import Container from "@mui/material/Container";
 
 export default function Posts() {
   const [isLoading, setIsLoading] = useState(true);
@@ -19,19 +19,23 @@ export default function Posts() {
 
   const skeletonArray = [1, 2, 3, 4];
 
+  // Text Filter with searchBar
   const [filterText, setFilterText] = useState("");
   let handleFilterTextChange = (e) => {
-    //convert input text to lower case
+    // Convert input text to lower case
     var lowerCase = e.toLowerCase();
     setFilterText(lowerCase);
   };
 
+  // Get all posts with Strapi API
   const fetchAllPosts = async () => {
     const data = await PostsApi.findAll();
     setPosts(data);
     setIsLoading(false);
   };
 
+
+  // Filter posts array on content
   const filterPosts = posts.filter((el) => {
     if (filterText === "") {
       return el;

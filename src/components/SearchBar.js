@@ -8,6 +8,7 @@ export default function SearchBar(props){
         props.onFilterTextChange(e.target.value);
     }
 
+    // Avoid key enter press - don't reload the entire page
     const handleEnterPress = (e) => {
         if (e.key === "Enter") {
             e.preventDefault();

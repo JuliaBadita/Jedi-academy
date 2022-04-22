@@ -122,6 +122,28 @@ $blue-lightsaber2 : #535ef7;
 
 $social-medias : #9b6042;
 
+// For stars background
+:root {
+	/* Fixed colors that don't get transition/animation */
+	--dark-cosmos-color: hsl(0, 0%, 0%);
+	--star-color: hsl(272, 57%, 95%);
+	
+	/* animation and transition timings */
+	--t-slow: 2500ms;
+	--t-med: 1500ms;
+	--t-fast: 1000ms;
+	--t-delay-motionpath: 400ms;
+	--t-delay-colorfades: 200ms;
+
+	--a-scale-from: scale(1);
+	--a-scale-to: scale(1.05);
+}
+
+/* Sass vars */
+$mq-small: 650px;
+$mq-medium: 850px;
+$mq-vert-small: 650px;
+
 
 /// History animated text
 

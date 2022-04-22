@@ -2,7 +2,7 @@
    Buttons
      ============================================================================ */
 
-/* ButtonSaber */
+/* ButtonSaber used in PostsPage and MembersPage */
 .buttonSaber {
    position: relative;
    display: block;
@@ -191,10 +191,7 @@
    }
 }
 
-
-
 /* SVG animations */
-
 @keyframes color_anim {
    0% {
          fill: white;

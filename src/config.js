@@ -6,3 +6,6 @@ export const API_TOKEN =
 export const EMPTY_IMG = "./assets/empty-img.png";
 export const POPULATE_POSTS = "populate[0]=img&populate[1]=img.datasrc";
 export const POPULATE_MEMBERS = "populate=*";
+export const API_MAILGUN_DOMAIN = "https://api.mailgun.net/v3/sandboxafd3d9df04da4a18b54a191fd1fc8e9c.mailgun.org/messages";
+export const API_MAILGUN_KEY = "226aee80a149859e195339afdd8e874c-02fa25a3-d014dbee";
+export const ADMIN_EMAIL="paulinemerlin410@gmail.com"

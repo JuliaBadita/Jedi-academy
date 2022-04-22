@@ -53,9 +53,15 @@
         .form-group {
             margin:25px;
             display:flex;
+            @media (max-width: 980px) {
+                display:block;
+            }
             .label {
                 width:130px;
                 margin-top: 6px;
+                @media (max-width: 980px) {
+                    margin-bottom:10px;
+                }
             }
             .field {
                 width:100%;

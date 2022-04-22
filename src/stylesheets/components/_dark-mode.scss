@@ -266,6 +266,10 @@
   .GridContainer .form .form-group textarea {
     border: 1px solid rgba($red-dark-mode, 0.5);
   }
+
+  .modal {
+    border: 1px double $red-dark-mode;
+  }
 }
 
 // Here, the Dark mode button itself

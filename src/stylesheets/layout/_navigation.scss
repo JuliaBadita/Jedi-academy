@@ -8,6 +8,7 @@
     align-items: center;
     background-color: $gray;
     position: sticky;
+    z-index: 3;
 
     /// Logo in the navbar
     .navbar__logo {
@@ -136,13 +137,13 @@
   .burger__toggle-icon {
     display: block;
     position: relative;
-    width: 100%;
+    width: 0.2rem;
     top: -4.1rem;
     -webkit-transition: margin 600ms;
     -moz-transition: margin 600ms;
     transition: margin 600ms;
     cursor: pointer;
-    z-index: 3;
+    z-index: 50;
     @media screen {
       
     }

@@ -1,0 +1,42 @@
+// Big Title (h1)
+
+.backGroundTitle {
+	color: black;
+    border-radius:50px;
+}
+
+.titleDiv {
+	position: relative;
+    overflow:hidden;
+    text-align:center;
+	background-size: 360px;
+    color:white;
+	text-shadow: $brand-color-day 1px 0 10px;
+	padding: 2em 2em 3em 2em;
+	display: flex;
+	gap: 60px;
+	flex-direction: column;
+	overflow-x: auto;
+	overflow-y: auto;
+    h1 {
+        font-family: Copperplate Gothic;
+        letter-spacing: 6.2px;
+        z-index: 2;
+    }
+
+	@media (min-width: $mq-small) {
+		overflow: hidden;
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		justify-content: center;
+		gap: clamp(2vw, 300px, 5vw);
+		height: 30vh;
+		padding: 0 5vw;
+	}
+
+	@media (min-width: $mq-medium) {
+		padding: 0 10vw;
+		gap: clamp(5vw, 400px, 10vw);
+	}
+}

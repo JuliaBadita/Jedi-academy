@@ -8,9 +8,9 @@ import Post from "./pages/PostPage.js";
 import Contact from "./pages/ContactPage.js";
 import MembersPage from "./pages/MembersPage.js";
 import MemberPage from "./pages/MemberPage.js";
-
-import xWing from "./images/x-wing.png";
+import xWing from "./assets/x-wing.png";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import History from "./components/History";
 
 function App() {
   return (
@@ -31,6 +31,7 @@ function App() {
           <Route path="/infos-utiles/:slug" exact element={<Post />} />
           <Route path="/liste-des-membres" exact element={<MembersPage />} />
           <Route path="/member/:id" exact element={<MemberPage />} />
+          <Route path="/history" exact element={<History />} />
         </Routes>
 
         <Footer />

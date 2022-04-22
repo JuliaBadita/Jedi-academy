@@ -1,6 +1,7 @@
 import React from "react"
-import deathStar from "../images/death-star.png"
+import deathStar from "../assets/death-star.png"
 
+// Big Title (h1)
 export default function Title({title}){
     return (
         <>

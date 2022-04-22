@@ -29,9 +29,10 @@
   'components/searchbar',
   'components/sidebar',
   'components/gridcontainer',
-  'components/stars',
   'components/icons',
   'components/button',
+  'components/stars',
+  'components/title',
   'components/carousel',
   'components/dark-mode',
   'components/card';
@@ -41,7 +42,8 @@
   'pages/home',
   'pages/member',
   'pages/contact',
-  'pages/post';
+  'pages/post', 
+  'pages/history';
 
 // 7. Themes
 @import

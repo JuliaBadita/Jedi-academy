@@ -47,10 +47,10 @@ export default class Burger extends Component {
             <NavLink to="/liste-des-membres">Membres</NavLink>
           </li>
           <li>
-            <NavLink to="/history">Notre histoire</NavLink>
+            <NavLink to="/histoire">Notre histoire</NavLink>
           </li>
           <li>
-            <NavLink to="/about">Contact</NavLink>
+            <NavLink to="/contact">Contact</NavLink>
           </li>
         </section>
       </>

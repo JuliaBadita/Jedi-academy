@@ -31,7 +31,7 @@ function App() {
           <Route path="/infos-utiles/:slug" exact element={<Post />} />
           <Route path="/liste-des-membres" exact element={<MembersPage />} />
           <Route path="/member/:id" exact element={<MemberPage />} />
-          <Route path="/history" exact element={<History />} />
+          <Route path="/histoire" exact element={<History />} />
         </Routes>
 
         <Footer />

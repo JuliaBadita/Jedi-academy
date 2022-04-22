@@ -1,5 +1,6 @@
 import { API_URL_POSTS, API_TOKEN, POPULATE_POSTS } from "../config";
 
+// find all the posts in Strapi API
 async function findAll() {
   const res = await fetch(`${API_URL_POSTS}?${POPULATE_POSTS}`, {
     method: "GET",
@@ -12,18 +13,7 @@ async function findAll() {
   return res_1.data;
 }
 
-async function findXRandom(nbPosts) {
-  const res = await fetch(`${API_URL_POSTS}?${POPULATE_POSTS}`, {
-    method: "GET",
-    headers: {
-      Accept: "Application/json",
-      Authorization: `Bearer ${API_TOKEN}`,
-    },
-  });
-  const res_1 = await res.json();
-  return res_1.data;
-}
-
+// Find One Post in Strapi API with the slug
 async function findOneWithSlug(slug) {
   const qs = require("qs");
   const query = qs.stringify(
@@ -52,6 +42,5 @@ async function findOneWithSlug(slug) {
 
 export default {
   findAll,
-  findOneWithSlug,
-  findXRandom,
+  findOneWithSlug
 };

@@ -1,15 +1,15 @@
-import Burger from './components/BurgerMenu'
-import Footer from './components/Footer'
-import Navbar from './components/Navbar'
-import CardsHome from './components/CardsHome.js'
-import './stylesheets/main.scss'
-import Posts from './pages/PostsPage.js'
-import Post from './pages/PostPage.js'
-import Contact from './pages/ContactPage.js'
-import MembersPage from './pages/MembersPage.js'
-import MemberPage from './pages/MemberPage.js'
-import xWing from './images/x-wing.png'
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
+import Burger from "./components/BurgerMenu";
+import Footer from "./components/Footer";
+import Navbar from "./components/Navbar";
+import CardsHome from "./components/CardsHome.js";
+import "./stylesheets/main.scss";
+import Posts from "./pages/PostsPage.js";
+import Post from "./pages/PostPage.js";
+import Contact from "./pages/ContactPage.js";
+import MembersPage from "./pages/MembersPage.js";
+import MemberPage from "./pages/MemberPage.js";
+import xWing from "./assets/x-wing.png"
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 
 function App() {
   return (

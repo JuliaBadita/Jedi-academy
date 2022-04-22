@@ -1,14 +1,15 @@
 import React, {useEffect, useState} from "react"
-import Grid from '@mui/material/Grid';
-import goldSeparator from '../images/gold-separator.svg'
-import redSeparator from '../images/red-separator.svg'
-import PreviousNextButton from "./PreviousNextButton";
-import PostsApi from '../services/postsAPI'
-import Skeleton from '@mui/material/Skeleton'
-import {useNavigate} from 'react-router-dom'
-import RandomArray from '../functions/RandomArray'
 import { useParams } from "react-router-dom";
+import {useNavigate} from 'react-router-dom'
+import Grid from '@mui/material/Grid';
+import Skeleton from '@mui/material/Skeleton'
+import PostsApi from '../services/postsAPI'
+import RandomArray from '../functions/RandomArray'
+import PreviousNextButton from "./PreviousNextButton";
+import goldSeparator from '../assets/gold-separator.svg'
+import redSeparator from '../assets/red-separator.svg'
 
+// Right part of PostPage
 export default function SideBarPost(){
     const [isLoading, setIsLoading] = useState(true)
     const [posts, setPosts] = useState([]);
@@ -18,13 +19,14 @@ export default function SideBarPost(){
         fetchAllPosts();
     },[slug])
 
+    // Strapi API call + random 3 posts
     const fetchAllPosts = async () => {
         const data = await PostsApi.findAll();
         const dataArray=RandomArray(data, 3);
-        console.log(dataArray);
         setPosts(dataArray);
         setIsLoading(false);
     }
+
     const skeletonArray=[1, 2, 3];
 
     let navigate = useNavigate(); 

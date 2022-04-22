@@ -1,3 +1,19 @@
+@import url("https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&display=swap");
+:root {
+  /* Fixed colors that don't get transition/animation */
+  --dark-cosmos-color: hsl(0, 0%, 0%);
+  --star-color: hsl(272, 57%, 95%);
+  /* animation and transition timings */
+  --t-slow: 2500ms;
+  --t-med: 1500ms;
+  --t-fast: 1000ms;
+  --t-delay-motionpath: 400ms;
+  --t-delay-colorfades: 200ms;
+  --a-scale-from: scale(1);
+  --a-scale-to: scale(1.05);
+}
+
+/* Sass vars */
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 /* Document
    ========================================================================== */
@@ -5,7 +21,6 @@
  * 1. Correct the line height in all browsers.
  * 2. Prevent adjustments of font size after orientation changes in iOS.
  */
-@import url("https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&display=swap");
 html {
   line-height: 1.15;
   /* 1 */
@@ -1038,322 +1053,6 @@ article.card:hover .infos .seats, article.card:hover .infos .txt, article.card:h
   margin-bottom: 20px;
 }
 
-:root {
-  /* Fixed colors that don't get transition/animation */
-  --dark-cosmos-color: hsl(0, 0%, 0%);
-  --star-color: hsl(272, 57%, 95%);
-  --t-sun-color: hsl(47, 100%, 88%);
-  --t-moon-color: hsl(274, 93%, 94%);
-  --t-moon-pattern-color: hsl(274, 58%, 89%);
-  --sunsys-color: hsl(41, 99%, 75%);
-  --sunsys-patterns-color: hsl(33, 95%, 73%);
-  --earth-water-color: hsl(202, 62%, 74%);
-  --earth-continent-color: hsl(192, 34%, 64%);
-  /* colorz  that will change on transition */
-  --circle-bg-color: hsl(28, 97%, 70%);
-  --cactus-body-color: hsl(337, 43%, 28%);
-  --cactus-flower-color: hsl(348, 80%, 62%);
-  --mountain-color: hsl(346, 43%, 50%);
-  --sand-01-color: hsl(339, 55%, 30%);
-  --sand-02-color: hsl(335, 62%, 37%);
-  --sand-03-color: hsl(338, 53%, 38%);
-  --sand-04-color: hsl(336, 46%, 50%);
-  /* The poster Illustration colors */
-  --poster: hsl(25, 43%, 79%);
-  --poster-border: min(3vmax, 50px);
-  /* animation and transition timings */
-  --t-slow: 2500ms;
-  --t-med: 1500ms;
-  --t-fast: 1000ms;
-  --t-delay-motionpath: 400ms;
-  --t-delay-colorfades: 200ms;
-  --a-scale-from: scale(1);
-  --a-scale-to: scale(1.05);
-}
-
-/* Sass vars */
-/* This is the code for the CSS transition demo */
-.svg-mask-transition {
-  -webkit-clip-path: url(#clip-path);
-          clip-path: url(#clip-path);
-}
-
-/* all the fill transitions */
-.circle-bg,
-.color-fade-transition {
-  transition: fill var(--t-slow) ease-in-out var(--t-delay-colorfades);
-}
-
-/* stars transition */
-.star {
-  fill: var(--star-color);
-  opacity: 0;
-  transition: opacity var(--t-med) ease-in-out var(--t-delay-colorfades);
-}
-
-/* Let"s have some comets raining from the sky */
-.svg-defs {
-  display: none;
-}
-
-.comet-rain {
-  z-index: -1;
-  position: absolute;
-  left: 0;
-  top: 0;
-  bottom: 0;
-  right: 0;
-}
-
-.comet-instance {
-  height: auto;
-  position: absolute;
-  left: -10vw;
-  top: -10vh;
-  z-index: -1;
-  transform: scaleX(-1);
-  fill: url(#gradient);
-}
-
-.comet-01,
-.comet-03,
-.comet-04,
-.comet-06 {
-  width: 5vmin;
-}
-
-.comet-02,
-.comet-05 {
-  width: 6vmin;
-}
-
-.x-wing {
-  width: 100px;
-  height: auto;
-  position: absolute;
-  left: -10vw;
-  top: -10vh;
-  z-index: -1;
-  transform: scaleX(-1);
-}
-
-.death-star {
-  width: 100px;
-  height: auto;
-  position: absolute;
-  left: 5vw;
-  top: 5vh;
-  transform: scale(1.2);
-  display: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .comet-instance {
-    -webkit-animation: MakeItRain 10s infinite;
-            animation: MakeItRain 10s infinite;
-  }
-
-  .xwing-instance {
-    -webkit-animation: MakeItFly 5s infinite;
-            animation: MakeItFly 5s infinite;
-  }
-
-  .comet-01 {
-    left: 30vw;
-    -webkit-animation-delay: 0ms;
-            animation-delay: 0ms;
-  }
-
-  .x-wing {
-    left: 15vw;
-    -webkit-animation-delay: 15ms;
-            animation-delay: 15ms;
-  }
-
-  .comet-02 {
-    left: 57vw;
-    -webkit-animation-delay: 9s;
-            animation-delay: 9s;
-  }
-
-  .comet-03 {
-    left: 83vw;
-    -webkit-animation-delay: 6s;
-            animation-delay: 6s;
-  }
-
-  .comet-04 {
-    top: 13vh;
-    -webkit-animation-delay: 22s;
-            animation-delay: 22s;
-  }
-
-  .comet-05 {
-    top: 34vh;
-    -webkit-animation-delay: 5s;
-            animation-delay: 5s;
-  }
-
-  .comet-06 {
-    top: 67vh;
-    -webkit-animation-delay: 14s;
-            animation-delay: 14s;
-  }
-
-  @-webkit-keyframes MakeItRain {
-    0% {
-      opacity: 0;
-      transform: scaleX(-1) translate(0, 0);
-    }
-    70% {
-      opacity: 0.4;
-      transform: scaleX(-1) translate(0, 0);
-    }
-    100% {
-      opacity: 1;
-      transform: scaleX(-1) translate(-101vw, 101vmax);
-    }
-  }
-
-  @keyframes MakeItRain {
-    0% {
-      opacity: 0;
-      transform: scaleX(-1) translate(0, 0);
-    }
-    70% {
-      opacity: 0.4;
-      transform: scaleX(-1) translate(0, 0);
-    }
-    100% {
-      opacity: 1;
-      transform: scaleX(-1) translate(-101vw, 101vmax);
-    }
-  }
-  @-webkit-keyframes MakeItFly {
-    100% {
-      opacity: 1;
-      transform: scaleX(-1) translate(-50vw, 50vmax);
-    }
-  }
-  @keyframes MakeItFly {
-    100% {
-      opacity: 1;
-      transform: scaleX(-1) translate(-50vw, 50vmax);
-    }
-  }
-}
-/* Layout */
-.titleDiv {
-  padding: 2em 2em 3em 2em;
-  display: flex;
-  gap: 60px;
-  flex-direction: column;
-  overflow-x: auto;
-  overflow-y: auto;
-}
-@media (min-width: 650px) {
-  .titleDiv {
-    overflow: hidden;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    gap: clamp(2vw, 300px, 5vw);
-    height: 30vh;
-    padding: 0 5vw;
-  }
-}
-@media (min-width: 850px) {
-  .titleDiv {
-    padding: 0 10vw;
-    gap: clamp(5vw, 400px, 10vw);
-  }
-}
-
-svg.animation-scene,
-svg.transition-scene {
-  flex-basis: 100%;
-  width: 100%;
-  position: relative;
-  margin: 1px auto;
-  z-index: 1;
-}
-
-.explanation {
-  margin-top: auto;
-}
-
-/* Explanation */
-.explanation {
-  padding: 3vh 0;
-  font-size: 1em;
-  line-height: 1.3;
-  border-bottom: 3px solid var(--dark-cosmos-color);
-  position: relative;
-}
-@media (min-width: 850px) {
-  .explanation {
-    font-size: 1.1em;
-    line-height: 1.4;
-    padding: 3vh 0;
-    margin-bottom: -0.9em;
-    border-bottom: 6px solid var(--dark-cosmos-color);
-  }
-  .explanation:before {
-    content: "";
-    position: absolute;
-    top: -6vh;
-    left: -1.2vh;
-    width: 2vh;
-    height: 5vh;
-    background-repeat: no-repeat;
-    background-size: 100%;
-    background-image: url("data:image/svg+xml;base64,PCEtLSBHZW5lcmF0b3I6IEFkb2JlIElsbHVzdHJhdG9yIDI0LjIuMSwgU1ZHIEV4cG9ydCBQbHVnLUluICAtLT4KPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4IiB3aWR0aD0iMTYycHgiCgkgaGVpZ2h0PSIzMjYuN3B4IiB2aWV3Qm94PSIwIDAgMTYyIDMyNi43IiBzdHlsZT0ib3ZlcmZsb3c6dmlzaWJsZTtlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDE2MiAzMjYuNzsiIHhtbDpzcGFjZT0icHJlc2VydmUiPgo8c3R5bGUgdHlwZT0idGV4dC9jc3MiPgoJLnN0MHtmaWxsOmhzbCgyOTAsIDM0JSwgMTAlKTt9Cjwvc3R5bGU+CjxkZWZzPgo8L2RlZnM+CjxnPgoJPGNpcmNsZSBjbGFzcz0ic3QwIiBjeD0iODMiIGN5PSIyNzIuNCIgcj0iNTQuMyIvPgoJPGNpcmNsZSBjbGFzcz0ic3QwIiBjeD0iMTA3LjgiIGN5PSI1NC4zIiByPSI1NC4zIi8+Cgk8Y2lyY2xlIGNsYXNzPSJzdDAiIGN4PSIxNC40IiBjeT0iMTIzLjgiIHI9IjE0LjQiLz4KPC9nPgo8L3N2Zz4K");
-  }
-  .explanation:before {
-    top: -8vw;
-    left: -1.3vw;
-    width: 2.5vw;
-    height: 16vw;
-  }
-}
-@media (min-width: 650px) and (max-height: 650px) {
-  .explanation {
-    font-size: 1em;
-    border-bottom: 2px solid var(--dark-cosmos-color);
-  }
-  .explanation:before {
-    background: none;
-  }
-}
-
-.accent {
-  background: var(--dark-cosmos-color);
-  padding: 0.2em 0.2em;
-}
-
-/* Utilities and pen background */
-.backGroundTitle {
-  color: var(--dark-cosmos-color);
-  border-radius: 50px;
-}
-
-/* collapsing the SVG on the body */
-.titleDiv {
-  font-family: "Raleway", sans-serif;
-  position: relative;
-  overflow: hidden;
-  text-align: center;
-  background-size: 360px;
-  color: white;
-  text-shadow: rgb(186, 145, 0) 1px 0 10px;
-}
-.titleDiv h1 {
-  font-family: Copperplate Gothic;
-  letter-spacing: 6.2px;
-  z-index: 2;
-}
-
 .searchIcon {
   fill: rgb(186, 145, 0);
 }
@@ -1361,7 +1060,7 @@ svg.transition-scene {
 /* ============================================================================
    Buttons
      ============================================================================ */
-/* ButtonSaber */
+/* ButtonSaber used in PostsPage and MembersPage */
 .buttonSaber {
   position: relative;
   display: block;
@@ -1564,6 +1263,282 @@ svg.transition-scene {
     fill: white;
   }
 }
+/* This is the code for the CSS transition demo */
+.svg-mask-transition {
+  -webkit-clip-path: url(#clip-path);
+          clip-path: url(#clip-path);
+}
+
+/* all the fill transitions */
+.circle-bg,
+.color-fade-transition {
+  transition: fill var(--t-slow) ease-in-out var(--t-delay-colorfades);
+}
+
+/* stars transition */
+.star {
+  fill: var(--star-color);
+  opacity: 0;
+  transition: opacity var(--t-med) ease-in-out var(--t-delay-colorfades);
+}
+
+/* Let"s have some comets raining from the sky */
+.svg-defs {
+  display: none;
+}
+
+.comet-rain {
+  z-index: -1;
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+}
+
+.comet-instance {
+  height: auto;
+  position: absolute;
+  left: -10vw;
+  top: -10vh;
+  z-index: -1;
+  transform: scaleX(-1);
+  fill: url(#gradient);
+}
+
+.comet-01,
+.comet-03,
+.comet-04,
+.comet-06 {
+  width: 5vmin;
+}
+
+.comet-02,
+.comet-05 {
+  width: 6vmin;
+}
+
+.x-wing {
+  width: 100px;
+  height: auto;
+  position: absolute;
+  left: -10vw;
+  top: -10vh;
+  z-index: -1;
+  transform: scaleX(-1);
+}
+
+.death-star {
+  width: 100px;
+  height: auto;
+  position: absolute;
+  left: 5vw;
+  top: 5vh;
+  transform: scale(1.2);
+  display: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .comet-instance {
+    -webkit-animation: MakeItRain 10s infinite;
+            animation: MakeItRain 10s infinite;
+  }
+
+  .xwing-instance {
+    -webkit-animation: MakeItFly 5s infinite;
+            animation: MakeItFly 5s infinite;
+  }
+
+  .comet-01 {
+    left: 30vw;
+    -webkit-animation-delay: 0ms;
+            animation-delay: 0ms;
+  }
+
+  .x-wing {
+    left: 15vw;
+    -webkit-animation-delay: 15ms;
+            animation-delay: 15ms;
+  }
+
+  .comet-02 {
+    left: 57vw;
+    -webkit-animation-delay: 9s;
+            animation-delay: 9s;
+  }
+
+  .comet-03 {
+    left: 83vw;
+    -webkit-animation-delay: 6s;
+            animation-delay: 6s;
+  }
+
+  .comet-04 {
+    top: 13vh;
+    -webkit-animation-delay: 22s;
+            animation-delay: 22s;
+  }
+
+  .comet-05 {
+    top: 34vh;
+    -webkit-animation-delay: 5s;
+            animation-delay: 5s;
+  }
+
+  .comet-06 {
+    top: 67vh;
+    -webkit-animation-delay: 14s;
+            animation-delay: 14s;
+  }
+
+  @-webkit-keyframes MakeItRain {
+    0% {
+      opacity: 0;
+      transform: scaleX(-1) translate(0, 0);
+    }
+    70% {
+      opacity: 0.4;
+      transform: scaleX(-1) translate(0, 0);
+    }
+    100% {
+      opacity: 1;
+      transform: scaleX(-1) translate(-101vw, 101vmax);
+    }
+  }
+
+  @keyframes MakeItRain {
+    0% {
+      opacity: 0;
+      transform: scaleX(-1) translate(0, 0);
+    }
+    70% {
+      opacity: 0.4;
+      transform: scaleX(-1) translate(0, 0);
+    }
+    100% {
+      opacity: 1;
+      transform: scaleX(-1) translate(-101vw, 101vmax);
+    }
+  }
+  @-webkit-keyframes MakeItFly {
+    100% {
+      opacity: 1;
+      transform: scaleX(-1) translate(-50vw, 50vmax);
+    }
+  }
+  @keyframes MakeItFly {
+    100% {
+      opacity: 1;
+      transform: scaleX(-1) translate(-50vw, 50vmax);
+    }
+  }
+}
+/* Layout */
+svg.animation-scene,
+svg.transition-scene {
+  flex-basis: 100%;
+  width: 100%;
+  position: relative;
+  margin: 1px auto;
+  z-index: 1;
+}
+
+.explanation {
+  margin-top: auto;
+}
+
+/* Explanation */
+.explanation {
+  padding: 3vh 0;
+  font-size: 1em;
+  line-height: 1.3;
+  border-bottom: 3px solid var(--dark-cosmos-color);
+  position: relative;
+}
+@media (min-width: 850px) {
+  .explanation {
+    font-size: 1.1em;
+    line-height: 1.4;
+    padding: 3vh 0;
+    margin-bottom: -0.9em;
+    border-bottom: 6px solid var(--dark-cosmos-color);
+  }
+  .explanation:before {
+    content: "";
+    position: absolute;
+    top: -6vh;
+    left: -1.2vh;
+    width: 2vh;
+    height: 5vh;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-image: url("data:image/svg+xml;base64,PCEtLSBHZW5lcmF0b3I6IEFkb2JlIElsbHVzdHJhdG9yIDI0LjIuMSwgU1ZHIEV4cG9ydCBQbHVnLUluICAtLT4KPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4IiB3aWR0aD0iMTYycHgiCgkgaGVpZ2h0PSIzMjYuN3B4IiB2aWV3Qm94PSIwIDAgMTYyIDMyNi43IiBzdHlsZT0ib3ZlcmZsb3c6dmlzaWJsZTtlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDE2MiAzMjYuNzsiIHhtbDpzcGFjZT0icHJlc2VydmUiPgo8c3R5bGUgdHlwZT0idGV4dC9jc3MiPgoJLnN0MHtmaWxsOmhzbCgyOTAsIDM0JSwgMTAlKTt9Cjwvc3R5bGU+CjxkZWZzPgo8L2RlZnM+CjxnPgoJPGNpcmNsZSBjbGFzcz0ic3QwIiBjeD0iODMiIGN5PSIyNzIuNCIgcj0iNTQuMyIvPgoJPGNpcmNsZSBjbGFzcz0ic3QwIiBjeD0iMTA3LjgiIGN5PSI1NC4zIiByPSI1NC4zIi8+Cgk8Y2lyY2xlIGNsYXNzPSJzdDAiIGN4PSIxNC40IiBjeT0iMTIzLjgiIHI9IjE0LjQiLz4KPC9nPgo8L3N2Zz4K");
+  }
+  .explanation:before {
+    top: -8vw;
+    left: -1.3vw;
+    width: 2.5vw;
+    height: 16vw;
+  }
+}
+@media (min-width: 650px) and (max-height: 650px) {
+  .explanation {
+    font-size: 1em;
+    border-bottom: 2px solid var(--dark-cosmos-color);
+  }
+  .explanation:before {
+    background: none;
+  }
+}
+
+.accent {
+  background: var(--dark-cosmos-color);
+  padding: 0.2em 0.2em;
+}
+
+.backGroundTitle {
+  color: black;
+  border-radius: 50px;
+}
+
+.titleDiv {
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+  background-size: 360px;
+  color: white;
+  text-shadow: rgb(186, 145, 0) 1px 0 10px;
+  padding: 2em 2em 3em 2em;
+  display: flex;
+  gap: 60px;
+  flex-direction: column;
+  overflow-x: auto;
+  overflow-y: auto;
+}
+.titleDiv h1 {
+  font-family: Copperplate Gothic;
+  letter-spacing: 6.2px;
+  z-index: 2;
+}
+@media (min-width: 650px) {
+  .titleDiv {
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: clamp(2vw, 300px, 5vw);
+    height: 30vh;
+    padding: 0 5vw;
+  }
+}
+@media (min-width: 850px) {
+  .titleDiv {
+    padding: 0 10vw;
+    gap: clamp(5vw, 400px, 10vw);
+  }
+}
+
 /* ============================================================================
    Carousel 
     ============================================================================ */
@@ -1673,6 +1648,10 @@ svg.transition-scene {
   border: 0.0625rem solid rgb(183, 10, 10);
   box-shadow: 0 0.0625rem 0.5rem -0.0625rem rgb(183, 10, 10);
 }
+.dark .cards__home {
+  border: 0.0625rem solid rgb(183, 10, 10);
+  box-shadow: 0 0.0625rem 0.5rem -0.0625rem rgb(183, 10, 10);
+}
 .dark .posts .cardInfos {
   background-image: linear-gradient(gray, black 12.5rem);
   color: rgb(183, 10, 10);
@@ -1751,6 +1730,9 @@ svg.transition-scene {
 }
 .dark .GridContainer h2 {
   border-bottom: 2px solid rgb(183, 10, 10);
+}
+.dark .GridContainer .form .form-group input, .dark .GridContainer .form .form-group textarea {
+  border: 1px solid rgba(183, 10, 10, 0.5);
 }
 
 .dark-mode-toggle {
@@ -1963,20 +1945,6 @@ Cards
   margin: 10px;
   transition-property: width, margin;
   transition-duration: 0.4s;
-  /*&:hover {
-      @include mediaMasonry-min('small'){
-          width: calc(100.00% - 10px);
-          margin:0px;
-      }
-      @include mediaMasonry-min('medium'){
-          width: calc(50.00% - 10px);
-          margin:0px;
-      }
-      @include mediaMasonry-min('large'){
-          width: calc(25.00% - 10px);
-          margin:5px;
-      }
-  }*/
 }
 .posts .cardInfos h2 {
   font-size: 1.2rem;
@@ -2181,6 +2149,7 @@ Cards
 }
 .GridContainer .form .form-group textarea {
   padding-top: 5px;
+  resize: none;
 }
 .GridContainer .first-title {
   margin-top: 0px;

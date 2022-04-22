@@ -456,7 +456,6 @@ footer {
   bottom: 0;
   left: 0;
   width: 100%;
-  z-index: 40;
 }
 footer hr {
   width: 80%;
@@ -2191,7 +2190,7 @@ Cards
 }
 .perspective article {
   position: relative;
-  top: 5%;
+  top: 2%;
   margin: 0 auto;
   display: block;
   font-family: "helvetica neue";

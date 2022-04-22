@@ -253,8 +253,9 @@
 
 
   /// History page 
-  .history__animated {
-    background: transparent;
+  .history__perspective {
+    color: $history;
+    background-color: transparent;
   }
 
   // Contact Page

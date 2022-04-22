@@ -1,56 +1,54 @@
- /* ============================================================================
+/* ============================================================================
     Dark mode
      ============================================================================ */
 
-     /// Here are the dark mode parameters
+/// Here are the dark mode parameters
 .dark {
-
   // The header in dark mode
   .dark-mode-label {
     background: $red-dark-mode;
   }
 
   .dark-mode-label .dark-mode-ball {
-    background: $white
+    background: $white;
   }
-  
-  
+
   .header {
     background-color: $black;
 
-    // logo 
+    // logo
     .navbar__logo-light {
       display: none;
     }
     .navbar__logo-dark {
       display: block;
     }
-  nav {
-    hr {
-      color:  $red-dark-mode;
-      border: 0.0625rem solid $red-dark-mode;
-    }
-    a.active {
-      &::after {
-        background: $red-dark-mode;
-      }
-  }
-  ul {
-    li {
-      font-weight: 500;
-      a {
+    nav {
+      hr {
         color: $red-dark-mode;
+        border: 0.0625rem solid $red-dark-mode;
+      }
+      a.active {
+        &::after {
+          background: $red-dark-mode;
+        }
+      }
+      ul {
+        li {
+          font-weight: 500;
+          a {
+            color: $red-dark-mode;
+          }
+        }
       }
     }
   }
-}
 
-}
- 
-// Burger menu
+  // Burger menu
 
   .burger-menu__content {
-    li,a {
+    li,
+    a {
       color: $white;
       &:hover {
         color: $red-dark-mode;
@@ -59,13 +57,13 @@
     a.active {
       color: $red-dark-mode;
       &::after {
-        background: $red-dark-mode
+        background: $red-dark-mode;
       }
     }
   }
   .burger__toggle-icon .burger__bar {
     border-right: 2.8em solid $red-lightsaber2;
-    border-left: 0.6em solid $white; 
+    border-left: 0.6em solid $white;
   }
   .burger-menu__content {
     background-color: $black;
@@ -79,7 +77,7 @@
     box-shadow: 0.3em 0 0.4em 0.1em rgb(72, 215, 56);
   }
 
-  // The footer 
+  // The footer
   footer {
     background-color: $black;
     hr {
@@ -90,24 +88,24 @@
         article {
           color: $white;
 
-            // logo 
-    .footer__logo-light {
-      display: none;
-    }
-    .footer__logo-dark {
-      display: block;
-    }
+          // logo
+          .footer__logo-light {
+            display: none;
+          }
+          .footer__logo-dark {
+            display: block;
+          }
           h4 {
             color: $red-dark-mode;
             font-weight: 600;
-            font-size: 1.10rem;
+            font-size: 1.1rem;
           }
           a {
             color: $white;
             &:visited {
               color: $white;
             }
-            &:hover{
+            &:hover {
               color: $red-dark-mode;
             }
           }
@@ -120,39 +118,36 @@
         }
       }
     }
-  
-  .footer__copyrights {
-    color: $white;
+
+    .footer__copyrights {
+      color: $white;
+    }
   }
+
+  // Home components
+  .div__container {
+    background-color: transparent;
   }
 
+  .home__card-title {
+    text-shadow: 1px 1px 2px $red, 0 0 1em $red, 0 0 0.2em $red;
+  }
 
-  // Home components 
-    .div__container {
-      background-color: transparent;
-    }
+  .cards__home {
+    border: 0.0625rem solid $red-dark-mode;
+    box-shadow: 0 0.0625rem 0.5rem -0.0625rem $red-dark-mode;
+  }
 
-    .home__card-title {
-      text-shadow: 1px 1px 2px $red, 0 0 1em $red, 0 0 0.2em $red;
-    }
-
-    .cards__home {
-      border: 0.0625rem solid $red-dark-mode;
-      box-shadow: 0 0.0625rem 0.5rem -0.0625rem $red-dark-mode;
-    }
-
-
-    // Infos Utiles 
+  // Infos Utiles
   .posts .cardInfos {
     background-image: linear-gradient(gray, black 12.5rem);
-    color:$red-dark-mode;
+    color: $red-dark-mode;
     box-shadow: 0px 1px 8px -1px $red-dark-mode;
     .cardContent p {
-      color:white;
+      color: white;
     }
-
   }
-  .buttonSaber{
+  .buttonSaber {
     span.line-1 {
       background: $red-dark-mode;
     }
@@ -160,12 +155,11 @@
     span.line-3 {
       background: $red-dark-mode;
     }
-
   }
 
   article.card {
     background-image: linear-gradient(gray, black 12.5rem);
-    color:$red-dark-mode;
+    color: $red-dark-mode;
     box-shadow: 0px 1px 8px -1px $red-dark-mode;
   }
 
@@ -191,34 +185,33 @@
 
   .separator {
     .gold {
-    display:none;
+      display: none;
     }
     .red {
-      display:block;
+      display: block;
     }
   }
 
   .searchBar fieldset {
-    border-color:rgba($red-dark-mode, 0.5);
+    border-color: rgba($red-dark-mode, 0.5);
   }
   .searchIcon {
     fill: $red-dark-mode;
   }
   .death-star {
-    display:block;
+    display: block;
   }
   .titleDiv {
     text-shadow: 1px 1px 2px red, 0 0 1em red, 0 0 0.2em red;
   }
 
   .buttonSaber a {
-    color:$red-dark-mode;
-    font-weight:600;
+    color: $red-dark-mode;
+    font-weight: 600;
   }
 
   // Members
   .members {
-  
     .cardMember {
       background-color: $black;
       box-shadow: 0px 1px 8px -1px $brand-color-night;
@@ -233,133 +226,136 @@
   .member {
     background-color: $black;
     box-shadow: 0px 1px 8px -1px $brand-color-night;
-    h1{
+    h1 {
       color: $brand-color-night;
     }
-    p{
+    p {
       color: white;
     }
   }
 
   .GridContainer {
     h2 {
-        border-bottom: 2px solid $red-dark-mode;
+      border-bottom: 2px solid $red-dark-mode;
     }
   }
+
+  //Dark mode for block member on homepage
+  .membersHome {
+    background: black;
+    color: $brand-color-night;
+    box-shadow: 0px 1px 8px -1px $brand-color-night;
+  }
 }
-
-
-
 
 // Here, the Dark mode button itself
 
 .dark-mode-toggle {
-   position: relative;
+  position: relative;
   //  left: 90rem;
   //  top: -3rem;
-   margin-right: 3.2rem;
-   z-index: 10;
-   @media (max-width: 990px) {
-     left: 2rem;
-   }
+  margin-right: 3.2rem;
+  z-index: 10;
+  @media (max-width: 990px) {
+    left: 2rem;
   }
-  
-  .dark-mode-checkbox {
-    display: none;
-  }
-  
-  .dark-mode-label {
-    height: 0.8rem;
-    width: 2.6rem;
-    background: $dark-mode-bg;
-    padding: 0.5rem 0.8rem;
-    border-radius: 5rem;
-    cursor:pointer;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    position: relative;
-    transform: scale(1.2);
-    box-shadow: 0.08rem 0.1rem 0.1rem $dark-mode-shadow;
-  }
-  
-  .dark-mode-label .dark-mode-ball {
-    background: $dark-mode-ball;
-    border-radius: 50%;
-    height: 1.4rem;
-    width: 1.4rem;
-    position: absolute;
-    top: 0.2rem;
-    left: 0.3rem;
-    right: 0.1rem;
-    transform: translateX(0);
-    transition: transform 0.4s cubic-bezier(.45, -1.12, .35,1.78);
-    z-index: 10;
-  }
-  
-  .dark-mode-checkbox:checked + .dark-mode-label .dark-mode-ball {
-    transform: translateX(2.2rem);
-  }
+}
 
-  .moon__dark-mode, .sun__dark-mode {
-      height: 1.1rem;
-  }
+.dark-mode-checkbox {
+  display: none;
+}
 
-  .moon__dark-mode {
-    margin-left: -0.3rem;
-  }
-  
-  .sun__dark-mode {
-    margin-left: 0.75rem;
-    z-index: 1;
-  }
+.dark-mode-label {
+  height: 0.8rem;
+  width: 2.6rem;
+  background: $dark-mode-bg;
+  padding: 0.5rem 0.8rem;
+  border-radius: 5rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  transform: scale(1.2);
+  box-shadow: 0.08rem 0.1rem 0.1rem $dark-mode-shadow;
+}
 
+.dark-mode-label .dark-mode-ball {
+  background: $dark-mode-ball;
+  border-radius: 50%;
+  height: 1.4rem;
+  width: 1.4rem;
+  position: absolute;
+  top: 0.2rem;
+  left: 0.3rem;
+  right: 0.1rem;
+  transform: translateX(0);
+  transition: transform 0.4s cubic-bezier(0.45, -1.12, 0.35, 1.78);
+  z-index: 10;
+}
+
+.dark-mode-checkbox:checked + .dark-mode-label .dark-mode-ball {
+  transform: translateX(2.2rem);
+}
+
+.moon__dark-mode,
+.sun__dark-mode {
+  height: 1.1rem;
+}
+
+.moon__dark-mode {
+  margin-left: -0.3rem;
+}
+
+.sun__dark-mode {
+  margin-left: 0.75rem;
+  z-index: 1;
+}
 
 /// Responsive version of the dark mode button
 
-  @media screen and (max-width: 1150px) {
-    .dark-mode-label {
-        height: 0.6rem;
-        width: 2.5rem;
-        box-shadow: 0.04rem 0.08rem 0.08rem $dark-mode-shadow;
-      }
-      .dark-mode-label .dark-mode-ball {
-      height: 1.3rem;
-      width: 1.3rem;
-      top: 0.13rem;
-      left: 0.145rem;
-      z-index: 100;
-      }
-      .moon__dark-mode {
-        height: 1rem;
-      }
-      .sun__dark-mode {
-        height: 1rem;
-        margin-left: 1.1rem;
-        z-index: 1;
-      }
-    }
-  
+@media screen and (max-width: 1150px) {
+  .dark-mode-label {
+    height: 0.6rem;
+    width: 2.5rem;
+    box-shadow: 0.04rem 0.08rem 0.08rem $dark-mode-shadow;
+  }
+  .dark-mode-label .dark-mode-ball {
+    height: 1.3rem;
+    width: 1.3rem;
+    top: 0.13rem;
+    left: 0.145rem;
+    z-index: 100;
+  }
+  .moon__dark-mode {
+    height: 1rem;
+  }
+  .sun__dark-mode {
+    height: 1rem;
+    margin-left: 1.1rem;
+    z-index: 1;
+  }
+}
 
-    @media screen and (max-width: 400px) {
-      .dark-mode-label {
-          height: 0.4rem;
-          width: 2.1rem;
-      }
-      .dark-mode-label .dark-mode-ball {
-        height: 1.1rem;
-        width: 1rem;
-        top: 0.17rem;
-        left: 0.1rem;
-        right: 2rem;
-        z-index: 100;
-        }
-        .moon__dark-mode {
-          height: 0.7em;
-        }
-        .sun__dark-mode {
-          height: 0.7rem;
-          margin-left: 1.4rem;
-          z-index: 1;
-        }
-    }
+@media screen and (max-width: 400px) {
+  .dark-mode-label {
+    height: 0.4rem;
+    width: 2.1rem;
+  }
+  .dark-mode-label .dark-mode-ball {
+    height: 1.1rem;
+    width: 1rem;
+    top: 0.17rem;
+    left: 0.1rem;
+    right: 2rem;
+    z-index: 100;
+  }
+  .moon__dark-mode {
+    height: 0.7em;
+  }
+  .sun__dark-mode {
+    height: 0.7rem;
+    margin-left: 1.4rem;
+    z-index: 1;
+  }
+}

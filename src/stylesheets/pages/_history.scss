@@ -82,6 +82,13 @@
         margin: 0.8em 0;
     }
 
+    @media (max-width: 500px) {
+            width: 25rem;
+    
+        }
+        @media (max-width: 390px) {
+            width: 22rem;
+        }
 
 .history__animated 
 {

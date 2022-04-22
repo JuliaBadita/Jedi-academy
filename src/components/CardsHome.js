@@ -1,8 +1,9 @@
-import React from 'react'
-import card1 from '../assets/img1.jpg'
-import card2 from '../assets/img2.jpg'
-import card3 from '../assets/img3.jpg'
-import '../stylesheets/main.scss'
+import React from "react";
+import card1 from "../assets/img1.jpg";
+import card2 from "../assets/img2.jpg";
+import card3 from "../assets/img3.jpg";
+import MembersHome from "./MembersHome.js";
+import "../stylesheets/main.scss";
 
 const cardsHome = () => {
   return (
@@ -32,6 +33,8 @@ const cardsHome = () => {
         </section>
       </div>
 
+      <MembersHome />
+
       {/* Logo star wars animated */}
       <article className="home__star-wars-animated">
         <div class="perspective">
@@ -42,7 +45,7 @@ const cardsHome = () => {
         </div>
       </article>
     </>
-  )
-}
+  );
+};
 
-export default cardsHome
+export default cardsHome;

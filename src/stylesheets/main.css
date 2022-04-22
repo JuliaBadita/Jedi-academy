@@ -1540,8 +1540,8 @@ svg.transition-scene {
    Carousel 
     ============================================================================ */
 /* ============================================================================
-   Dark mode
-    ============================================================================ */
+    Dark mode
+     ============================================================================ */
 .dark .dark-mode-label {
   background: rgb(183, 10, 10);
 }
@@ -1570,10 +1570,12 @@ svg.transition-scene {
 .dark .header nav ul li a {
   color: rgb(183, 10, 10);
 }
-.dark .burger-menu__content li, .dark .burger-menu__content a {
+.dark .burger-menu__content li,
+.dark .burger-menu__content a {
   color: #fff;
 }
-.dark .burger-menu__content li:hover, .dark .burger-menu__content a:hover {
+.dark .burger-menu__content li:hover,
+.dark .burger-menu__content a:hover {
   color: rgb(183, 10, 10);
 }
 .dark .burger-menu__content a.active {
@@ -1634,6 +1636,9 @@ svg.transition-scene {
 }
 .dark footer .footer__copyrights {
   color: #fff;
+}
+.dark .div__container {
+  background-color: transparent;
 }
 .dark .div__container {
   background-color: transparent;
@@ -1732,8 +1737,20 @@ svg.transition-scene {
   color: #E9C660;
   background-color: transparent;
 }
-.dark .GridContainer .form .form-group input, .dark .GridContainer .form .form-group textarea {
+.dark .membersHome {
+  background: black;
+  color: rgb(254, 0, 0);
+  box-shadow: 0px 1px 8px -1px rgb(254, 0, 0);
+}
+.dark .history__animated {
+  background: transparent;
+}
+.dark .GridContainer .form .form-group input,
+.dark .GridContainer .form .form-group textarea {
   border: 1px solid rgba(183, 10, 10, 0.5);
+}
+.dark .modal {
+  border: 1px double rgb(183, 10, 10);
 }
 
 .dark-mode-toggle {
@@ -1784,7 +1801,8 @@ svg.transition-scene {
   transform: translateX(2.2rem);
 }
 
-.moon__dark-mode, .sun__dark-mode {
+.moon__dark-mode,
+.sun__dark-mode {
   height: 1.1rem;
 }
 
@@ -1814,12 +1832,17 @@ svg.transition-scene {
 
   .moon__dark-mode {
     height: 1rem;
+    margin-left: -0.5rem;
   }
 
   .sun__dark-mode {
     height: 1rem;
     margin-left: 1.1rem;
     z-index: 1;
+  }
+
+  .dark-mode-checkbox:checked + .dark-mode-label .dark-mode-ball {
+    transform: translateX(2.4rem);
   }
 }
 @media screen and (max-width: 400px) {
@@ -1852,6 +1875,30 @@ svg.transition-scene {
     transform: translateX(1.5rem);
   }
 }
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80%;
+  max-width: 400px;
+  background-color: rgb(255, 255, 255);
+  border: 1px double rgb(186, 145, 0);
+  padding: 30px;
+}
+.modal p {
+  text-align: center;
+  margin: 0px;
+}
+.modal p.success {
+  color: green;
+  padding-bottom: 10px;
+}
+.modal p.error {
+  color: red;
+  padding-bottom: 10px;
+}
+
 /* ============================================================================
 Cards
 ============================================================================ */
@@ -2040,6 +2087,35 @@ Cards
     transform: scale(0);
   }
 }
+.membersHome {
+  background: #e2d9d9;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 0 auto;
+  border-radius: 1rem;
+  padding: 1rem;
+  text-align: center;
+  color: rgb(186, 145, 0);
+}
+.membersHome .MuiGrid-container {
+  justify-content: center;
+}
+
+.roundImg {
+  width: 140px;
+  height: 140px;
+  overflow: hidden;
+  border-radius: 50%;
+  margin: 1rem auto 1rem auto;
+}
+.roundImg img {
+  max-width: 100%;
+  max-height: auto;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
 .members {
   padding: 1rem;
 }
@@ -2049,19 +2125,6 @@ Cards
 }
 .members .MuiGrid-container {
   justify-content: center;
-}
-.members .roundImg {
-  width: 140px;
-  height: 140px;
-  overflow: hidden;
-  border-radius: 50%;
-  margin: 1rem auto 1rem auto;
-}
-.members .roundImg img {
-  max-width: 100%;
-  max-height: auto;
-  -o-object-fit: cover;
-     object-fit: cover;
 }
 .members .MuiTypography-h5 {
   color: rgb(186, 145, 0);
@@ -2144,9 +2207,19 @@ Cards
   margin: 25px;
   display: flex;
 }
+@media (max-width: 980px) {
+  .GridContainer .form .form-group {
+    display: block;
+  }
+}
 .GridContainer .form .form-group .label {
   width: 130px;
   margin-top: 6px;
+}
+@media (max-width: 980px) {
+  .GridContainer .form .form-group .label {
+    margin-bottom: 10px;
+  }
 }
 .GridContainer .form .form-group .field {
   width: 100%;
@@ -2230,6 +2303,16 @@ Cards
 .history__perspective p {
   text-align: justify;
   margin: 0.8em 0;
+}
+@media (max-width: 500px) {
+  .history__perspective {
+    width: 25rem;
+  }
+}
+@media (max-width: 390px) {
+  .history__perspective {
+    width: 22rem;
+  }
 }
 .history__perspective .history__animated {
   position: absolute;

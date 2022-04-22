@@ -1,7 +1,8 @@
-import React from "react";
+import React, {useState } from "react";
 import Grid from "@mui/material/Grid";
 import Container from "@mui/material/Container";
 import Title from "../components/Title";
+import Modal from "../components/Modal"
 import {Formik, Field, Form, ErrorMessage} from 'formik';
 import * as Yup from 'yup';
 import { HiMail } from 'react-icons/hi';
@@ -9,9 +10,13 @@ import { AiFillPhone } from 'react-icons/ai';
 import { FaAddressCard } from 'react-icons/fa';
 import { AiFillClockCircle } from 'react-icons/ai';
 import PreviousNextButton from "../components/PreviousNextButton";
-
+import mailgunAPI from "../services/mailgunAPI";
 
 export default function Contact() {
+  const [open, setOpen] = useState(false);
+  const [messageModal, setMessageModal] = useState(false);
+  const handleOpen = () => setOpen(true);
+  const handleClose = () => setOpen(false);
 
   const validationSchema = Yup.object().shape({
     name: Yup.string()
@@ -36,11 +41,31 @@ export default function Contact() {
 };
 
 const handleSubmit = (values) => {
-  console.log(values)
+  sendMessage(values.name, values.email, values.message);
 };
+
+const sendMessage = async (name, email, message) => {
+  const res = await mailgunAPI.sendEmail(name, email, message);
+  console.log(res)
+  if (res.message=="Queued. Thank you.") {
+    let jsx = (<><p className="success">Message envoyé !</p><p>Nous vous contactons dès que possible !</p></>);
+    setMessageModal(jsx);
+    handleOpen();
+  }
+  else {
+    let jsx = (<><p className="error">Une erreur est survenue.</p><p>Vous pouvez nous contacter par email.</p></>);
+    setMessageModal(jsx);
+    handleOpen();
+  }
+};
+
 
   return (
     <>
+      <Modal 
+        handleClose={handleClose}
+        open={open}
+        message={messageModal} />
       <Title title="Contactez-nous" />
       <Container>
         <Grid container className="GridContainer">

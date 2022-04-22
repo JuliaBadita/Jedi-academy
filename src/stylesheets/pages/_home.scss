@@ -18,51 +18,65 @@
 // Home cards title 
 
 .home__card-title {
-    font-family: Copperplate Gothic;
-    letter-spacing: 3px;
-    font-size: 2em;
-    margin: 7rem 1rem 7rem 1rem;
-    text-align: center;
-    color: white;
-    text-shadow: rgb(186, 145, 0) 1px 0 10px;
-    @media (max-width: 1150px) {
-        font-size: 1.7rem;
-    }
-    @media (max-width: 1050px) {
-        font-size: 1.5rem;
-    }
-    @media (max-width: 980px) {
-        font-size: 1.4rem;
-
-    }
+  font-family: Copperplate Gothic;
+  letter-spacing: 3px;
+  font-size: 2em;
+  margin: 7rem 1rem 7rem 1rem;
+  text-align: center;
+  color: white;
+  text-shadow: rgb(186, 145, 0) 1px 0 10px;
+  @media (max-width: 1150px) {
+    font-size: 1.7rem;
+  }
+  @media (max-width: 1050px) {
+    font-size: 1.5rem;
+  }
+  @media (max-width: 980px) {
+    font-size: 1.4rem;
+  }
 }
 
-
-// Star Wars logo animated 
+// Star Wars logo animated
 
 .home__star-wars-animated {
-    animation: stars 122s infinite linear;
-   }
-   .perspective {
-    width: 100%;
-    height: 100%;
-    perspective:2000;
-    display: flex;  
-    justify-content: center;
+  animation: stars 122s infinite linear;
+}
+.perspective {
+  width: 100%;
+  height: 100%;
+  perspective: 2000;
+  display: flex;
+  justify-content: center;
 
-    img {
-        margin: 3rem;
-        transform-origin: center center;
-        animation: sw 5s linear infinite;
-        width: 50% ;
-        height: 50% ;
-        
-@media (max-width: 980px) {
-        width: 100% ;
-        height: 100% ;
-}
-}
+  img {
+    margin: 3rem;
+    transform-origin: center center;
+    animation: sw 5s linear infinite;
+    width: 50%;
+    height: 50%;
+
+    @media (max-width: 980px) {
+      width: 100%;
+      height: 100%;
+    }
+  }
 }
 @keyframes sw {
-    to {transform:scale(0);}
+  to {
+    transform: scale(0);
+  }
+}
+
+//Block members
+.membersHome {
+  background: $gray;
+  width: fit-content;
+  margin: 0 auto;
+  border-radius: 1rem;
+  padding: 1rem;
+  text-align: center;
+  color: $brand-color-day;
+  .MuiGrid-container {
+    justify-content: center;
+  }
 }

@@ -18,7 +18,7 @@
   .header {
     background-color: $black;
 
-    // logo 
+    // logo
     .navbar__logo-light {
       display: none;
     }
@@ -249,6 +249,12 @@
     h2 {
         border-bottom: 2px solid $red-dark-mode;
     }
+  }
+
+
+  /// History page 
+  .history__animated {
+    background: transparent;
   }
 
   // Contact Page

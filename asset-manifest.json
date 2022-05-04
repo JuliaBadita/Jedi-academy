@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/Jedi-academy/static/css/main.d8b0829b.css",
+    "main.js": "/Jedi-academy/static/js/main.4f0ea3cd.js",
+    "static/media/death-star.png": "/Jedi-academy/static/media/death-star.57b2af6fc3e7d5258be4.png",
+    "static/media/starwars-1649334637769-8594.jpg": "/Jedi-academy/static/media/starwars-1649334637769-8594.0411e63f063f3f627836.jpg",
+    "static/media/x-wing.png": "/Jedi-academy/static/media/x-wing.c87638dac2dfcc99df14.png",
+    "static/media/img2.jpg": "/Jedi-academy/static/media/img2.6e5792b3befccb32de5b.jpg",
+    "static/media/logo_light-mode.png": "/Jedi-academy/static/media/logo_light-mode.b0893cbe805c0957062a.png",
+    "static/media/logo_dark-mode.png": "/Jedi-academy/static/media/logo_dark-mode.c89c48638f23bb39b594.png",
+    "static/media/img3.jpg": "/Jedi-academy/static/media/img3.a673716a2d17be5c58e3.jpg",
+    "static/media/img1.jpg": "/Jedi-academy/static/media/img1.5f61627cdbeffe6c41f1.jpg",
+    "static/media/icon-dark-mode.png": "/Jedi-academy/static/media/icon-dark-mode.c737d13651f2219fea7b.png",
+    "static/media/red-separator.svg": "/Jedi-academy/static/media/red-separator.a51edf1277830343ef738cbe8aff5843.svg",
+    "static/media/gold-separator.svg": "/Jedi-academy/static/media/gold-separator.84085f040206f8d0e6f804b57271c008.svg",
+    "index.html": "/Jedi-academy/index.html",
+    "main.d8b0829b.css.map": "/Jedi-academy/static/css/main.d8b0829b.css.map",
+    "main.4f0ea3cd.js.map": "/Jedi-academy/static/js/main.4f0ea3cd.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.d8b0829b.css",
+    "static/js/main.4f0ea3cd.js"
+  ]
+}
